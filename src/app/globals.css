@@ -2,14 +2,15 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ededed;
+
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-manpore: var(--font-manpore);
+  --font-montserrat: var(--font-montserrat);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +20,78 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
+
 }
+
+body {
+  overflow-x: hidden;
+  background: #000;
+  color: var(--foreground);
+  font-family: var(--font-montserrat);
+}
+
+h1 {
+  font-size: 2.875rem;
+  font-family: var(--font-manpore);
+  line-height: 1;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 2.125rem;
+  /*line-height: 1;*/
+  font-weight: 500;
+}
+
+/* Mainly for hiring page */
+h5 {
+  font-family: var(--font-manpore);
+  font-weight: 700;
+  font-size: 2.125rem;
+  line-height: 1;
+  text-wrap: balance;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 1.75rem;
+  }
+  h5 {
+    font-size: 1.75rem;
+  }
+}
+
+.button-gradient{
+  background: linear-gradient(180deg, #FFFFFF -21.83%, rgba(255, 255, 255, 0.7) 100%);
+  color: black;
+  font-size: 0.6875rem ;
+  font-weight: 700;
+  font-family: var(--font-manpore);
+  text-transform: uppercase;
+  padding: 0 0 0 20px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+}
+
+.text-gold {
+  background: linear-gradient(309.94deg, rgba(173, 141, 85, 0.9) 5.06%, #D2AD75 23.8%, #E8CDA0 38.72%, #D2AD75 63.7%, rgba(173, 141, 85, 0.9) 77.23%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gray {
+  background: linear-gradient(90deg, #4C4C4C 0%, #B2B2B2 67.31%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
