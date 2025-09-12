@@ -7,7 +7,7 @@ const marquee_elements = ["No Blocked Accounts", "Dedicated Processing Agent", "
 
 export default function Hero() {
     return (
-        <div className="relative">
+        <section className="relative">
             <div className="absolute -z-10 -translate-y-30 2xl:-translate-y-50">
                 <Image src={"/svg/backgrounds/bg.svg"} alt={"Background Image"} width={2272} height={1419}/>
             </div>
@@ -49,6 +49,6 @@ export default function Hero() {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }
