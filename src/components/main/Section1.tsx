@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Section1() {
     return (
-        <div className="flex items-center justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12">
+        <div className="flex items-center justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12 pt-40">
             <div>
                 <Image src={"/img/img.png"} alt={"Aziz reading a newspaper"} width={574} height={603}/>
             </div>

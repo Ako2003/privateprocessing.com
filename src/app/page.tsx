@@ -6,7 +6,7 @@ import Section3 from "@/components/main/Section3";
 
 export default function Home() {
   return (
-      <main className="space-y-30">
+      <main >
         <div>
             <Navbar />
             <Hero />

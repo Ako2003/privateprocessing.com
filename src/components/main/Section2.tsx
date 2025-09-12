@@ -4,7 +4,7 @@ import ArrowText from "@/components/main/ArrowText";
 
 export default function Section1() {
     return (
-        <div>
+        <div className="pt-40">
             <div className="relative w-full bg-[url('/img/img_1.png')] h-[660px] bg-cover bg-no-repeat">
                 <div
                     className="absolute inset-0 -translate-x-[35%]"

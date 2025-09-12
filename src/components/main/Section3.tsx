@@ -14,35 +14,37 @@ const points = [
 
 export default function Section3() {
     return(
-        <div className="flex flex-col items-center justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12">
-            <div className="flex justify-between w-full items-end">
-                <div>
-                    <ArrowText title={"The problem no one seems to solve"} />
-                    <h2>Why E-Commerce <br/> <span className="text-gold font-bold">‘Whales’ use Private Processing™</span></h2>
+        <section className="bg-[#101010] py-40">
+            <div className="flex flex-col items-center justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12">
+                <div className="flex justify-between w-full items-end">
+                    <div>
+                        <ArrowText title={"The problem no one seems to solve"} />
+                        <h2>Why E-Commerce <br/> <span className="text-gold font-bold">‘Whales’ use Private Processing™</span></h2>
+                    </div>
+                    <div>
+                        <CustomButton />
+                    </div>
                 </div>
-                <div>
-                    <CustomButton />
-                </div>
-            </div>
 
-            <div className="flex items-center justify-between w-full mt-15">
-                <div>
-                    <Image src={"/img/img_2.png"} alt={"Account Restricted Image"} width={582} height={592} />
-                </div>
-                <div>
-                    {points.map((item, index) => (
-                        <div key={index} className="space-y-5">
-                            <div className="flex items-center gap-x-5">
-                                <Image src="/svg/red-cross.svg" alt={"Red Cross"} width={22} height={22}/>
-                                <p className="font-bold text-[20px] max-w-[600px] tracking-wider capitalize">{item}</p>
+                <div className="flex items-center justify-between w-full mt-15">
+                    <div>
+                        <Image src={"/img/img_2.png"} alt={"Account Restricted Image"} width={582} height={592} />
+                    </div>
+                    <div>
+                        {points.map((item, index) => (
+                            <div key={index} className="space-y-5">
+                                <div className="flex items-center gap-x-5">
+                                    <Image src="/svg/red-cross.svg" alt={"Red Cross"} width={22} height={22}/>
+                                    <p className="font-bold text-[20px] max-w-[600px] tracking-wider capitalize">{item}</p>
+                                </div>
+                                {index !== points.length - 1 && (
+                                    <hr className="border-t border-[#2B2B2B] w-full mb-5"/>
+                                )}
                             </div>
-                            {index !== points.length - 1 && (
-                                <hr className="border-t border-[#2B2B2B] w-full mb-5"/>
-                            )}
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
