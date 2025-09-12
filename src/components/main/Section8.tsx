@@ -1,5 +1,7 @@
 export default function Section8(){
     return(
-        <div></div>
+        <section className="py-15">
+
+        </section>
     )
 }

@@ -43,8 +43,6 @@ export default function Section7(){
                         <CustomButton />
                     </div>
                 </div>
-
-
             </div>
         </section>
     )
