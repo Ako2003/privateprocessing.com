@@ -32,7 +32,7 @@ export default function Section7(){
                 >
                     {points.map((point, i) => (
                         <div key={i}>
-                            <Image src={`/svg/${point.icon}`} alt={point.title} width={44} height={44}/>
+                            <Image src={`/svg/${point.icon}`} alt={point.title} width={50} height={50}/>
                             <h4 className="mt-2">{point.title}</h4>
                             <p className="font-inter font-light">{point.description}</p>
                         </div>
