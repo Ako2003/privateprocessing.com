@@ -47,8 +47,8 @@ export default function Section4(){
                                 Making sure you can process payments. Because the more you process the more they earn.
                             </p>
                         </div>
-                        <hr className="border-t border-[#2b2b2b] w-full my-5"/>
-                        <CustomButton />
+                        <hr className="border-t border-[#2b2b2b] w-full mt-5"/>
+                        <CustomButton className="mt-8"/>
                     </div>
                     <div className="-z-10">
                         <Image src={"/img/img_3.png"} alt={"Private processing over other platforms"} width={808} height={760} className="-translate-y-20"/>
