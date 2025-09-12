@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CustomButton from "@/components/main/CustomButton";
+import ArrowText from "@/components/main/ArrowText";
 
 export default function Section1() {
     return (
@@ -31,11 +32,7 @@ export default function Section1() {
                     </div>
 
                     <div>
-                        <div className="flex items-center gap-x-2 mb-3">
-                            <Image src={"/svg/arrows/white-down-right-arrow.svg"} alt={"White down right arrow"} width={10}
-                                   height={10}/>
-                            <p className="font-manrope font-bold text-[11px] uppercase">private processing™</p>
-                        </div>
+                        <ArrowText title={"private processing™"}/>
                         <h3 className="max-w-[440px] mb-6">Experience the private banking of payment processing</h3>
                         <CustomButton />
                     </div>

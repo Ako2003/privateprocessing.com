@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CustomButton from "@/components/main/CustomButton";
 import Marquee from "react-fast-marquee";
+import ArrowText from "@/components/main/ArrowText";
 
 const marquee_elements = ["No Blocked Accounts", "Dedicated Processing Agent", "No Frozen Funds", "No Support Chatbots", "Old School Support"]
 
@@ -37,11 +38,7 @@ export default function Hero() {
                 </div>
 
                 <div className="mb-5">
-                    <div className="flex justify-center items-center gap-x-1 mb-5">
-                        <Image src={"/svg/arrows/white-down-right-arrow.svg"} alt={"White down right arrow"} width={10}
-                               height={10}/>
-                        <p className="font-manrope font-bold text-[11px] uppercase">we can help</p>
-                    </div>
+                    <ArrowText title="we can help" className="justify-center"/>
                     <Marquee autoFill>
                         {marquee_elements.map((item, index) => (
                             <div key={index} className="mx-10">
