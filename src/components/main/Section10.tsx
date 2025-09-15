@@ -30,7 +30,7 @@ export default function Section4(){
                 </div>
 
                 <div className="flex lg:flex-row flex-col items-center justify-between mt-10">
-                    <div className="flex lg:flex-wrap flex-col gap-3 mb-3">
+                    <div className="flex lg:flex-wrap max-lg:flex-col gap-3 mb-3">
                         {awards.map((award, index) => (
                             <div key={index} className="border border-white/12 rounded-full px-3 py-1">
                                 <p>{award.color} - ${award.price}M+</p>
