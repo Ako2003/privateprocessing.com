@@ -15,7 +15,7 @@ import Section12 from "@/components/main/Section12";
 
 export default function Home() {
   return (
-      <main >
+      <main className="bg-black">
         <div>
             <Navbar />
             <Hero />
@@ -27,7 +27,7 @@ export default function Home() {
         <Section5 />
         <Section6 />
         <Section7 />
-        {/*<Section8 />*/}
+        <Section8 />
         <Section9 />
         {/*<Section10 />*/}
         <Section11 />

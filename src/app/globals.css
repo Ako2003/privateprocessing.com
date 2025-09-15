@@ -119,3 +119,7 @@ h5 {
   border-color: #2B2B2B;
 }
 
+.card-layer {
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0) 30.23%, rgba(3, 3, 3, 0.5) 56.88%, #0A0A0A 102.91%);
+
+}

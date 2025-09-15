@@ -50,7 +50,7 @@ export default function Navbar(){
             </div>
             {/* Mobile Menu*/}
             {isOpen && (
-                <div className="fixed top-19 lg:hidden h-[calc(100vh-70px)] w-full bg-black/80 backdrop-blur-sm z-10">
+                <div className="fixed top-19 lg:hidden h-[calc(100vh)] w-full bg-black/80 backdrop-blur-sm z-10">
                     <div className="flex flex-col justify-center h-full">
                         {menu.map((item, index) => (
                             <div key={index} className="text-center" onClick={() => setIsOpen(false)}>

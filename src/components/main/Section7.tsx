@@ -12,12 +12,12 @@ const points = [
 
 export default function Section7(){
     return(
-        <section className="py-15 bg-[#101010]">
+        <section className="py-15">
             <div className="max-w-[1400px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"We make business human"}/>
                     <h2>
-                        <span className="text-gold">Values</span> we share with our clients
+                        <span className="text-gold font-semibold">Values</span> we share with our clients
                     </h2>
                 </div>
 
