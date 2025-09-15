@@ -4,7 +4,7 @@ import ArrowText from "@/components/main/ArrowText";
 
 export default function Section1() {
     return (
-        <section className="lg:pt-40 pt-20">
+        <section className="mt-25">
             <div className="relative w-full bg-[url('/img/img_1.png')] h-[660px] bg-cover bg-no-repeat bg-[position:75%_25%]
  ">
                 <div

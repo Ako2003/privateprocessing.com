@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 // import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -29,54 +28,68 @@ const staggerContainer = {
 export default function Footer() {
     return (
         <footer
-            className="bg-black text-white pb-20 px-4 overflow-hidden"
+            className="mx-auto max-w-[1400px] text-white pb-20 px-4 overflow-hidden"
         >
-            <hr className="border-t border-[#3F3F3F] w-full container w-11/12 pb-10"/>
+
+            <div className="h-[1px] w-full mb-10" style={{
+                background: "radial-gradient(50% 816.76% at 50% 50%, #1E1E1E 36.7%, rgba(28, 29, 34, 0) 100%)",
+            }}/>
             <div
-                className="container w-11/12 flex flex-col md:flex-row justify-between items-start space-y-10 md:space-y-0 md:space-x-20"
-            >
+                className="flex flex-col md:flex-row justify-between items-start space-y-10 md:space-y-0 md:space-x-20">
                 {/* Left Side */}
                 <div
                     className="max-w-md"
                 >
                     <Image
-                        src="/svg/logo-gold.svg"
+                        src="/svg/logo.svg"
                         alt="Logo"
-                        width={125}
-                        height={133}
+                        width={163.33}
+                        height={48}
                     />
-                    <p className="mt-20 text-[10px] text-white/60 max-md:hidden">* The use of Shopify and Stripe{"'"}s names and logos is for illustrative purposes only and does not imply endorsement or affiliation.</p>
+                </div>
+
+                <div>
+                    <p className="font-inter font-medium text-base">Navigation</p>
+                    <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-1">
+                        <li>
+                            <a href="#">Private processing Solution </a>
+                        </li>
+                        <li>
+                            <a href="#">Mission</a>
+                        </li>
+                        <li>
+                            <a href="#">Shared Values</a>
+                        </li>
+                        <li>
+                            <a href="#">Awards</a>
+                        </li>
+                    </ul>
                 </div>
 
                 {/* Back to top */}
-                <div
-                    className="ml-auto flex flex-col lg:items-end items-start"
-                >
-                    <h2 className="text-4xl font-medium mb-2 lg:text-right w-full">Private Processing</h2>
-                    <p className="text-white/60 mb-2 lg:text-right w-full">
-                        Feel free to reach out if you want to know more details.
-                    </p>
-                    <div className="w-full lg:text-right mb-6">
-                        <a href="https://www.skool.com/wealthconsulting" target="_blank"
-                           className="uppercase font-medium text-[13px] text-white/80 hover:text-white cursor-pointer">Join
-                            Skool | </a>
-                        <a href="https://wa.me/+971528072627" target="_blank"
-                           className="uppercase font-medium text-[13px] text-white/80 hover:text-white cursor-pointer">Contact
-                            Us</a>
+                <div>
+                    <a className="font-inter font-medium text-base"
+                       href="mailto:info@privateprocessing.com">info@privateprocessing.com</a>
+                    <div className="flex items-center gap-x-2 mt-3">
+                        <a className="font-inter font-medium text-base text-[#9194A1]"> Work With Us</a>
+                        <Image src={"/svg/arrows/gray-arrow.svg"} alt={"Gray Arrow Icon"} width={15.42} height={8}/>
                     </div>
+                </div>
+            </div>
 
-                    <a href="#" className="flex flex-col items-center cursot-pointer">
-                        <Image src={"/svg/main/arrow-up.svg"} alt={"Arrow Up"} height={40} width={40} className="mb-2"/>
-                        <p
-                            className="text-gray-400 text-sm text-center hover:text-white"
-                        >
-                            Back to top
-                        </p>
-                    </a>
-
-                    <p className="mt-20 text-[10px] text-white/60 md:hidden">* The use of Shopify and Stripe{"'"}s names
-                        and logos is for illustrative purposes only and does not imply endorsement or affiliation.</p>
-
+            <div className="flex md:flex-row flex-col-reverse justify-between items-start mt-10">
+                <div className="basis-5/7">
+                    <div className="flex items-center gap-5">
+                        <p className="font-poppins text-[20px] font-semibold">Disclaimer</p>
+                        <hr className="w-full border-[#363636]"/>
+                    </div>
+                    <p className="mt-2 text-[12px] text-white/60">At Private Processing, we provide exclusive and secure payment solutions designed to protect e-commerce entrepreneurs from blocked accounts and frozen funds. Our mission is to deliver long-term stability and confidence through a private-banking approach to global payment processing.</p>
+                    <p className="mt-5 text-[14px] text-white/60">© Private Processing. All Rights RESERVED</p>
+                </div>
+                <div className="basis-1/7 flex items-center gap-5 max-md:mb-10">
+                    <Image src={"/svg/social-media/whatsapp.svg"} alt={"Whatsapp Icon"} width={20} height={20} />
+                    <Image src={"/svg/social-media/instagram.svg"} alt={"Instagram Icon"} width={20} height={20} />
+                    <Image src={"/svg/social-media/youtube.svg"} alt={"Youtube Icon"} width={26} height={20} />
                 </div>
             </div>
         </footer>

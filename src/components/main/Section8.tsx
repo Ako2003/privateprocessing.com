@@ -13,7 +13,7 @@ const cards = [
 
 export default function Section8(){
     return (
-        <section className="py-15">
+        <section className="mt-25">
             <div className="relative max-w-[1400px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"Requirements clients need to fulfill"}/>

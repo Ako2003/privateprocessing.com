@@ -12,7 +12,7 @@ const points = [
 
 export default function Section5() {
     return (
-        <section className="lg:pt-40 pt-20">
+        <section className="max-lg:mt-25 overflow-x-hidden">
             <div
                 className="relative w-full bg-[url('/img/img_4.png')] lg:h-[660px] bg-cover bg-no-repeat lg:bg-[position:0%_25%]">
                 <div

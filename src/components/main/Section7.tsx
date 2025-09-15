@@ -12,7 +12,7 @@ const points = [
 
 export default function Section7(){
     return(
-        <section className="py-15">
+        <section className="mt-25">
             <div className="max-w-[1400px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"We make business human"}/>
@@ -24,7 +24,7 @@ export default function Section7(){
                 <div
                     className="
                         grid grid-cols-1 lg:grid-cols-3 gap-y-10 mt-10
-                        [&>*]:max-w-[262px] [&>*]:w-full
+                        [&>*]:lg:max-w-[262px] [&>*]:w-full
                         lg:[&>*]:justify-self-center
                         lg:[&>*:nth-child(3n+1)]:justify-self-start
                         lg:[&>*:nth-child(3n)]:justify-self-end
