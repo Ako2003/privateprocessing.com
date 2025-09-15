@@ -23,7 +23,7 @@ export default function Hero() {
             <div className="absolute -z-10 -bottom-60 left-1/2">
                 <Image src={"/svg/backgrounds/golden-circle.svg"} alt={"Golden Circle"} width={606} height={583}/>
             </div>
-            <div className="h-[calc(100vh-80px)] flex flex-col justify-between">
+            <div className="h-screen flex flex-col justify-between">
                 <div className="mx-auto w-11/12 h-full">
                     <div className="flex flex-col justify-center h-full max-w-[824px]">
                         <h1>

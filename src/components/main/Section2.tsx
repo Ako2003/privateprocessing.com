@@ -4,15 +4,17 @@ import ArrowText from "@/components/main/ArrowText";
 
 export default function Section1() {
     return (
-        <section className="pt-40">
-            <div className="relative w-full bg-[url('/img/img_1.png')] h-[660px] bg-cover bg-no-repeat">
+        <section className="lg:pt-40 pt-20">
+            <div className="relative w-full bg-[url('/img/img_1.png')] h-[660px] bg-cover bg-no-repeat bg-[position:75%_25%]
+ ">
                 <div
-                    className="absolute inset-0 -translate-x-[35%]"
+                    className="max-lg:hidden absolute inset-0 -translate-x-[35%]"
                     style={{
                         background:
                             "linear-gradient(270.04deg, rgba(0, 0, 0, 0) 3.05%, #000000 34.03%)",
                     }}
                 />
+                <div className="bg-black/60 absolute inset-0"/>
 
                 <div
                     className="relative z-10 flex flex-col justify-between h-full  max-w-[1400px] mx-auto w-11/12 py-15">

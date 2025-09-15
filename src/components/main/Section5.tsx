@@ -12,7 +12,7 @@ const points = [
 
 export default function Section5() {
     return (
-        <section className="pt-40">
+        <section className="lg:pt-40 pt-20">
             <div className="relative w-full bg-[url('/img/img_4.png')] h-[660px] bg-contain bg-no-repeat">
                 <div
                     className="absolute inset-0 translate-x-[10%]"
@@ -24,7 +24,7 @@ export default function Section5() {
                 />
 
                 <div className="relative z-10 flex h-full items-center">
-                    <div className="basis-4/5"/>
+                    <div className="basis-4/5 max-lg:hidden"/>
                     <div className="flex flex-col items-start max-w-[1400px] mx-auto w-11/12">
                         <div>
                             <h2 className="!font-normal">

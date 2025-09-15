@@ -4,7 +4,7 @@ import CustomButton from "@/components/main/CustomButton";
 
 export default function Section4(){
     return(
-        <section className="pt-40">
+        <section className="lg:pt-40 py-20">
             <div className="mx-auto max-w-[1400px] w-11/12">
                 <div>
                     <ArrowText title={"Private Processing™ Solution"} className="justify-center" />
@@ -16,8 +16,8 @@ export default function Section4(){
                     <p className="text-center max-w-[950px] mx-auto mt-5 text-lg">If you never want to face payment processing issues again and process 1M–100M per month with stability  and peace of mind, the first step is to switch from Retail Processing to Private Processing™.</p>
                 </div>
 
-                <div className="flex items-center justify-between">
-                    <div className="w-[474px]">
+                <div className="flex lg:flex-row flex-col-reverse items-center justify-between max-lg:mt-10">
+                    <div className="lg:w-[474px]">
                         <div>
                             <h3 className="!font-semibold">What is Retail Processing?</h3>
                             <p className="font-inter font-light text-whitisch mt-3">

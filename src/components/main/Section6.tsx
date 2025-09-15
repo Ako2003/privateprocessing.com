@@ -4,7 +4,7 @@ import ArrowText from "@/components/main/ArrowText";
 export default function Section6() {
     return(
         <section className="py-15 bg-[#101010]">
-            <div className="flex items-center justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12 pt-40">
+            <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12">
                 <div>
                     <ArrowText title={"shared values"} />
                     <h2 className="max-w-[555px]">

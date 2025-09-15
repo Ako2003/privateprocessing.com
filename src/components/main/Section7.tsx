@@ -24,7 +24,7 @@ export default function Section7(){
                 <div
                     className="
                         grid grid-cols-1 sm:grid-cols-3 gap-y-10 mt-10
-                        [&>*]:max-w-[262px] [&>*]:w-full
+                        [&>*]:lg:max-w-[262px] [&>*]:w-full
                         sm:[&>*]:justify-self-center
                         sm:[&>*:nth-child(3n+1)]:justify-self-start
                         sm:[&>*:nth-child(3n)]:justify-self-end
