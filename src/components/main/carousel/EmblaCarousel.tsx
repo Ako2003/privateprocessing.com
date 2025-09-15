@@ -8,6 +8,7 @@ import {
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from "next/image";
+import CustomButton from "@/components/main/CustomButton";
 
 
 type PropType = {
@@ -54,13 +55,14 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             </div>
 
             <div className="embla__controls">
-                <div className="embla__buttons">
+                <div className="flex justify-between w-full items-center">
                     <div className="lg:absolute top-6 right-0">
                         <div className="flex mx-auto gap-x-5">
                             <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                             <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
                         </div>
                     </div>
+                    <CustomButton className="lg:hidden"/>
                 </div>
             </div>
         </section>

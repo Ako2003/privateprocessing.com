@@ -1,6 +1,7 @@
 import ArrowText from "@/components/main/ArrowText";
 import EmblaCarousel from "@/components/main/carousel/EmblaCarousel";
 import "@/app/embla.css"
+import CustomButton from "@/components/main/CustomButton";
 
 const cards = [
     {title:"Starter Processing ", image: "img.png", number: "250k-500k"},
@@ -24,6 +25,7 @@ export default function Section8(){
                 <div className="mt-10">
                     <EmblaCarousel slides={cards} />
                 </div>
+                <CustomButton className="max-lg:hidden mt-5"/>
 
             </div>
         </section>
