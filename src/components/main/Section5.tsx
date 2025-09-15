@@ -14,7 +14,7 @@ export default function Section5() {
     return (
         <section className="mt-25 overflow-x-hidden">
             <div
-                className="relative w-full bg-[url('/img/img_4.png')] lg:h-[660px] bg-cover bg-no-repeat lg:bg-[position:0%_25%]">
+                className="relative w-full lg:bg-[url('/img/img_4.png')] lg:h-[660px] bg-cover bg-no-repeat lg:bg-[position:0%_25%]">
                 <div
                     className="max-lg:hidden absolute inset-0 translate-x-[10%]"
                     style={{
@@ -25,11 +25,11 @@ export default function Section5() {
                 />
 
                 <div className="bg-black/60 absolute inset-0 lg:hidden"/>
-                <div className="relative z-0 flex max-lg:flex-col max-lg:justify-between h-full  max-w-[1400px] mx-auto w-11/12 py-15">
+                <div className="relative z-0 flex max-lg:flex-col max-lg:justify-between h-full  max-w-[1400px] lg:mx-auto w-11/12 py-15">
                     <div className="basis-4/5 max-lg:hidden"/>
                     <div className="flex flex-col items-start justify-center h-full max-w-[1400px] mx-auto w-11/12">
                         <div>
-                            <h2 className="!font-normal">
+                            <h2 className="!font-normal !text-[38px]">
                                 <span className="text-gold font-manrope font-bold">A New World Opens.</span>
                                 <br/>
                                 The World Of Private Processing™
@@ -47,7 +47,7 @@ export default function Section5() {
 
                             ))}
                         </div>
-                        <CustomButton/>
+                        <CustomButton className="mt-3"/>
                     </div>
 
                 </div>

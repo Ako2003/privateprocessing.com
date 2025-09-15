@@ -12,18 +12,18 @@ const points = [
 
 export default function Section7(){
     return(
-        <section className="mt-50">
+        <section className="lg:mt-50 mt-35">
             <div className="max-w-[1400px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"We make business human"}/>
-                    <h2>
+                    <h2 className="!text-[38px]">
                         <span className="text-gold font-semibold">Values</span> we share with our clients
                     </h2>
                 </div>
 
                 <div
                     className="
-                        grid grid-cols-1 lg:grid-cols-3 gap-y-10 mt-10
+                        grid grid-cols-1 lg:grid-cols-3 gap-y-20 mt-10
                         [&>*]:lg:max-w-[262px] [&>*]:w-full
                         lg:[&>*]:justify-self-center
                         lg:[&>*:nth-child(3n+1)]:justify-self-start
@@ -34,12 +34,6 @@ export default function Section7(){
                         <div key={i}>
                             <div className="relative">
                                 <Image src={`/svg/${point.icon}`} alt={point.title} width={42} height={42}/>
-                                <div className="absolute w-15 h-full top-0 right-0" style={{
-                                    /* SHADE */
-                                    background: "linear-gradient(180deg, rgba(205, 137, 57, 0) 43.67%, #D0AD6F 100%)",
-                                    mixBlendMode: "plus-lighter",
-                                    filter: "blur(32px)",
-                                }}/>
                             </div>
                             <h4 className="mt-2 capitalize !text-[20px]">{point.title}</h4>
                             <p className="font-inter font-light text-whitisch">{point.description}</p>

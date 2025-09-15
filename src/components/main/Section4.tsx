@@ -5,15 +5,15 @@ import CustomButton from "@/components/main/CustomButton";
 export default function Section4(){
     return(
         <section className="mt-50">
-            <div className="mx-auto max-w-[1400px] w-11/12">
+            <div className="mx-auto max-w-[1400px] w-11/12 overflow-hidden">
                 <div>
-                    <ArrowText title={"Private Processing™ Solution"} className="justify-center" />
-                    <h3 className="text-center !text-[40px] capitalize">
+                    <ArrowText title={"Private Processing™ Solution"} />
+                    <h3 className="text-left !text-[38px] capitalize">
                         <span className="text-gold font-bold capitalise">Time for the best.</span>
                         <br />
                         Time for Private Processing™
                     </h3>
-                    <p className="text-center max-w-[950px] mx-auto mt-5 text-lg">If you never want to face payment processing issues again and process 1M–100M per month with stability  and peace of mind, the first step is to switch from Retail Processing to Private Processing™.</p>
+                    <p className="max-w-[950px]  mt-5 text-lg">If you never want to face payment processing issues again and process 1M–100M per month with stability  and peace of mind, the first step is to switch from Retail Processing to Private Processing™.</p>
                 </div>
 
                 <div className="flex lg:flex-row flex-col-reverse items-center justify-between max-lg:mt-10">
@@ -50,9 +50,9 @@ export default function Section4(){
                         <hr className="border-t border-[#2b2b2b] w-full mt-5"/>
                         <CustomButton className="mt-8"/>
                     </div>
-                    <div className="translate-x-5">
+                    <div className="translate-x-5 max-lg:mt-5">
                         <Image src={"/img/img_3.png"} alt={"Private processing over other platforms"} width={808}
-                               height={760} className="-translate-y-30"/>
+                               height={760} className="lg:-translate-y-30 -translate-y-20 scale-150"/>
                     </div>
                 </div>
             </div>

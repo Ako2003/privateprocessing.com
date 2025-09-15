@@ -14,19 +14,19 @@ const points = [
 
 export default function Section3() {
     return(
-        <section className="mt-50">
+        <section className="lg:mt-50 mt-35">
             <div className="flex flex-col items-center lg:justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12">
                 <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end gap-5">
                     <div>
                         <ArrowText title={"The problem no one seems to solve"} />
-                        <h2>Why E-Commerce <br/> <span className="text-gold font-bold">‘Whales’ use Private Processing™</span></h2>
+                        <h2 className="!text-[38px]">Why E-Commerce <br/> <span className="text-gold font-bold">Whales use Private Processing™</span></h2>
                     </div>
-                    <div>
+                    <div className="max-lg:hidden">
                         <CustomButton />
                     </div>
                 </div>
 
-                <div className="flex lg:flex-row flex-col gap-10 items-center justify-between w-full mt-15">
+                <div className="flex lg:flex-row flex-col gap-10 items-center justify-between w-full mt-5">
                     <div className="max-lg:w-full">
                         <Image src={"/img/img_2.png"} alt={"Account Restricted Image"} width={582} height={592} />
                     </div>
@@ -43,6 +43,9 @@ export default function Section3() {
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className="flex justify-start w-full mt-10 lg:hidden">
+                    <CustomButton />
                 </div>
             </div>
         </section>
