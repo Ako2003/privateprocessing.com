@@ -14,10 +14,9 @@ export default function Section1() {
                             "linear-gradient(270.04deg, rgba(0, 0, 0, 0) 3.05%, #000000 34.03%)",
                     }}
                 />
-                <div className="bg-black/60 absolute inset-0"/>
+                <div className="bg-black/60 absolute inset-0 lg:hidden"/>
 
-                <div
-                    className="relative z-10 flex flex-col justify-between h-full  max-w-[1400px] mx-auto w-11/12 py-15">
+                <div className="relative z-0 flex flex-col justify-between h-full  max-w-[1400px] mx-auto w-11/12 py-15">
                     <div className="flex items-center gap-x-2">
                         <div>
                             <Image src={"svg/arrows/white-arrow-down.svg"} alt={"White Arrow Down"} width={40}

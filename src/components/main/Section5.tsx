@@ -13,9 +13,10 @@ const points = [
 export default function Section5() {
     return (
         <section className="lg:pt-40 pt-20">
-            <div className="relative w-full bg-[url('/img/img_4.png')] h-[660px] bg-contain bg-no-repeat">
+            <div
+                className="relative w-full bg-[url('/img/img_4.png')] lg:h-[660px] bg-cover bg-no-repeat lg:bg-[position:0%_25%]">
                 <div
-                    className="absolute inset-0 translate-x-[10%]"
+                    className="max-lg:hidden absolute inset-0 translate-x-[10%]"
                     style={{
                         background:
                             "linear-gradient(270.04deg, rgba(0, 0, 0, 0) 3.05%, #000000 34.03%)",
@@ -23,7 +24,8 @@ export default function Section5() {
                     }}
                 />
 
-                <div className="relative z-10 flex h-full items-center">
+                <div className="bg-black/60 absolute inset-0 lg:hidden"/>
+                <div className="relative z-0 flex max-lg:flex-col max-lg:justify-between h-full  max-w-[1400px] mx-auto w-11/12 py-15">
                     <div className="basis-4/5 max-lg:hidden"/>
                     <div className="flex flex-col items-start max-w-[1400px] mx-auto w-11/12">
                         <div>
@@ -38,13 +40,14 @@ export default function Section5() {
                         <div className="mb-5">
                             {points.map((point, i) => (
                                 <div key={i} className="flex items-center gap-x-1 mb-3">
-                                    <Image src={"/svg/golden-tick.svg"} alt={"Golden Tick Icon"} width={15.19} height={10.76} />
+                                    <Image src={"/svg/golden-tick.svg"} alt={"Golden Tick Icon"} width={15.19}
+                                           height={10.76}/>
                                     <p className="font-intel font medium text-lg">{point}</p>
                                 </div>
 
                             ))}
                         </div>
-                        <CustomButton />
+                        <CustomButton/>
                     </div>
 
                 </div>

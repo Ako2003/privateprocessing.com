@@ -13,7 +13,7 @@ export default function Hero() {
             </div>
             <div className="absolute -z-1 -translate-y-30 right-0 h-[calc(100vh+200px)] w-full">
                 <Image src={"/svg/backgrounds/bg1.svg"} alt={"Background Image"} fill/>
-                <div className="absolute bottom-40 h-[709px] w-full" style={{
+                <div className="absolute max-lg:bottom-40 bottom-0 h-[709px] w-full" style={{
                     background: "linear-gradient(180deg, rgba(10, 10, 10, 0) 11.27%, rgba(10, 10, 10, 0.9) 81.87%, rgba(0, 0, 0, 0.95) 95.56%)",
                 }}/>
             </div>

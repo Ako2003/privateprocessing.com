@@ -23,11 +23,11 @@ export default function Section7(){
 
                 <div
                     className="
-                        grid grid-cols-1 sm:grid-cols-3 gap-y-10 mt-10
-                        [&>*]:lg:max-w-[262px] [&>*]:w-full
-                        sm:[&>*]:justify-self-center
-                        sm:[&>*:nth-child(3n+1)]:justify-self-start
-                        sm:[&>*:nth-child(3n)]:justify-self-end
+                        grid grid-cols-1 lg:grid-cols-3 gap-y-10 mt-10
+                        [&>*]:max-w-[262px] [&>*]:w-full
+                        lg:[&>*]:justify-self-center
+                        lg:[&>*:nth-child(3n+1)]:justify-self-start
+                        lg:[&>*:nth-child(3n)]:justify-self-end
                       "
                 >
                     {points.map((point, i) => (
@@ -39,7 +39,7 @@ export default function Section7(){
                     ))}
 
                     {/* Button as the last element in row 2, right side */}
-                    <div className="sm:col-start-3 sm:row-start-2 justify-self-end self-end">
+                    <div className="lg:col-start-3 lg:row-start-2 lg:justify-self-end self-end">
                         <CustomButton />
                     </div>
                 </div>

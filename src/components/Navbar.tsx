@@ -20,10 +20,10 @@ export default function Navbar(){
             <div className="fixed w-full py-4 bg-black z-100">
                 <div className="flex items-center justify-between max-w-[1400px] mx-auto w-11/12">
                     <div>
-                        <Link href="/" className="max-lg:hidden">
+                        <Link href="/public" className="max-lg:hidden">
                             <Image src="/svg/logo.svg" alt={"Private Processing Logo"} width={153} height={48}/>
                         </Link>
-                        <Link href="/" className="lg:hidden">
+                        <Link href="/public" className="lg:hidden">
                             <Image src="/svg/logo-small.svg" alt={"Private Processing Logo"} width={48.31} height={48}/>
                         </Link>
                     </div>
@@ -50,8 +50,8 @@ export default function Navbar(){
             </div>
             {/* Mobile Menu*/}
             {isOpen && (
-                <div className="fixed top-19 lg:hidden h-[calc(100vh)] w-full bg-black/80 backdrop-blur-sm z-10">
-                    <div className="flex flex-col justify-center h-full">
+                <div className="fixed top-19 lg:hidden h-[calc(100vh)] w-full bg-black/80 backdrop-blur-sm z-100">
+                    <div className="flex flex-col justify-center h-[calc(100svh)]">
                         {menu.map((item, index) => (
                             <div key={index} className="text-center" onClick={() => setIsOpen(false)}>
                                 <Link href={item.url} className="font-normal text-xs uppercase">{item.title}</Link>

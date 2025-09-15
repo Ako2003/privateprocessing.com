@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const manpore = Manrope({
     variable: "--font-manpore",
@@ -35,7 +37,9 @@ export default function RootLayout({
         <body
             className={`${manpore.variable} ${montserrat.variable} ${inter.variable} antialiased`}
         >
+        <Navbar />
         {children}
+        <Footer />
         </body>
         </html>
     );
