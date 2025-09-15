@@ -24,7 +24,7 @@ export default function Hero() {
                 <Image src={"/svg/backgrounds/golden-circle.svg"} alt={"Golden Circle"} width={606} height={583}/>
             </div>
             <div className="h-[calc(100svh)] flex flex-col justify-between">
-                <div className="mx-auto w-11/12 h-full">
+                <div className="mx-auto max-w-[1400px] w-11/12 h-full">
                     <div className="flex flex-col justify-center h-full max-w-[824px]">
                         <h1>
                             Peace of mind in Payment Processing Is Only
