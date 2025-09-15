@@ -12,7 +12,7 @@ const points = [
 
 export default function Section7(){
     return(
-        <section className="mt-25">
+        <section className="mt-50">
             <div className="max-w-[1400px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"We make business human"}/>
@@ -32,11 +32,19 @@ export default function Section7(){
                 >
                     {points.map((point, i) => (
                         <div key={i}>
-                            <Image src={`/svg/${point.icon}`} alt={point.title} width={50} height={50}/>
-                            <h4 className="mt-2">{point.title}</h4>
-                            <p className="font-inter font-light">{point.description}</p>
+                            <div className="relative">
+                                <Image src={`/svg/${point.icon}`} alt={point.title} width={42} height={42}/>
+                                <div className="absolute w-15 h-full top-0 right-0" style={{
+                                    /* SHADE */
+                                    background: "linear-gradient(180deg, rgba(205, 137, 57, 0) 43.67%, #D0AD6F 100%)",
+                                    mixBlendMode: "plus-lighter",
+                                    filter: "blur(32px)",
+                                }}/>
+                            </div>
+                            <h4 className="mt-2 capitalize !text-[20px]">{point.title}</h4>
+                            <p className="font-inter font-light text-whitisch">{point.description}</p>
                         </div>
-                    ))}
+                        ))}
 
                     {/* Button as the last element in row 2, right side */}
                     <div className="lg:col-start-3 lg:row-start-2 lg:justify-self-end self-end">

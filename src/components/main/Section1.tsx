@@ -14,7 +14,7 @@ export default function Section1() {
                             The first class experience of payment processing
                         </h2>
                         <p className="font-semibold text-lg mt-5">Imagine having a personal Private Processing Manager on your side.</p>
-                        <p className="font-inter font-light text-lg max-w-[550px] mt-5">Someone that takes care of everything and can solve any challenge in payment processing for you.</p>
+                        <p className="font-inter font-light text-lg max-w-[550px] mt-5 text-[#9194a1]">Someone that takes care of everything and can solve any challenge in payment processing for you.</p>
                     </div>
                 </div>
             </div>

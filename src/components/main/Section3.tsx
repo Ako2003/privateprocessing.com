@@ -14,7 +14,7 @@ const points = [
 
 export default function Section3() {
     return(
-        <section className="mt-25">
+        <section className="mt-50">
             <div className="flex flex-col items-center lg:justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12">
                 <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end gap-5">
                     <div>

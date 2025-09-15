@@ -17,28 +17,30 @@ export default function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
     return(
         <nav className="relative">
-            <div className="fixed w-full py-4 bg-black z-100">
+            <div className="fixed w-full py-4 bg-black/60 backdrop-blur-[4px]  z-100">
                 <div className="flex items-center justify-between max-w-[1400px] mx-auto w-11/12">
-                    <div>
-                        <Link href="/public" className="max-lg:hidden">
-                            <Image src="/svg/logo.svg" alt={"Private Processing Logo"} width={153} height={48}/>
-                        </Link>
-                        <Link href="/public" className="lg:hidden">
-                            <Image src="/svg/logo-small.svg" alt={"Private Processing Logo"} width={48.31} height={48}/>
-                        </Link>
-                    </div>
+                    <div className="flex gap-x-30 items-center">
+                        <div>
+                            <Link href="/public" className="max-lg:hidden">
+                                <Image src="/svg/logo.svg" alt={"Private Processing Logo"} width={153} height={48}/>
+                            </Link>
+                            <Link href="/public" className="lg:hidden">
+                                <Image src="/svg/logo-small.svg" alt={"Private Processing Logo"} width={48.31} height={48}/>
+                            </Link>
+                        </div>
 
-                    <div className="flex gap-x-6 max-lg:hidden">
-                        {menu.map((item, index) => (
-                            <div key={index}>
-                                <Link href={item.url} className="font-normal text-xs uppercase">{item.title}</Link>
-                            </div>
-                        ))}
+                        <div className="flex gap-x-15 max-xl:hidden">
+                            {menu.map((item, index) => (
+                                <div key={index}>
+                                    <Link href={item.url} className="font-medium text-xs uppercase">{item.title}</Link>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     <CustomButton />
 
-                    <div className="lg:hidden transition-all duration-500">
+                    <div className="xl:hidden transition-all duration-500">
                         {isOpen ? (
                             <X onClick={()=>setIsOpen(false)}/>
                         ) : (
@@ -50,7 +52,7 @@ export default function Navbar(){
             </div>
             {/* Mobile Menu*/}
             {isOpen && (
-                <div className="fixed top-19 lg:hidden h-[calc(100vh)] w-full bg-black/80 backdrop-blur-sm z-100">
+                <div className="fixed top-19 xl:hidden h-[calc(100vh)] w-full bg-black/80 backdrop-blur-sm z-100">
                     <div className="flex flex-col justify-center h-[calc(100svh)]">
                         {menu.map((item, index) => (
                             <div key={index} className="text-center" onClick={() => setIsOpen(false)}>

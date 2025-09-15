@@ -28,7 +28,7 @@ const staggerContainer = {
 export default function Footer() {
     return (
         <footer
-            className="mx-auto max-w-[1400px] text-white pb-20 px-4 overflow-hidden"
+            className="mx-auto max-w-[1400px] text-white pb-20 px-4 overflow-hidden mt-50"
         >
 
             <div className="h-[1px] w-full mb-10" style={{
@@ -52,7 +52,7 @@ export default function Footer() {
                     <p className="font-inter font-medium text-base">Navigation</p>
                     <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-1">
                         <li>
-                            <a href="#">Private processing Solution </a>
+                            <a href="#">Private processing solution </a>
                         </li>
                         <li>
                             <a href="#">Mission</a>
@@ -77,16 +77,16 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="flex md:flex-row flex-col-reverse justify-between items-start mt-10">
+            <div className="flex md:flex-row flex-col-reverse justify-between items-start mt-30">
                 <div className="basis-5/7">
                     <div className="flex items-center gap-5">
-                        <p className="font-poppins text-[20px] font-semibold">Disclaimer</p>
+                        <p className="font-semibold">Disclaimer</p>
                         <hr className="w-full border-[#363636]"/>
                     </div>
                     <p className="mt-2 text-[12px] text-white/60">At Private Processing, we provide exclusive and secure payment solutions designed to protect e-commerce entrepreneurs from blocked accounts and frozen funds. Our mission is to deliver long-term stability and confidence through a private-banking approach to global payment processing.</p>
                     <p className="mt-5 text-[14px] text-white/60">© Private Processing. All Rights RESERVED</p>
                 </div>
-                <div className="basis-1/7 flex items-center gap-5 max-md:mb-10">
+                <div className="basis-1/7 flex items-center justify-end gap-5 max-md:mb-10">
                     <Image src={"/svg/social-media/whatsapp.svg"} alt={"Whatsapp Icon"} width={20} height={20} />
                     <Image src={"/svg/social-media/instagram.svg"} alt={"Instagram Icon"} width={20} height={20} />
                     <Image src={"/svg/social-media/youtube.svg"} alt={"Youtube Icon"} width={26} height={20} />

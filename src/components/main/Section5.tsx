@@ -4,7 +4,7 @@ import CustomButton from "@/components/main/CustomButton";
 
 const points = [
     "No struggles with alternative payment options",
-    "High Credit Card Acceptance Rates.",
+    "High Credit Card Acceptance Rates",
     "Dedicated Private Processing Executive Manager",
     "Reserves are discussed upfront",
     "Old School Support",
@@ -12,7 +12,7 @@ const points = [
 
 export default function Section5() {
     return (
-        <section className="max-lg:mt-25 overflow-x-hidden">
+        <section className="mt-25 overflow-x-hidden">
             <div
                 className="relative w-full bg-[url('/img/img_4.png')] lg:h-[660px] bg-cover bg-no-repeat lg:bg-[position:0%_25%]">
                 <div
@@ -27,7 +27,7 @@ export default function Section5() {
                 <div className="bg-black/60 absolute inset-0 lg:hidden"/>
                 <div className="relative z-0 flex max-lg:flex-col max-lg:justify-between h-full  max-w-[1400px] mx-auto w-11/12 py-15">
                     <div className="basis-4/5 max-lg:hidden"/>
-                    <div className="flex flex-col items-start max-w-[1400px] mx-auto w-11/12">
+                    <div className="flex flex-col items-start justify-center h-full max-w-[1400px] mx-auto w-11/12">
                         <div>
                             <h2 className="!font-normal">
                                 <span className="text-gold font-manrope font-bold">A New World Opens.</span>
@@ -36,13 +36,13 @@ export default function Section5() {
                             </h2>
                             <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>
                         </div>
-                        <hr className="border-t border-[#2b2b2b] w-full my-5 max-w-[677px]"/>
+                        <hr className="border-t border-[#2b2b2b] w-full my-10 max-w-[677px]"/>
                         <div className="mb-5">
                             {points.map((point, i) => (
-                                <div key={i} className="flex items-center gap-x-1 mb-3">
+                                <div key={i} className="flex items-center gap-x-3 mb-3 text-whitisch">
                                     <Image src={"/svg/golden-tick.svg"} alt={"Golden Tick Icon"} width={15.19}
                                            height={10.76}/>
-                                    <p className="font-intel font medium text-lg">{point}</p>
+                                    <p className="font-intel font medium text-lg capitalize">{point}</p>
                                 </div>
 
                             ))}

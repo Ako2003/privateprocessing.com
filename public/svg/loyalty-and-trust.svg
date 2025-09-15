@@ -4,15 +4,19 @@
         <path d="M22.1591 32.6603C21.786 32.6603 21.4229 32.5276 21.1368 32.2828L15.4482 27.418C14.788 26.8534 14.7105 25.8605 15.275 25.2002C15.8394 24.5398 16.8325 24.4621 17.4929 25.027L21.9169 28.8103L30.6855 17.3085C31.2122 16.6176 32.1991 16.4842 32.8901 17.0112C33.5812 17.5379 33.7141 18.525 33.1874 19.2158L23.4102 32.0409C23.148 32.3849 22.7558 32.6057 22.3256 32.6515C22.27 32.6573 22.2145 32.6603 22.1591 32.6603Z" fill="url(#paint1_linear_190_5774)"/>
     </g>
     <defs>
-        <linearGradient id="paint0_linear_190_5774" x1="8.87768" y1="-20.6574" x2="66.1788" y2="4.51564" gradientUnits="userSpaceOnUse">
-            <stop offset="0.2977" stop-color="#FAF0D8"/>
-            <stop offset="0.4876" stop-color="#E0CC9F"/>
-            <stop offset="0.9008" stop-color="#E0CC9F" stop-opacity="0"/>
+        <linearGradient id="paint0_linear_190_5774" x1="39.1124" y1="53.5663" x2="0.74758" y2="23.7615" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#AD8D55" stop-opacity="0.9"/>
+            <stop offset="0.259615" stop-color="#D2AD75"/>
+            <stop offset="0.466346" stop-color="#E8CDA0"/>
+            <stop offset="0.8125" stop-color="#D2AD75"/>
+            <stop offset="1" stop-color="#AD8D55" stop-opacity="0.9"/>
         </linearGradient>
-        <linearGradient id="paint1_linear_190_5774" x1="18.5381" y1="10.0906" x2="39.5621" y2="21.6903" gradientUnits="userSpaceOnUse">
-            <stop offset="0.2977" stop-color="#FAF0D8"/>
-            <stop offset="0.4876" stop-color="#E0CC9F"/>
-            <stop offset="0.9008" stop-color="#E0CC9F" stop-opacity="0"/>
+        <linearGradient id="paint1_linear_190_5774" x1="30.6674" y1="33.7996" x2="18.0238" y2="21.4634" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#AD8D55" stop-opacity="0.9"/>
+            <stop offset="0.259615" stop-color="#D2AD75"/>
+            <stop offset="0.466346" stop-color="#E8CDA0"/>
+            <stop offset="0.8125" stop-color="#D2AD75"/>
+            <stop offset="1" stop-color="#AD8D55" stop-opacity="0.9"/>
         </linearGradient>
         <clipPath id="clip0_190_5774">
             <rect width="50" height="50" fill="white"/>

@@ -4,8 +4,8 @@ import "@/app/embla.css"
 import CustomButton from "@/components/main/CustomButton";
 
 const cards = [
-    {title:"Starter Processing ", image: "img.png", number: "250k-500k"},
-    {title:"Advanced Processing ", image: "img_1.png", number: "500k-1M"},
+    {title:"Starter Processing ", image: "img.png", number: "250K-500K"},
+    {title:"Advanced Processing ", image: "img_1.png", number: "500K-1M"},
     {title:"Expert Processing ", image: "img_2.png", number: "1M-10M"},
     {title:"Private Processing", image: "img_3.png", number: "10M-100M"},
 ]
@@ -13,7 +13,7 @@ const cards = [
 
 export default function Section8(){
     return (
-        <section className="mt-25">
+        <section className="mt-52.5">
             <div className="relative max-w-[1400px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"Requirements clients need to fulfill"}/>
@@ -22,7 +22,7 @@ export default function Section8(){
                     </h2>
                 </div>
 
-                <div className="mt-10">
+                <div className="mt-12.5">
                     <EmblaCarousel slides={cards} />
                 </div>
                 <CustomButton className="max-lg:hidden mt-5"/>

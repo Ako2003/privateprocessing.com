@@ -23,22 +23,22 @@ export default function Hero() {
             <div className="absolute -z-10 -bottom-60 left-1/2">
                 <Image src={"/svg/backgrounds/golden-circle.svg"} alt={"Golden Circle"} width={606} height={583}/>
             </div>
-            <div className="h-[calc(100svh)] flex flex-col justify-between">
+            <div className="relative z-10 h-[calc(100svh)] flex flex-col justify-between">
                 <div className="mx-auto max-w-[1400px] w-11/12 h-full">
-                    <div className="flex flex-col justify-center h-full max-w-[824px]">
+                    <div className="flex flex-col justify-center h-full max-w-[824px] translate-y-10">
                         <h1>
                             Peace of mind in Payment Processing Is Only
                             <span className="text-gold font-semibold"> One Call Away ... </span>
                         </h1>
-                        <p className="text-[24px] max-w-[500px] capitalize leading-8 mt-5">
+                        <p className="text-[24px] max-w-[500px] capitalize leading-8 mt-8 font-light text-[#b7b7b7]">
                             Relief the stress of payment processing in e-com with private processing™
                         </p>
-                        <CustomButton className="mt-10 w-fit"/>
+                        <CustomButton className="mt-13 w-fit"/>
                     </div>
                 </div>
 
                 <div className="mb-5">
-                    <ArrowText title="we can help" className="justify-center"/>
+                    <ArrowText title="we can help" className="justify-center mb-10"/>
                     <Marquee autoFill>
                         {marquee_elements.map((item, index) => (
                             <div key={index} className="mx-10">
