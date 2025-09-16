@@ -71,7 +71,14 @@ export default function Footer() {
                     <a className="font-inter font-medium text-base"
                        href="mailto:info@privateprocessing.com">info@privateprocessing.com</a>
                     <div className="flex items-center gap-x-2 mt-3">
-                        <a className="font-inter font-medium text-base text-[#9194A1]"> Work With Us</a>
+                        <a
+                            href="https://wa.me/971528072627"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-inter font-medium text-base text-[#9194A1]"
+                        >
+                            Work With Us
+                        </a>
                         <Image src={"/svg/arrows/gray-arrow.svg"} alt={"Gray Arrow Icon"} width={15.42} height={8}/>
                     </div>
                 </div>
