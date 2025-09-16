@@ -19,7 +19,7 @@ export default function Section1() {
                         business alive</p>
                 </div>
             </div>
-            <div className="relative w-full bg-[url('/img/img_1.png')] lg:h-[660px] h-[400px] bg-cover bg-no-repeat bg-[position:75%_25%]
+            <div className="relative w-full bg-[url('/img/img_1.png')] lg:h-[600px] h-[400px] bg-cover bg-no-repeat bg-[position:75%_25%]
  ">
                 <div
                     className="max-lg:hidden absolute inset-0 -translate-x-[35%]"
@@ -55,7 +55,7 @@ export default function Section1() {
 
                     <div>
                         <ArrowText title={"private processing™"}/>
-                        <h3 className="max-w-[440px] mb-6">Experience the private banking of payment processing</h3>
+                        <h3 className="max-w-[500px] mb-6 text-balance">Experience the private banking of payment processing</h3>
                         <CustomButton/>
                     </div>
                 </div>

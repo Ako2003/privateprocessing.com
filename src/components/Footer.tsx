@@ -50,9 +50,9 @@ export default function Footer() {
 
                 <div>
                     <p className="font-inter font-medium text-base">Navigation</p>
-                    <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-1">
+                    <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-3">
                         <li>
-                            <a href="#">Private processing solution </a>
+                            <a href="#">Private Processing Solution </a>
                         </li>
                         <li>
                             <a href="#">Mission</a>
@@ -88,7 +88,7 @@ export default function Footer() {
                 <div className="basis-5/7">
                     <div className="flex items-center gap-5">
                         <p className="font-semibold">Disclaimer</p>
-                        <hr className="w-full border-[#363636]"/>
+                        <hr className="w-full border-[#1E1E1E] h-[0.5px]"/>
                     </div>
                     <p className="mt-2 text-[12px] text-white/60">At Private Processing, we provide exclusive and secure payment solutions designed to protect e-commerce entrepreneurs from blocked accounts and frozen funds. Our mission is to deliver long-term stability and confidence through a private-banking approach to global payment processing.</p>
                     <p className="mt-5 text-[14px] text-white/60">© Private Processing. All Rights RESERVED</p>

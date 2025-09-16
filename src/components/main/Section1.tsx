@@ -10,7 +10,7 @@ export default function Section1() {
                     </div>
                     <div className="max-w-[600px]">
                         <h1 className="capitalize !text-[38px]"><span
-                            className="text-gold capitalize font-bold">private processing™</span> <br/>
+                            className="text-gold capitalize font-bold text-balance">private processing™ </span>
                             The first class experience of payment processing
                         </h1>
                         <div className="lg:hidden mt-5 relative">
@@ -21,7 +21,7 @@ export default function Section1() {
                                  }}
                             />
                         </div>
-                        <p className="font-semibold text-lg mt-5">Imagine having a personal Private Processing Manager
+                        <p className="font-semibold text-lg mt-5 text-pretty max-w-[500px]">Imagine having a personal Private Processing Manager
                             on your side.</p>
                         <p className="font-inter font-light text-lg max-w-[550px] mt-5 text-[#9194a1]">Someone that
                             takes care of everything and can solve any challenge in payment processing for you.</p>

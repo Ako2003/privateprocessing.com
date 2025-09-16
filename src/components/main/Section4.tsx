@@ -15,13 +15,13 @@ export default function Section4(){
                         <span className="align-super text-lg ml-0.5">™</span>
                     </h3>
 
-                    <p className="lg:text-center lg:mx-auto max-w-[950px]  mt-5 text-lg">If you never want to face payment processing issues again
+                    <p className="lg:text-center lg:mx-auto max-w-[950px]  mt-5 text-lg mb-10">If you never want to face payment processing issues again
                         and process 1M–100M per month with stability and peace of mind, the first step is to switch from
                         Retail Processing to Private Processing™.</p>
                 </div>
 
                 <div className="flex lg:flex-row flex-col-reverse items-center justify-between max-lg:mt-10">
-                    <div className="lg:w-[474px]">
+                    <div className="lg:w-[450px]">
                         <div>
                             <h3 className="!font-semibold !text-[28px]">What is retail processing?</h3>
                             <p className="font-inter font-light text-whitisch mt-3">

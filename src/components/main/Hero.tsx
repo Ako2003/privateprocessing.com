@@ -25,12 +25,12 @@ export default function Hero() {
             </div>
             <div className="relative z-10 h-[calc(100svh)] flex flex-col justify-between">
                 <div className="mx-auto max-w-[1200px] w-11/12 h-full">
-                    <div className="flex flex-col justify-center h-full max-w-[824px] translate-y-10">
+                    <div className="flex flex-col justify-center h-full max-w-[824px] translate-y-15">
                         <h1>
                             Peace of mind in Payment Processing Is Only
                             <span className="text-gold font-semibold"> One Call Away ... </span>
                         </h1>
-                        <p className="text-[24px] max-w-[500px] capitalize leading-8 mt-8 font-light text-[#b7b7b7]">
+                        <p className="text-[22px] max-w-[500px] capitalize leading-8 mt-8 font-light text-[#b7b7b7]">
                             Relief the stress of payment processing in e-com with private processing™
                         </p>
                         <CustomButton className="mt-13 w-fit"/>

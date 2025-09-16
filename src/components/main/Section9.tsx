@@ -19,9 +19,9 @@ export default function Section9(){
                         />
                     </div>
 
-                    <p className="font-semibold text-lg max-w-[600px] mt-5">Becoming a Private Processing™ client means to never worry about payment processing again.</p>
-                    <p className="font-inter font-light text-lg max-w-[600px] mt-5 text-whitisch">Our mission is to build the strongest payment processing company in the world that provides the most exclusive support and customer experience to elite entrepreneurs and high-level businesses.</p>
-                    <p className="font-inter font-light text-lg max-w-[600px] mt-5 text-whitisch">We build a high level community of righteous entrepreneurs that fight for good, revolutionize industries and make the world a better place.</p>
+                    <p className="font-semibold text-lg max-w-[470px] mt-5">Becoming a Private Processing™ client means to never worry about payment processing again.</p>
+                    <p className="font-inter font-light text-lg max-w-[470px] mt-5 text-whitisch">Our mission is to build the strongest payment processing company in the world that provides the most exclusive support and customer experience to elite entrepreneurs and high-level businesses.</p>
+                    <p className="font-inter font-light text-lg max-w-[470px] mt-5 text-whitisch">We build a high level community of righteous entrepreneurs that fight for good, revolutionize industries and make the world a better place.</p>
                 </div>
                 <div className="max-lg:hidden">
                     <Image src={"/img/img_7.png"} alt={"Aziz sitting into the cat"} width={520} height={540}/>

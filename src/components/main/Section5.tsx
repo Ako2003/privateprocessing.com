@@ -14,7 +14,7 @@ export default function Section5() {
     return (
         <section className="mt-25 overflow-x-hidden">
             <div
-                className="relative w-full lg:bg-[url('/img/img_4.png')] lg:h-[660px] bg-cover bg-no-repeat lg:bg-[position:0%_25%]">
+                className="relative w-full lg:bg-[url('/img/img_4.png')] lg:h-[600px] bg-cover bg-no-repeat lg:bg-[position:0%_25%]">
                 <div
                     className="max-lg:hidden absolute inset-0 translate-x-[10%]"
                     style={{

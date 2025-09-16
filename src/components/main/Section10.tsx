@@ -40,7 +40,7 @@ export default function Section4(){
                             </div>
                         ))}
                     </div>
-                    <CustomButton className="mt-5"/>
+                    <CustomButton/>
                 </div>
             </div>
         </section>

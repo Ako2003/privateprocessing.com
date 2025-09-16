@@ -16,7 +16,7 @@ export default function Section3() {
     return(
         <section className="lg:mt-50 mt-35">
             <div className="flex flex-col items-center lg:justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
-                <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end gap-5">
+                <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end gap-5 mb-10">
                     <div>
                         <ArrowText title={"The problem no one seems to solve"} />
                         <h2 className="!text-[38px]">Why E-Commerce <br/> <span className="text-gold font-bold">Whales use Private Processing™</span></h2>

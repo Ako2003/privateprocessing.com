@@ -18,13 +18,13 @@ export default function Section12(){
                              }}
                         />
                     </div>
-                    <p className="font-semibold text-lg max-w-[600px]">Samuel Aziz Boubaous is a German
+                    <p className="font-semibold text-lg max-w-[470px] mt-5">Samuel Aziz Boubaous is a German
                         entrepreneur and the mastermind behind leading nine-figure e-commerce companies that took over
                         the fitness industry in the last years, supported by a team of over 100 employees.</p>
-                    <p className="font-inter font-light text-lg max-w-[600px] mt-5 text-whitisch">He experienced the
+                    <p className="font-inter font-light text-lg max-w-[470px] mt-5 text-whitisch">He experienced the
                         struggles of payment processing and banking first hand when scaling in international markets
                         like the US, Europe and Asia.</p>
-                    <p className="font-inter font-light text-lg max-w-[600px] my-5 text-whitisch">A recent article on
+                    <p className="font-inter font-light text-lg max-w-[470px] my-5 text-whitisch">A recent article on
                         Forbes describes how he got into payment processing as well as his vision to build his own bank
                         and fintech unicorn, that focuses on righteous values and principles which uplift society and
                         inspires millions worldwide.</p>
@@ -32,9 +32,15 @@ export default function Section12(){
                         <span className="font-bold text-white">@Samuel Aziz Boubaous</span> — Founder of Private
                         Processing™</a>
                 </div>
-                <div className="relative max-lg:hidden">
+                <div className="relative max-lg:hidden -translate-y-10">
                     <Image src={"/img/img_10.png"} alt={"Aziz sitting into the cat"} width={542} height={596}/>
-                    <a target="_blank" href="https://www.youtube.com/@samuelazizbusiness" className="absolute bottom-0 p-5 text-lg max-w-[400px] text-whitisch"><span
+                    <div className="absolute h-[286px] w-full bottom-0"
+                         style={{
+                             background: "linear-gradient(179.8deg, rgba(0, 0, 0, 0) 0.17%, #000000 88.56%)",
+                         }}
+                    />
+                    <a target="_blank" href="https://www.youtube.com/@samuelazizbusiness"
+                       className="absolute bottom-0 p-5 text-lg max-w-[400px] text-whitisch"><span
                         className="font-bold text-white">@Samuel Aziz Boubaous</span> — Founder of Private Processing™
                     </a>
                 </div>
