@@ -9,7 +9,7 @@ export default function Section1() {
                         <Image src={"/img/img.png"} alt={"Aziz reading a newspaper"} width={574} height={603}/>
                     </div>
                     <div className="max-w-[700px]">
-                        <h1 className="capitalize"><span
+                        <h1 className="capitalize !text-[38px]"><span
                             className="text-gold capitalize font-bold">private processing™</span> <br/>
                             The first class experience of payment processing
                         </h1>

@@ -39,11 +39,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                         <div className="embla__slide" key={index}>
                             <div className={`embla__slide__number relative`}>
                                 <Image src={`/img/cards/${card.image}`} alt={"Card image"} width={320} height={400} className="w-full h-suto" />
-                                <div className="absolute lg:top-5 top-10 lg:left-17 left-8">
+                                <div className="absolute lg:top-5 top-10 lg:left-7 left-8">
                                     <p className="font-inter font-medium lg:text-[22px] text-[20px]">{card.title}</p>
                                 </div>
                                 <div className="absolute -bottom-1 card-layer h-[320px] w-full"/>
-                                <div className="absolute lg:bottom-0 lg:left-17 bottom-5 pb-5 left-5 text-nowrap">
+                                <div className="absolute lg:bottom-0 lg:left-7 bottom-5 pb-5 left-5 text-nowrap">
                                     <p className="font-inter font-normal text-[12px] capitalize text-[#ADADAD] border-white/12 border rounded-full py-2 px-4 w-fit">monthly
                                         revenue</p>
                                     <p className="font-inter font-medium text-[40px] text-gold ">{card.number}</p>

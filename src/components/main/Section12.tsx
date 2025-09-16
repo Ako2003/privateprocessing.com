@@ -10,8 +10,13 @@ export default function Section12(){
                         <span className="text-gold capitalize font-semibold">The Fouder</span><br/>
                         Of Private Processing™
                     </h2>
-                    <div className="relative lg:hidden mt-5">
+                    <div className="relative lg:hidden my-5">
                         <Image src={"/img/img_10.png"} alt={"Aziz sitting into the cat"} width={542} height={596}/>
+                        <div className="absolute h-[286px] w-full bottom-0"
+                             style={{
+                                 background: "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.81) 57.08%)",
+                             }}
+                        />
                     </div>
                     <p className="font-semibold text-lg max-w-[600px]">Samuel Aziz Boubaous is a German
                         entrepreneur and the mastermind behind leading nine-figure e-commerce companies that took over

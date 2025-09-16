@@ -3,10 +3,10 @@ import Image from "next/image";
 import CustomButton from "@/components/main/CustomButton";
 
 const awards = [
-    { image: "img.png", color: "Bronze", price: "1"},
-    { image: "img_1.png", color: "Gold", price: "10"},
-    { image: "img_2.png", color: "Platinum", price: "100"},
-    { image: "img_3.png", color: "Black", price: "500"},
+    { image: "bronze.png", color: "Bronze", price: "1"},
+    { image: "gold.png", color: "Gold", price: "10"},
+    { image: "platinum.png", color: "Platinum", price: "100"},
+    { image: "black.png", color: "Black", price: "500"},
 ]
 
 
