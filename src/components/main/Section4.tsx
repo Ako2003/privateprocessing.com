@@ -7,13 +7,17 @@ export default function Section4(){
         <section className="lg:mt-50 mt-35">
             <div className="mx-auto max-w-[1400px] w-11/12 overflow-hidden">
                 <div>
-                    <ArrowText title={"Private Processing™ Solution"} />
-                    <h3 className="text-left !text-[38px] capitalize">
-                        <span className="text-gold font-bold capitalise">Time for the best.</span>
-                        <br />
-                        Time for Private Processing™
+                    <ArrowText title={"Private Processing™ Solution"}/>
+                    <h3 className="text-left !text-[38px] capitalize leading-tight">
+                        <span className="text-gold font-bold capitalize">Time for the best.</span>
+                        <br/>
+                        Time for Private Processing
+                        <span className="align-super text-lg ml-0.5">™</span>
                     </h3>
-                    <p className="max-w-[950px]  mt-5 text-lg">If you never want to face payment processing issues again and process 1M–100M per month with stability  and peace of mind, the first step is to switch from Retail Processing to Private Processing™.</p>
+
+                    <p className="max-w-[950px]  mt-5 text-lg">If you never want to face payment processing issues again
+                        and process 1M–100M per month with stability and peace of mind, the first step is to switch from
+                        Retail Processing to Private Processing™.</p>
                 </div>
 
                 <div className="flex lg:flex-row flex-col-reverse items-center justify-between max-lg:mt-10">

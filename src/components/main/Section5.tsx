@@ -32,7 +32,7 @@ export default function Section5() {
                             <h2 className="!font-normal !text-[38px]">
                                 <span className="text-gold font-manrope font-bold">A New World Opens.</span>
                                 <br/>
-                                The World Of Private Processing™
+                                The World Of Private Processing<span className="align-super text-lg ml-0.5">™</span>
                             </h2>
                             <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>
                         </div>

@@ -8,7 +8,8 @@ export default function Section6() {
                 <div>
                     <ArrowText title={"shared values"} />
                     <h2 className="!text-[38px] max-w-[555px]">
-                        What Private Processing™ <span className="text-gold capitalize font-bold">Clients</span> have in common
+                        What Private Processing<span className="align-super text-lg ml-0.5">™</span> <span
+                        className="text-gold capitalize font-bold">Clients</span> have in common
                     </h2>
                     <p className="font-semibold text-lg max-w-[550px] mt-5">Private Processing™ clients are used to excellent service.</p>
                     <p className="font-inter font-light text-lg max-w-[550px] mt-5 text-whitisch">They value their time more than money and understand that they don’t need to be an expert in every field themselves.</p>
