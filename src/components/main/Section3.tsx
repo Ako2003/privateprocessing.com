@@ -28,7 +28,7 @@ export default function Section3() {
 
                 <div className="flex lg:flex-row flex-col gap-10 items-center justify-between w-full mt-5">
                     <div className="max-lg:w-full">
-                        <Image src={"/img/img_2.png"} alt={"Account Restricted Image"} width={582} height={592} />
+                        <Image src={"/img/img_2.png"} alt={"Account Restricted Image"} width={520} height={540} />
                     </div>
                     <div>
                         {points.map((item, index) => (

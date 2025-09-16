@@ -6,7 +6,7 @@ export default function Section1() {
             <div className="max-w-[1400px] mx-auto w-11/12">
                 <div className="flex lg:flex-row flex-col gap-10 items-center justify-between">
                     <div className="max-lg:hidden">
-                        <Image src={"/img/img.png"} alt={"Aziz reading a newspaper"} width={574} height={603}/>
+                        <Image src={"/img/img.png"} alt={"Aziz reading a newspaper"} width={520} height={540}/>
                     </div>
                     <div className="max-w-[700px]">
                         <h1 className="capitalize !text-[38px]"><span

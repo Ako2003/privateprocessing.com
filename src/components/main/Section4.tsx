@@ -52,7 +52,7 @@ export default function Section4(){
                     </div>
                     <div className="translate-x-5 max-lg:mt-5">
                         <Image src={"/img/img_3.png"} alt={"Private processing over other platforms"} width={808}
-                               height={760} className="lg:-translate-y-30 -translate-y-20 scale-150"/>
+                               height={760} className="lg:-translate-y-30 -translate-y-20 max-lg:scale-150"/>
                     </div>
                 </div>
             </div>

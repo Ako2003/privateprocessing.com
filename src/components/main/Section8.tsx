@@ -17,7 +17,7 @@ export default function Section8(){
             <div className="relative max-w-[1400px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"Requirements clients need to fulfill"}/>
-                    <h2>
+                    <h2 className="!text-[38px]">
                         Private Processing <span className="text-gold font-semibold">Client Tiers</span>
                     </h2>
                 </div>

@@ -94,9 +94,20 @@ export default function Footer() {
                     <p className="mt-5 text-[14px] text-white/60">© Private Processing. All Rights RESERVED</p>
                 </div>
                 <div className="basis-1/7 flex items-center justify-end gap-5 max-md:mb-10">
-                    <Image src={"/svg/social-media/whatsapp.svg"} alt={"Whatsapp Icon"} width={20} height={20} />
-                    <Image src={"/svg/social-media/instagram.svg"} alt={"Instagram Icon"} width={20} height={20} />
-                    <Image src={"/svg/social-media/youtube.svg"} alt={"Youtube Icon"} width={26} height={20} />
+                    <a
+                        href="https://wa.me/971528072627"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-inter font-medium text-base text-[#9194A1]"
+                        >
+                    <Image src={"/svg/social-media/whatsapp.svg"} alt={"Whatsapp Icon"} width={20} height={20}/>
+                    </a>
+                    <a href="https://www.instagram.com/samuel.aziz.boubaous?igsh=dnFvY2E2N3YyZmty">
+                        <Image src={"/svg/social-media/instagram.svg"} alt={"Instagram Icon"} width={20} height={20}/>
+                    </a>
+                    <a href="https://www.youtube.com/@samuelazizbusiness">
+                        <Image src={"/svg/social-media/youtube.svg"} alt={"Youtube Icon"} width={26} height={20} />
+                    </a>
                 </div>
             </div>
         </footer>
