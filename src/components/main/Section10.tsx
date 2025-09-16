@@ -13,7 +13,7 @@ const awards = [
 export default function Section4(){
     return(
         <section className="lg:mt-50 mt-35">
-            <div className="mx-auto max-w-[1400px] w-11/12">
+            <div className="mx-auto max-w-[1200px] w-11/12">
                 <div>
                     <ArrowText title={"NEW: Private Processing™ Awards"} className="justify-center" />
                     <h3 className="text-center font-normal !text-[38px] capitalize">
@@ -21,7 +21,7 @@ export default function Section4(){
                     </h3>
                 </div>
 
-                <div className="flex flex-wrap items-center lg:justify-between justify-center mt-10 gap-12">
+                <div className="flex flex-wrap items-center lg:justify-between justify-center mt-10 gap-5">
                     {awards.map((award, index) => (
                         <div key={index}>
                             <Image src={`/img/awards/` + award.image} alt={award.image} width={277} height={387}/>

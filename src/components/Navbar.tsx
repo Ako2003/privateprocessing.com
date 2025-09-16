@@ -18,7 +18,7 @@ export default function Navbar(){
     return(
         <nav className="relative">
             <div className="fixed w-full py-4 bg-black/60 backdrop-blur-[4px]  z-100">
-                <div className="flex items-center justify-between max-w-[1400px] mx-auto w-11/12">
+                <div className="flex items-center justify-between max-w-[1200px] mx-auto w-11/12">
                     <div className="flex gap-x-30 items-center">
                         <div>
                             <Link href="/public" className="max-lg:hidden">

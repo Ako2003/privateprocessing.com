@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Section9(){
     return (
         <section className="lg:mt-50 mt-35">
-            <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12">
+            <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div>
                     <ArrowText title={"mission"}/>
                     <h2 className="max-w-[600px] !text-[38px] mb-5">

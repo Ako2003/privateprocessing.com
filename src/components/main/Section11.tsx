@@ -5,7 +5,7 @@ import CustomButton from "@/components/main/CustomButton";
 export default function Section11(){
     return (
         <section className="lg:mt-50 mt-25">
-            <div className="flex lg:flex-row flex-col-reverse gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1400px] w-11/12">
+            <div className="flex lg:flex-row flex-col-reverse gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div className="max-lg:hidden">
                     <Image src={"/img/img_9.png"} alt={"Aziz sitting into the cat"} width={520} height={540}/>
                 </div>

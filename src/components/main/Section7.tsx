@@ -13,7 +13,7 @@ const points = [
 export default function Section7(){
     return(
         <section className="lg:mt-50 mt-35">
-            <div className="max-w-[1400px] mx-auto w-11/12">
+            <div className="max-w-[1200px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"We make business human"}/>
                     <h2 className="!text-[38px]">

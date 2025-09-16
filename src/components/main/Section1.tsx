@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function Section1() {
     return (
         <section className="mt-25 relative z-10">
-            <div className="max-w-[1400px] mx-auto w-11/12">
+            <div className="max-w-[1200px] mx-auto w-11/12">
                 <div className="flex lg:flex-row flex-col gap-10 items-center justify-between">
                     <div className="max-lg:hidden">
                         <Image src={"/img/img.png"} alt={"Aziz reading a newspaper"} width={520} height={540}/>
                     </div>
-                    <div className="max-w-[700px]">
+                    <div className="max-w-[600px]">
                         <h1 className="capitalize !text-[38px]"><span
                             className="text-gold capitalize font-bold">private processing™</span> <br/>
                             The first class experience of payment processing

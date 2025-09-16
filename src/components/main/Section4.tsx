@@ -5,7 +5,7 @@ import CustomButton from "@/components/main/CustomButton";
 export default function Section4(){
     return(
         <section className="lg:mt-50 mt-35">
-            <div className="mx-auto max-w-[1400px] w-11/12 overflow-hidden">
+            <div className="mx-auto max-w-[1200px] w-11/12 overflow-hidden">
                 <div>
                     <ArrowText title={"Private Processing™ Solution"} className="lg:justify-center"/>
                     <h3 className="lg:text-center !text-[38px] capitalize leading-tight">

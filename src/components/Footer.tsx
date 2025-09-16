@@ -28,7 +28,7 @@ const staggerContainer = {
 export default function Footer() {
     return (
         <footer
-            className="mx-auto max-w-[1400px] text-white pb-20 px-4 overflow-hidden mt-50"
+            className="mx-auto max-w-[1200px] text-white pb-20 px-4 overflow-hidden mt-50"
         >
 
             <div className="h-[1px] w-full mb-10" style={{

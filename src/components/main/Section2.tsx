@@ -37,7 +37,7 @@ export default function Section1() {
 
 
                 <div
-                    className="relative z-0 flex flex-col justify-between h-full  max-w-[1400px] mx-auto w-11/12 py-15 max-lg:hidden">
+                    className="relative z-0 flex flex-col justify-between h-full  max-w-[1200px] mx-auto w-11/12 py-15 max-lg:hidden">
                     <div className="flex items-center gap-x-2">
                         <div>
                             <Image src={"svg/arrows/white-arrow-down.svg"} alt={"White Arrow Down"} width={40}

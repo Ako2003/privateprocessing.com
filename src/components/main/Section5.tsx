@@ -25,9 +25,9 @@ export default function Section5() {
                 />
 
                 <div className="bg-black/60 absolute inset-0 lg:hidden"/>
-                <div className="relative z-0 flex max-lg:flex-col max-lg:justify-between h-full  max-w-[1400px] lg:mx-auto w-11/12 py-15">
+                <div className="relative z-0 flex max-lg:flex-col max-lg:justify-between h-full  max-w-[1200px] lg:mx-auto w-11/12 py-15">
                     <div className="basis-4/5 max-lg:hidden"/>
-                    <div className="flex flex-col items-start justify-center h-full max-w-[1400px] mx-auto w-11/12">
+                    <div className="flex flex-col items-start justify-center h-full max-w-[1200px] mx-auto w-11/12">
                         <div>
                             <h2 className="!font-normal !text-[38px]">
                                 <span className="text-gold font-manrope font-bold">A New World Opens.</span>
