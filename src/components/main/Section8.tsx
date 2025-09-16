@@ -17,12 +17,12 @@ export default function Section8(){
             <div className="relative max-w-[1200px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"Requirements clients need to fulfill"}/>
-                    <h2 className="!text-[38px]">
+                    <h2 className="lg:!text-[38px] text-balance">
                         Private Processing <span className="text-gold font-semibold">Client Tiers</span>
                     </h2>
                 </div>
 
-                <div className="mt-12.5">
+                <div className="lg:mt-12.5 mt-5">
                     <EmblaCarousel slides={cards} />
                 </div>
                 <CustomButton className="max-lg:hidden mt-5"/>

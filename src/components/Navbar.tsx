@@ -38,7 +38,7 @@ export default function Navbar(){
                         </div>
                     </div>
 
-                    <CustomButton />
+                    <CustomButton className="max-lg:hidden"/>
 
                     <div className="xl:hidden transition-all duration-500">
                         {isOpen ? (

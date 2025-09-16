@@ -8,7 +8,7 @@ export default function Section4(){
             <div className="mx-auto max-w-[1200px] w-11/12 overflow-hidden">
                 <div>
                     <ArrowText title={"Private Processing™ Solution"} className="lg:justify-center"/>
-                    <h3 className="lg:text-center !text-[38px] capitalize leading-tight">
+                    <h3 className="lg:text-center lg:!text-[38px] capitalize leading-tight">
                         <span className="text-gold font-bold capitalize">Time for the best.</span>
                         <br/>
                         Time for Private Processing

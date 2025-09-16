@@ -16,7 +16,7 @@ export default function Section7(){
             <div className="max-w-[1200px] mx-auto w-11/12">
                 <div>
                     <ArrowText title={"We make business human"}/>
-                    <h2 className="!text-[38px]">
+                    <h2 className="lg:!text-[38px]">
                         <span className="text-gold font-semibold">Values</span> we share with our clients
                     </h2>
                 </div>

@@ -16,10 +16,10 @@ export default function Section3() {
     return(
         <section className="lg:mt-50 mt-35">
             <div className="flex flex-col items-center lg:justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
-                <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end gap-5 mb-10">
+                <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end gap-5 ;g:mb-10">
                     <div>
                         <ArrowText title={"The problem no one seems to solve"} />
-                        <h2 className="!text-[38px]">Why E-Commerce <br/> <span className="text-gold font-bold">Whales use Private Processing™</span></h2>
+                        <h2 className="lg:!text-[38px]">Why E-Commerce <br/> <span className="text-gold font-bold">Whales use Private Processing™</span></h2>
                     </div>
                     <div className="max-lg:hidden">
                         <CustomButton />
@@ -35,7 +35,7 @@ export default function Section3() {
                             <div key={index} className="space-y-5">
                                 <div className="flex items-center gap-x-5">
                                     <Image src="/svg/red-cross.svg" alt={"Red Cross"} width={22} height={22}/>
-                                    <p className="font-bold text-[20px] max-w-[600px] tracking-wider capitalize">{item}</p>
+                                    <p className="font-bold lg:text-[20px] text-[18px] max-w-[600px] tracking-wider capitalize">{item}</p>
                                 </div>
                                 {index !== points.length - 1 && (
                                     <hr className="border-t border-[#2B2B2B] w-full mb-5"/>

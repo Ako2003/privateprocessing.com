@@ -7,10 +7,10 @@ export default function Section9(){
             <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div>
                     <ArrowText title={"mission"}/>
-                    <h2 className="max-w-[600px] !text-[38px] mb-5">
+                    <h2 className="max-w-[600px] lg:!text-[38px] mb-5">
                         <span className="text-gold capitalize font-semibold">We are not only</span> Building a Payment-Processing Company
                     </h2>
-                    <div className="lg:hidden relative">
+                    <div className="lg:hidden relative mb-10">
                         <Image src={"/img/img_7.png"} alt={"Aziz sitting into the cat"} width={520} height={540}/>
                         <div className="absolute h-[286px] w-full bottom-0"
                             style={{

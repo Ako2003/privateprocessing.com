@@ -38,7 +38,7 @@ export default function Footer() {
                 className="flex flex-col md:flex-row justify-between items-start space-y-10 md:space-y-0 md:space-x-20">
                 {/* Left Side */}
                 <div
-                    className="max-w-md"
+                    className="max-w-md flex justify-between items-center w-full"
                 >
                     <Image
                         src="/svg/logo.svg"
@@ -46,6 +46,24 @@ export default function Footer() {
                         width={163.33}
                         height={48}
                     />
+
+                    {/*<div className="flex gap-5 lg:hidden">*/}
+                    {/*    <a*/}
+                    {/*        href="https://wa.me/971528072627"*/}
+                    {/*        target="_blank"*/}
+                    {/*        rel="noopener noreferrer"*/}
+                    {/*        className="font-inter font-medium text-base text-[#9194A1]"*/}
+                    {/*    >*/}
+                    {/*        <Image src={"/svg/social-media/whatsapp.svg"} alt={"Whatsapp Icon"} width={25} height={25}/>*/}
+                    {/*    </a>*/}
+                    {/*    <a href="https://www.instagram.com/samuel.aziz.boubaous?igsh=dnFvY2E2N3YyZmty">*/}
+                    {/*        <Image src={"/svg/social-media/instagram.svg"} alt={"Instagram Icon"} width={25}*/}
+                    {/*               height={25}/>*/}
+                    {/*    </a>*/}
+                    {/*    <a href="https://www.youtube.com/@samuelazizbusiness">*/}
+                    {/*        <Image src={"/svg/social-media/youtube.svg"} alt={"Youtube Icon"} width={31} height={25}/>*/}
+                    {/*    </a>*/}
+                    {/*</div>*/}
                 </div>
 
                 <div>
@@ -93,7 +111,7 @@ export default function Footer() {
                     <p className="mt-2 text-[12px] text-white/60">At Private Processing, we provide exclusive and secure payment solutions designed to protect e-commerce entrepreneurs from blocked accounts and frozen funds. Our mission is to deliver long-term stability and confidence through a private-banking approach to global payment processing.</p>
                     <p className="mt-5 text-[14px] text-white/60">© Private Processing. All Rights RESERVED</p>
                 </div>
-                <div className="basis-1/7 flex items-center justify-end gap-5 max-md:mb-10">
+                <div className="basis-1/7 flex items-center justify-end gap-5 max-md:mb-10 max-lg:hidden">
                     <a
                         href="https://wa.me/971528072627"
                         target="_blank"
@@ -107,6 +125,23 @@ export default function Footer() {
                     </a>
                     <a href="https://www.youtube.com/@samuelazizbusiness">
                         <Image src={"/svg/social-media/youtube.svg"} alt={"Youtube Icon"} width={26} height={20} />
+                    </a>
+                </div>
+                <div className="basis-1/7 flex items-center justify-end gap-7 max-md:mb-10 lg:hidden">
+                    <a
+                        href="https://wa.me/971528072627"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-inter font-medium text-base text-[#9194A1]"
+                    >
+                        <Image src={"/svg/social-media/whatsapp.svg"} alt={"Whatsapp Icon"} width={25} height={25}/>
+                    </a>
+                    <a href="https://www.instagram.com/samuel.aziz.boubaous?igsh=dnFvY2E2N3YyZmty">
+                        <Image src={"/svg/social-media/instagram.svg"} alt={"Instagram Icon"} width={25}
+                               height={25}/>
+                    </a>
+                    <a href="https://www.youtube.com/@samuelazizbusiness">
+                        <Image src={"/svg/social-media/youtube.svg"} alt={"Youtube Icon"} width={31} height={25}/>
                     </a>
                 </div>
             </div>

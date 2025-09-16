@@ -29,9 +29,9 @@ export default function Section5() {
                     <div className="basis-4/5 max-lg:hidden"/>
                     <div className="flex flex-col items-start justify-center h-full max-w-[1200px] mx-auto w-11/12">
                         <div>
-                            <h2 className="!font-normal !text-[38px]">
+                            <h2 className="!font-normal lg:!text-[38px]">
                                 <span className="text-gold font-manrope font-bold">A New World Opens.</span>
-                                <br/>
+                                <br />
                                 The World Of Private Processing<span className="align-super text-lg ml-0.5">™</span>
                             </h2>
                             <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>

@@ -16,7 +16,7 @@ export default function Section4(){
             <div className="mx-auto max-w-[1200px] w-11/12">
                 <div>
                     <ArrowText title={"NEW: Private Processing™ Awards"} className="justify-center" />
-                    <h3 className="text-center font-normal !text-[38px] capitalize">
+                    <h3 className="text-center font-normal lg:!text-[38px] capitalize max-lg:text-balance">
                         <span className="text-gold font-semibold capitalize">We Celebrate</span> Success Together
                     </h3>
                 </div>

@@ -7,7 +7,7 @@ export default function Section6() {
             <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div>
                     <ArrowText title={"shared values"} />
-                    <h2 className="!text-[38px] max-w-[555px]">
+                    <h2 className="lg:!text-[38px] max-w-[555px]">
                         What Private Processing<span className="align-super text-lg ml-0.5">™</span> <span
                         className="text-gold capitalize font-bold">Clients</span> have in common
                     </h2>

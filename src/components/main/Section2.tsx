@@ -6,7 +6,7 @@ export default function Section1() {
     return (
         <section className="lg:mt-50 mt-25">
             <div className="relative flex items-start gap-x-2 mb-10 lg:hidden mx-auto w-11/12 ">
-                <div className="mt-2">
+                <div className="mt-2 max-lg:hidden">
                     <Image src={"svg/arrows/white-arrow-down.svg"} alt={"White Arrow Down"} width={40}
                            height={40}/>
                 </div>
@@ -61,7 +61,7 @@ export default function Section1() {
                 </div>
 
             </div>
-            <div className="mt-10 lg:hidden mx-auto w-11/12">
+            <div className="mt-10 lg:hidden mx-auto w-11/12 -translate-y-20">
                 <ArrowText title={"private processing™"}/>
                 <h3 className="max-w-[440px] mb-6 capitalize">Experience the private banking of payment processing</h3>
                 <CustomButton/>

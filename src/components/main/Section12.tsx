@@ -6,7 +6,7 @@ export default function Section12(){
         <section className="lg:my-50 mt-25">
             <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div>
-                    <h2 className="max-w-[600px] !text-[38px]">
+                    <h2 className="max-w-[600px] lg:!text-[38px]">
                         <span className="text-gold capitalize font-semibold">The Founder</span><br className="max-lg:hidden"/> Of Private
                         Processing<span className="align-super text-lg ml-0.5">™</span>
                     </h2>

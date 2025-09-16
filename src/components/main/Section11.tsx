@@ -11,7 +11,7 @@ export default function Section11(){
                 </div>
                 <div>
                     <ArrowText title={"Private Processing Connections™"}/>
-                    <h2 className="max-w-[470px] !text-[38px] mb-5">
+                    <h2 className="max-w-[470px] lg:!text-[38px] mb-5">
                         <span
                             className="text-gold capitalize font-semibold">Geneva. Monaco. Dubai. Istanbul. Singapore.</span>
                     </h2>
