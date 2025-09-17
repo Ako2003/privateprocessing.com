@@ -5,7 +5,7 @@ import ArrowText from "@/components/main/ArrowText";
 export default function Section1() {
     return (
         <section className="lg:mt-50 mt-25">
-            <div className="relative flex items-start gap-x-2 mb-10 lg:hidden mx-auto w-11/12 ">
+            <div className="relative flex items-start gap-x-2 mb-10 lg:hidden mx-auto w-11/12">
                 <div className="mt-2 max-lg:hidden">
                     <Image src={"svg/arrows/white-arrow-down.svg"} alt={"White Arrow Down"} width={40}
                            height={40}/>
@@ -19,8 +19,7 @@ export default function Section1() {
                         business alive</p>
                 </div>
             </div>
-            <div className="relative w-full bg-[url('/img/img_1.png')] lg:h-[600px] h-[400px] bg-cover bg-no-repeat bg-[position:75%_25%]
- ">
+            <div className="relative w-full bg-[url('/img/img_1.png')] lg:h-[600px] h-[400px] bg-cover bg-no-repeat bg-[position:75%_25%] max-w-[1440px] mx-auto">
                 <div
                     className="max-lg:hidden absolute inset-0 -translate-x-[35%]"
                     style={{
@@ -28,7 +27,14 @@ export default function Section1() {
                             "linear-gradient(270.04deg, rgba(0, 0, 0, 0) 3.05%, #000000 34.03%)",
                     }}
                 />
+                <div
+                    className="max-lg:hidden absolute right-0 translate-x-[35%] w-full h-[660px]"
+                    style={{
+                        background: "linear-gradient(180.68deg, rgba(0, 0, 0, 0) 0.59%, #000000 88.24%)",
+                        transform: "matrix(0, 1, 1, 0, 0, 0)",
 
+                    }}
+                />
 
                 <div className="absolute inset-0 w-full h-full z-0" style={{
                     background: "linear-gradient(189.39deg, rgba(0, 0, 0, 0) 45.37%, #000000 90.56%)",

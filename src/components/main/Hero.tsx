@@ -9,15 +9,15 @@ export default function Hero() {
     return (
         <section className="relative z-10 overflow-hidden">
             <div className="absolute translate-y-20 lg:-translate-y-30 2xl:-translate-y-50 max-lg:hidden">
-                <Image src={"/svg/backgrounds/bg.svg"} alt={"Background Image"} width={2272} height={1419}/>
+                <Image src={"/svg/backgrounds/bg.svg"} alt={"Background Image"} width={2272} height={1419} className="opacity-50"/>
             </div>
             <div className="absolute -z-1 lg:-translate-y-30 translate-y-10 right-0 h-[calc(100vh+200px)] w-full">
-                <Image src={"/svg/backgrounds/bg1.svg"} alt={"Background Image"} fill className="max-lg:scale-170"/>
+                <Image src={"/svg/backgrounds/bg1.svg"} alt={"Background Image"} fill className="max-lg:scale-170 opacity-50"/>
                 <div className="absolute max-lg:bottom-30 bottom-0 h-[709px] w-full" style={{
                     background: "linear-gradient(180deg, rgba(10, 10, 10, 0) 11.27%, rgba(10, 10, 10, 0.9) 81.87%, rgba(0, 0, 0, 0.95) 95.56%)",
                 }}/>
             </div>
-            <div className="absolute -z-30 lg:-translate-y-30 translate-y-30 right-0">
+            <div className="absolute -z-30 lg:-translate-y-60 translate-y-30 -right-15">
                 <Image src={"/svg/backgrounds/golden-circle.svg"} alt={"Golden Circle"} width={606} height={583}/>
             </div>
             <div className="absolute -z-10 -bottom-60 left-1/2">

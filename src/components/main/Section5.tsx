@@ -12,10 +12,18 @@ const points = [
 
 export default function Section5() {
     return (
-        <section className=" overflow-hidden">
-            <div className="relative w-full flex lg:flex-row flex-col items-center h-[600px]">
-                <div className="basis-1/2 w-full max-lg:translate-y-30">
-                    <Image src={"/img/img_4.png"} alt={"Vincent Pecho"} width={393} height={523} className="object-cover object-[25%_25%] w-full h-[600px]" />
+        <section className="mt-35 overflow-hidden">
+            <div className="relative w-full flex lg:flex-row flex-col items-center h-[600px] max-w-[1440px] mx-auto">
+                <div className="relative basis-1/2 w-full max-lg:translate-y-30">
+                    <Image src={"/img/img_4.png"} alt={"Vincent Pecho"} width={393} height={523}
+                           className="object-cover object-[25%_25%] w-full h-[600px]"/>
+                    <div
+                        className="max-lg:hidden absolute left-0 h-[600px] w-full top-0 -translate-x-[30%]"
+                        style={{
+                            background: "linear-gradient(180.68deg, rgba(0, 0, 0, 0) 0.59%, #000000 88.24%)",
+                            transform: "matrix(0, -1, -1, 0, 0, 0)",
+                        }}
+                    />
                 </div>
                 <div>
                     <div
@@ -26,7 +34,6 @@ export default function Section5() {
                             transform: "rotate(180deg)",
                         }}
                     />
-
                     <div className="bg-black/60 absolute inset-0 lg:hidden"/>
                     <div className="relative z-0 h-full max-w-[1200px] lg:mx-auto w-11/12 py-15">
                         <div className="flex flex-col items-start justify-center h-full max-w-[1200px] mx-auto w-11/12">
