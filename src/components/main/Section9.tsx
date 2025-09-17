@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Section9(){
     return (
-        <section className="lg:mt-50 mt-35">
+        <section className="lg:pt-30 lg:mt-20 pt-35" id="mission">
             <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div>
                     <ArrowText title={"mission"}/>

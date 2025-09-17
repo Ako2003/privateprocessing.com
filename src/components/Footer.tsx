@@ -70,16 +70,16 @@ export default function Footer() {
                     <p className="font-inter font-medium text-base">Navigation</p>
                     <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-3">
                         <li>
-                            <a href="#">Private Processing Solution </a>
+                            <a href="#private-processing-solution">Private Processing Solution </a>
                         </li>
                         <li>
-                            <a href="#">Mission</a>
+                            <a href="#shared-values">Shared Values</a>
                         </li>
+                    <li>
+                        <a href="#mission">Mission</a>
+                    </li>
                         <li>
-                            <a href="#">Shared Values</a>
-                        </li>
-                        <li>
-                            <a href="#">Awards</a>
+                            <a href="#awards">Awards</a>
                         </li>
                     </ul>
                 </div>

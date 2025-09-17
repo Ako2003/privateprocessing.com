@@ -14,9 +14,9 @@ export default function CustomButton({ className }: CustomButtonProps) {
             <div
                 className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 blur-2xl"
                 style={{
-                    background:
-                        "linear-gradient(180deg, rgba(205, 137, 57, 0) 43.67%, #D0AD6F 100%)",
+                    background: "linear-gradient(180deg, rgba(205, 137, 57, 0) 43.67%, #D0AD6F 100%)",
                     mixBlendMode: "plus-lighter",
+                    filter: "blur(32px)",
                 }}
             />
 

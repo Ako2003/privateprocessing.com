@@ -13,43 +13,46 @@ const points = [
 export default function Section5() {
     return (
         <section className="mt-25 overflow-x-hidden">
-            <div
-                className="relative w-full lg:bg-[url('/img/img_4.png')] lg:h-[600px] bg-cover bg-no-repeat lg:bg-[position:0%_25%]">
-                <div
-                    className="max-lg:hidden absolute inset-0 translate-x-[10%]"
-                    style={{
-                        background:
-                            "linear-gradient(270.04deg, rgba(0, 0, 0, 0) 3.05%, #000000 34.03%)",
-                        transform: "rotate(180deg)",
-                    }}
-                />
+            <div className="relative w-full flex">
+                <div className="basis-1/2 w-full">
+                    <Image src={"/img/img_4.png"} alt={"Vincent Pecho"} width={393} height={523} className="object-cover object-[25%_15%] w-full h-[660px]" />
+                </div>
+                <div>
+                    <div
+                        className="max-lg:hidden absolute inset-0 translate-x-[10%]"
+                        style={{
+                            background:
+                                "linear-gradient(270.04deg, rgba(0, 0, 0, 0) 3.05%, #000000 34.03%)",
+                            transform: "rotate(180deg)",
+                        }}
+                    />
 
-                <div className="bg-black/60 absolute inset-0 lg:hidden"/>
-                <div className="relative z-0 flex max-lg:flex-col max-lg:justify-between h-full  max-w-[1200px] lg:mx-auto w-11/12 py-15">
-                    <div className="basis-4/5 max-lg:hidden"/>
-                    <div className="flex flex-col items-start justify-center h-full max-w-[1200px] mx-auto w-11/12">
-                        <div>
-                            <h2 className="!font-normal lg:!text-[38px]">
-                                <span className="text-gold font-manrope font-bold">A New World Opens.</span>
-                                <br />
-                                The World Of Private Processing<span className="align-super text-lg ml-0.5">™</span>
-                            </h2>
-                            <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>
-                        </div>
-                        <hr className="border-t border-[#2b2b2b] w-full my-10 max-w-[677px]"/>
-                        <div className="mb-5">
-                            {points.map((point, i) => (
-                                <div key={i} className="flex items-center gap-x-3 mb-3 text-whitisch">
-                                    <Image src={"/svg/golden-tick.svg"} alt={"Golden Tick Icon"} width={15.19}
-                                           height={10.76}/>
-                                    <p className="font-intel font medium text-lg capitalize">{point}</p>
-                                </div>
+                    <div className="bg-black/60 absolute inset-0 lg:hidden"/>
+                    <div className="relative z-0 h-full max-w-[1200px] lg:mx-auto w-11/12 py-15">
+                        <div className="flex flex-col items-start justify-center h-full max-w-[1200px] mx-auto w-11/12">
+                            <div>
+                                <h2 className="!font-normal lg:!text-[38px]">
+                                    <span className="text-gold font-manrope font-bold">A New World Opens.</span>
+                                    <br />
+                                    The World Of Private Processing<span className="align-super text-lg ml-0.5">™</span>
+                                </h2>
+                                <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>
+                            </div>
+                            <hr className="border-t border-[#2b2b2b] w-full my-10 max-w-[677px]"/>
+                            <div className="mb-5">
+                                {points.map((point, i) => (
+                                    <div key={i} className="flex items-center gap-x-3 mb-3 text-whitisch">
+                                        <Image src={"/svg/golden-tick.svg"} alt={"Golden Tick Icon"} width={15.19}
+                                               height={10.76}/>
+                                        <p className="font-intel font medium text-lg capitalize">{point}</p>
+                                    </div>
 
-                            ))}
+                                ))}
+                            </div>
+                            <CustomButton className="mt-3"/>
                         </div>
-                        <CustomButton className="mt-3"/>
+
                     </div>
-
                 </div>
             </div>
         </section>

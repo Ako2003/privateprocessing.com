@@ -3,7 +3,7 @@ import ArrowText from "@/components/main/ArrowText";
 
 export default function Section6() {
     return(
-        <section className="lg:mt-50 mt-25">
+        <section className="lg:pt-30 lg:mt-20 pt-25" id="shared-values">
             <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div>
                     <ArrowText title={"shared values"} />

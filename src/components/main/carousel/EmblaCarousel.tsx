@@ -16,6 +16,8 @@ type PropType = {
         title: string
         image: string,
         number: string,
+        color: string,
+        circleColor: string,
     }[],
     options?: EmblaOptionsType
 }
@@ -41,6 +43,15 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                                 <Image src={`/img/cards/${card.image}`} alt={"Card image"} width={320} height={400} className="w-full h-suto" />
                                 <div className="absolute lg:top-5 top-10 lg:left-7 left-5">
                                     <p className="font-inter font-medium lg:text-[22px] text-[20px]">{card.title}</p>
+                                    <div className="relative">
+                                        <div className={`z-0 absolute w-[31px] h-[31px] rounded-full`} style={{
+                                            backgroundColor: card.circleColor,
+                                        }}/>
+                                        <div className="relative z-1 ml-4 translate-y-1.5">
+                                            <p className={`font-inter font-light italic text-[8px] leading-2 ${index === 2 ? "text-white" : "text-[#BFBEBE]"}`}>Private Processing</p>
+                                            <p className="font-inter font-bold italic text-[8px]">{card.color} Member</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="absolute -bottom-1 card-layer h-[320px] w-full"/>
                                 <div className="absolute lg:bottom-0 lg:left-7 bottom-5 pb-5 left-5 text-nowrap">

@@ -4,10 +4,10 @@ import "@/app/embla.css"
 import CustomButton from "@/components/main/CustomButton";
 
 const cards = [
-    {title:"Starter Processing ", image: "img.png", number: "250K-500K"},
-    {title:"Advanced Processing ", image: "img_1.png", number: "500K-1M"},
-    {title:"Expert Processing ", image: "img_2.png", number: "1M-10M"},
-    {title:"Private Processing", image: "img_3.png", number: "10M-100M"},
+    {title:"Starter Processing ", image: "img.png", number: "250K-500K", color: "GREEN", circleColor: "#0C220C"},
+    {title:"Advanced Processing ", image: "img_1.png", number: "500K-1M", color: "GOLD", circleColor: "#7C601A"},
+    {title:"Expert Processing ", image: "img_2.png", number: "1M-10M", color: "PLATINUM", circleColor: "#B8B7B7"},
+    {title:"Elite Processing", image: "img_3.png", number: "10M-100M", color: "BLACK", circleColor: "#000000"},
 ]
 
 

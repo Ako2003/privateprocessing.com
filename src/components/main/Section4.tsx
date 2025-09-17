@@ -4,7 +4,7 @@ import CustomButton from "@/components/main/CustomButton";
 
 export default function Section4(){
     return(
-        <section className="lg:mt-50 mt-35">
+        <section className="lg:pt-30 lg:mt-20 pt-35" id="private-processing-solution">
             <div className="mx-auto max-w-[1200px] w-11/12 overflow-hidden">
                 <div>
                     <ArrowText title={"Private Processing™ Solution"} className="lg:justify-center"/>

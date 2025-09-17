@@ -8,8 +8,8 @@ import { useState } from "react";
 
 const menu = [
     {title: "Private processing solution", url: "#private-processing-solution"},
-    {title: "Mission", url: "#mission"},
     {title: "Shared values", url: "#shared-values"},
+    {title: "Mission", url: "#mission"},
     {title: "Awards", url: "#awards"},
 ]
 
@@ -52,7 +52,7 @@ export default function Navbar(){
             </div>
             {/* Mobile Menu*/}
             {isOpen && (
-                <div className="fixed top-19 xl:hidden h-[calc(100vh)] w-full bg-black/80 backdrop-blur-sm z-100">
+                <div className="fixed translate-y-[9.5px] top-19 xl:hidden h-[calc(100vh)] w-full bg-black/60 backdrop-blur-[4px] z-100">
                     <div className="flex flex-col justify-center h-[calc(100svh)]">
                         {menu.map((item, index) => (
                             <div key={index} className="text-center" onClick={() => setIsOpen(false)}>
@@ -65,3 +65,4 @@ export default function Navbar(){
         </nav>
     )
 }
+
