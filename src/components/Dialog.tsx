@@ -118,16 +118,17 @@ export function Dialog({
                 ref={panelRef}
                 tabIndex={-1}
                 className={cn(
-                    "relative mx-4 w-full rounded-xl border border-slate-700 bg-slate-900 shadow-2xl outline-none",
+                    "relative mx-4 w-full rounded-xl border border-[#212121] shadow-2xl outline-none",
                     "focus-visible:ring-2 focus-visible:ring-blue-500",
                     variant === "modal" && sizeStyles(size),
                     variant === "drawer" && drawerStyles(size),
-                    " overflow-hidden flex flex-col", // <— added
+                    "overflow-hidden flex flex-col",
                     contentClassName
                 )}
             >
 
-                {/* Header */}
+
+            {/* Header */}
                 {(title) && (
                     <div className="flex items-start justify-between gap-4 p-5">
                         <div className="min-w-0">
