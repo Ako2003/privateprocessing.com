@@ -17,7 +17,7 @@ export default function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
     return(
         <nav className="relative">
-            <div className="fixed w-full py-4 bg-black/60 backdrop-blur-[4px]  z-100">
+            <div className="fixed w-full py-4 bg-black/60 lg:backdrop-blur-[4px] backdrop-blur-[8px] z-100">
                 <div className="flex items-center justify-between max-w-[1200px] mx-auto w-11/12">
                     <div className="flex gap-x-30 items-center">
                         <div>
@@ -40,7 +40,7 @@ export default function Navbar(){
 
                     <CustomButton className="max-lg:hidden"/>
 
-                    <div className="xl:hidden transition-all duration-500">
+                    <div className="xl:hidden transition-all duration-500 z-100">
                         {isOpen ? (
                             <X onClick={()=>setIsOpen(false)}/>
                         ) : (
@@ -52,11 +52,11 @@ export default function Navbar(){
             </div>
             {/* Mobile Menu*/}
             {isOpen && (
-                <div className="fixed translate-y-[9.5px] top-19 xl:hidden h-[calc(100vh)] w-full bg-black/60 backdrop-blur-[4px] z-100">
-                    <div className="flex flex-col justify-center h-[calc(100svh)]">
+                <div className="fixed translate-y-[9.5px] top-19 xl:hidden h-[calc(100vh)] w-full bg-black/60 backdrop-blur-[8px] z-90">
+                    <div className="flex flex-col justify-center h-[calc(100svh)] -translate-y-20 space-y-3">
                         {menu.map((item, index) => (
                             <div key={index} className="text-center" onClick={() => setIsOpen(false)}>
-                                <Link href={item.url} className="font-normal text-xs uppercase">{item.title}</Link>
+                                <Link href={item.url} className="font-medium text-[14px] uppercase">{item.title}</Link>
                             </div>
                         ))}
                     </div>

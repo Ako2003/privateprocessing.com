@@ -4,7 +4,7 @@ import ArrowText from "@/components/main/ArrowText";
 
 export default function Section1() {
     return (
-        <section className="lg:mt-50 mt-25">
+        <section className="lg:mt-50 mt-35">
             <div className="relative flex items-start gap-x-2 mb-10 lg:hidden mx-auto w-11/12">
                 <div className="mt-2 max-lg:hidden">
                     <Image src={"svg/arrows/white-arrow-down.svg"} alt={"White Arrow Down"} width={40}

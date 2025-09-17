@@ -12,11 +12,20 @@ const points = [
 
 export default function Section5() {
     return (
-        <section className="mt-35 overflow-hidden">
-            <div className="relative w-full flex lg:flex-row flex-col items-center h-[600px] max-w-[1440px] mx-auto">
+        <section className="lg:mt-35 lg:overflow-hidden overflow-x-hidden">
+            <div className="relative w-full flex lg:flex-row flex-col items-center lg:h-[600px] max-w-[1440px] mx-auto">
+
+                <div className="lg:hidden w-11/12 mx-auto translate-y-30">
+                    <h2 className="!font-normal lg:!text-[38px]">
+                        <span className="text-gold font-manrope font-bold">A New World Opens.</span>
+                        <br/>
+                        The World Of Private Processing<span className="align-super text-lg ml-0.5">™</span>
+                    </h2>
+                    <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>
+                </div>
                 <div className="relative basis-1/2 w-full max-lg:translate-y-30">
                     <Image src={"/img/img_4.png"} alt={"Vincent Pecho"} width={393} height={523}
-                           className="object-cover object-[25%_25%] w-full h-[600px]"/>
+                           className="object-cover lg:object-[25%_25%] object-[50%_25%] w-full h-[600px]"/>
                     <div
                         className="max-lg:hidden absolute left-0 h-[600px] w-full top-0 -translate-x-[30%]"
                         style={{
@@ -34,18 +43,18 @@ export default function Section5() {
                             transform: "rotate(180deg)",
                         }}
                     />
-                    <div className="bg-black/60 absolute inset-0 lg:hidden"/>
+                    {/*<div className="bg-black/60 absolute inset-0 lg:hidden"/>*/}
                     <div className="relative z-0 h-full max-w-[1200px] lg:mx-auto w-11/12 py-15">
                         <div className="flex flex-col items-start justify-center h-full max-w-[1200px] mx-auto w-11/12">
-                            <div>
+                            <div className="max-lg:hidden">
                                 <h2 className="!font-normal lg:!text-[38px]">
                                     <span className="text-gold font-manrope font-bold">A New World Opens.</span>
-                                    <br />
+                                    <br/>
                                     The World Of Private Processing<span className="align-super text-lg ml-0.5">™</span>
                                 </h2>
                                 <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>
                             </div>
-                            <hr className="border-t border-[#2b2b2b] w-full my-10 max-w-[677px]"/>
+                            <hr className="max-lg:hidden border-t border-[#2b2b2b] w-full my-10 max-w-[677px]"/>
                             <div className="mb-5">
                                 {points.map((point, i) => (
                                     <div key={i} className="flex items-center gap-x-3 mb-3 text-whitisch">

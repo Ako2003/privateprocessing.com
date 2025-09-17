@@ -13,6 +13,9 @@ export default function Section1() {
                             className="text-gold capitalize font-bold text-balance">private processing™ </span>
                             The first class experience of payment processing
                         </h1>
+                        <p className="font-semibold text-lg mt-5 text-pretty max-w-[500px]">Imagine having a personal
+                            Private Processing Manager
+                            on your side.</p>
                         <div className="lg:hidden mt-5 relative">
                             <Image src={"/img/img.png"} alt={"Aziz reading a newspaper"} width={574} height={603}/>
                             <div className="absolute h-[286px] w-full bottom-0"
@@ -21,8 +24,6 @@ export default function Section1() {
                                  }}
                             />
                         </div>
-                        <p className="font-semibold text-lg mt-5 text-pretty max-w-[500px]">Imagine having a personal Private Processing Manager
-                            on your side.</p>
                         <p className="font-inter font-light text-lg max-w-[550px] mt-5 text-[#9194a1]">Someone that
                             takes care of everything and can solve any challenge in payment processing for you.</p>
                     </div>
