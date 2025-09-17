@@ -1,6 +1,6 @@
 import ArrowText from "@/components/main/ArrowText";
 import Image from "next/image";
-import CustomButton from "@/components/main/CustomButton";
+import CustomButton from "@/components/CustomButton";
 
 export default function Section4(){
     return(

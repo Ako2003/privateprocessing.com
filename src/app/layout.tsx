@@ -36,6 +36,11 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={`${manpore.variable} ${montserrat.variable} ${inter.variable} antialiased`}>
+        <Script
+            id="calendly-sdk"
+            src="https://assets.calendly.com/assets/external/widget.js"
+            strategy="afterInteractive"
+        />
         {/* Load Facebook Pixel after hydration */}
         <Script
             id="fb-pixel"

@@ -1,6 +1,6 @@
 import ArrowText from "@/components/main/ArrowText";
 import Image from "next/image";
-import CustomButton from "@/components/main/CustomButton";
+import CustomButton from "@/components/CustomButton";
 
 const points = [
     {icon: "human-relationships.svg", title:"Human relationships", description: "We believe that in a digital world human relationship and strong partnerships are more valuable and needed than ever before."},

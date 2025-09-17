@@ -8,7 +8,7 @@ import {
 } from './EmblaCarouselArrowButtons'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from "next/image";
-import CustomButton from "@/components/main/CustomButton";
+import CustomButton from "@/components/CustomButton";
 
 
 type PropType = {

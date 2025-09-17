@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CustomButton from "@/components/main/CustomButton";
+import CustomButton from "@/components/CustomButton";
 import Marquee from "react-fast-marquee";
 import ArrowText from "@/components/main/ArrowText";
 

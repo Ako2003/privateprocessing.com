@@ -1,5 +1,5 @@
 import ArrowText from "@/components/main/ArrowText";
-import CustomButton from "@/components/main/CustomButton";
+import CustomButton from "@/components/CustomButton";
 import Image from "next/image";
 
 const points = [
@@ -14,7 +14,7 @@ const points = [
 
 export default function Section3() {
     return(
-        <section className="lg:mt-50 mt-35">
+        <section className="lg:mt-50 mt-15">
             <div className="flex flex-col items-center lg:justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div className="flex lg:flex-row flex-col justify-between w-full lg:items-end gap-5 ;g:mb-10">
                     <div>

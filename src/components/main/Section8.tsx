@@ -1,7 +1,7 @@
 import ArrowText from "@/components/main/ArrowText";
 import EmblaCarousel from "@/components/main/carousel/EmblaCarousel";
 import "@/app/embla.css"
-import CustomButton from "@/components/main/CustomButton";
+import CustomButton from "@/components/CustomButton";
 
 const cards = [
     {title:"Starter Processing ", image: "img.png", number: "250K-500K", color: "GREEN", circleColor: "#0C220C"},

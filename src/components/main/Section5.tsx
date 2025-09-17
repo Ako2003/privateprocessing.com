@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {Cabin} from "next/dist/compiled/@next/font/dist/google";
-import CustomButton from "@/components/main/CustomButton";
+import CustomButton from "@/components/CustomButton";
 
 const points = [
     "No struggles with alternative payment options",
