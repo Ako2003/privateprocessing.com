@@ -30,15 +30,15 @@ export default function Hero() {
                             Peace of mind in Payment Processing Is Only
                             <span className="text-gold font-semibold"> One Call Away ... </span>
                         </h1>
-                        <p className="lg:text-[22px] text-[18px] max-w-[500px] capitalize leading-8 mt-8 font-light text-[#b7b7b7]">
-                            Relief the stress of payment processing in e-com with private processing™
+                        <p className="lg:text-[22px] text-[18px] max-w-[480px] capitalize leading-8 mt-8 font-light text-[#b7b7b7]">
+                            Relief the stress of payment processing in e-commerce with private processing™
                         </p>
                         <CustomButton className="lg:mt-13 mt-8 w-fit"/>
                     </div>
                 </div>
 
                 <div className="mb-5">
-                    <ArrowText title="we can help" className="justify-center mb-10"/>
+                    <ArrowText title="find out if you qualify" className="justify-center mb-10"/>
                     <Marquee autoFill>
                         {marquee_elements.map((item, index) => (
                             <div key={index} className="mx-10">
