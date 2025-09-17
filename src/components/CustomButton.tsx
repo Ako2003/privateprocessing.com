@@ -24,6 +24,8 @@ export default function CustomButton({ className }: CustomButtonProps) {
                             "linear-gradient(180deg, rgba(205, 137, 57, 0) 43.67%, #D0AD6F 100%)",
                         mixBlendMode: "plus-lighter",
                         filter: "blur(32px)",
+                        border: "1px solid rgba(181, 148, 95, 0.33)",
+
                     }}
                 />
                 <p className="relative z-10">Find out if you qualify</p>
