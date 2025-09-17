@@ -13,9 +13,9 @@ const points = [
 export default function Section5() {
     return (
         <section className=" overflow-hidden">
-            <div className="relative w-full flex lg:flex-row flex-col items-center">
+            <div className="relative w-full flex lg:flex-row flex-col items-center h-[600px]">
                 <div className="basis-1/2 w-full max-lg:translate-y-30">
-                    <Image src={"/img/img_4.png"} alt={"Vincent Pecho"} width={393} height={523} className="object-cover object-[25%_15%] w-full" />
+                    <Image src={"/img/img_4.png"} alt={"Vincent Pecho"} width={393} height={523} className="object-cover object-[25%_25%] w-full h-[600px]" />
                 </div>
                 <div>
                     <div
