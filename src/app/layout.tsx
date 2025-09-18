@@ -33,13 +33,13 @@ export const metadata: Metadata = {
         description: "Secure, scalable payment solutions from Private Processing. Streamline transactions, protect data, and grow your business with expert guidance and support.",
         images: [
             {
-                url: "https://privateprocessing.com/logo.png",
+                url: "https://privateprocessing.com/newlogo.png",
 
             }
         ]
     },
     alternates: {
-        canonical: `https://privateprocessing.com/`,
+        canonical: `https://www.privateprocessing.com/`,
     },
 };
 
