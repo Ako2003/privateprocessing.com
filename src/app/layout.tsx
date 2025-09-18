@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Private Processing - The Private Banking of Payment Processing",
     description: "Secure, scalable payment solutions from Private Processing. Streamline transactions, protect data, and grow your business with expert guidance and support.",
     openGraph: {
-        url: "https://privateprocessing.com/",
+        url: "https://www.privateprocessing.com/",
         type: "website",
         title: "Private Processing - The Private Banking of Payment Processing",
         description: "Secure, scalable payment solutions from Private Processing. Streamline transactions, protect data, and grow your business with expert guidance and support.",
