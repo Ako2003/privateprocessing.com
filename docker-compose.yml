@@ -1,0 +1,16 @@
+services:
+  frontend:
+    container_name: privateprocessing.com
+    build:
+      context: ./
+      target: production
+    restart: always
+    environment:
+      - NODE_ENV=production
+  #   ports:
+#      - "3001:3000"  # Uncommented for external access
+
+networks:
+  default:
+    name: npm
+    external: true
