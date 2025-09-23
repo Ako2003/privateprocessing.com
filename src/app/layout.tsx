@@ -34,7 +34,6 @@ export const metadata: Metadata = {
         images: [
             {
                 url: "https://privateprocessing.com/newlogo.png",
-
             }
         ]
     },
