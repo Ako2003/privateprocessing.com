@@ -250,23 +250,23 @@ export default function MerchantIntakeForm() {
 
                 <div>
                     <label className="block text-sm font-medium text-gray-700">First Name *</label>
-                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("firstName")} />
+                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="first name" {...register("firstName")} />
                     {errorText("firstName")}
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Last Name *</label>
-                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("lastName")} />
+                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="last name" {...register("lastName")} />
                     {errorText("lastName")}
                 </div>
 
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Mobile Phone *</label>
-                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("mobilePhone")} />
+                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="mobile phone" {...register("mobilePhone")} />
                     {errorText("mobilePhone")}
                 </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Phone</label>
-                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("phone")} />
+                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="phone" {...register("phone")} />
                     {errorText("phone")}
                 </div>
             </section>
@@ -316,30 +316,30 @@ export default function MerchantIntakeForm() {
             <section className="space-y-4">
                 <div>
                     <label className="block text-sm font-medium text-gray-700">Company Name *</label>
-                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("companyName")} />
+                    <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="Company Name" {...register("companyName")} />
                     {errorText("companyName")}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Address Line 1 *</label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("address1")} />
+                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="Address" {...register("address1")} />
                         {errorText("address1")}
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Region / State / Province *</label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("region")} />
+                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="Region" {...register("region")} />
                         {errorText("region")}
                     </div>
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700">City *</label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("city")} />
+                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="City" {...register("city")} />
                         {errorText("city")}
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-700">ZIP / Postal Code *</label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("postal")} />
+                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="ZIP" {...register("postal")} />
                         {errorText("postal")}
                     </div>
 
@@ -379,7 +379,7 @@ export default function MerchantIntakeForm() {
                         <label className="block text-sm font-medium text-gray-700">
                             Business Tax Number / EIN / VAT *
                         </label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" {...register("taxNumber")} />
+                        <input className="mt-1 w-full rounded-md border border-gray-300 text-gray-900 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2" placeholder="Tax Number" {...register("taxNumber")} />
                         {errorText("taxNumber")}
                     </div>
                 </div>

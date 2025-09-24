@@ -1,24 +1,26 @@
 // app/api/merchant-intake/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { z } from "zod";
+import {config} from "@/../config";
 
-export const runtime = "nodejs"; // needed for Buffer
+export const runtime = "nodejs";
 
-// Put near the top of the file
+// --- Recipients ---
 const RECIPIENTS: string[] = (
-    process.env.MAIL_TO_LIST ??
+    config.MAIL_TO_LIST??
     "jake@compaytence.com, info@privateprocessing.com, michael@compaytence.com, jessica@compaytence.com, natasha@compaytence.com, lars@compaytence.com"
 )
     .split(",")
     .map((s) => s.trim())
     .filter(Boolean);
 
-
+// --- Transport ---
 function createTransport() {
-    const host = "smtp.gmail.com";
-    const port = Number(587);
-    const user = "info@wealthconsulting.com";
-    const pass = "myvuxirdzxjdwplr";
+    const host = config.SMTP_HOST!;
+    const port = Number(config.SMTP_PORT || 587);
+    const user = config.SMTP_USER; // info@wealthconsulting.com
+    const pass = config.SMTP_PASS;
     return nodemailer.createTransport({
         host,
         port,
@@ -27,9 +29,37 @@ function createTransport() {
     });
 }
 
+// --- Schema (server-side mirror of the form) ---
+const IntakeSchema = z.object({
+    email: z.string().email(),
+    firstName: z.string(),
+    lastName: z.string(),
+    mobilePhone: z.string(),
+    phone: z.string().optional(),
+    preferredComm: z.array(z.string()),
+    preferredLanguage: z.string(),
+    spokenWith: z.string(),
+    referral: z.string().optional().nullable(),
+    companyName: z.string(),
+    address1: z.string(),
+    city: z.string(),
+    region: z.string(),
+    postal: z.string(),
+    country: z.string(),
+    website: z.string().optional().nullable(),
+    foundingYear: z.string(), // we keep string to match client payload
+    annualRevenue: z.string().optional().nullable(),
+    employees: z.string().optional().nullable(),
+    taxNumber: z.string(),
+    description: z.string(),
+    shoppingCarts: z.array(z.string()),
+    paymentProviders: z.array(z.string()),
+    reserves: z.string().optional().nullable(),
+});
+type IntakeData = z.infer<typeof IntakeSchema>;
 
-
-const FIELD_LABELS: Record<string, string> = {
+// --- Labels for the email body ---
+const FIELD_LABELS: Record<keyof IntakeData, string> = {
     email: "Email",
     firstName: "First Name",
     lastName: "Last Name",
@@ -56,21 +86,16 @@ const FIELD_LABELS: Record<string, string> = {
     reserves: "Reserves / Holds",
 };
 
+// --- Helpers ---
 function toDateStamp(d = new Date()) {
     return d.toISOString().slice(0, 10); // YYYY-MM-DD
 }
-
 function asLine(label: string, value: unknown) {
-    if (Array.isArray(value)) {
-        return `${label}: ${value.join(", ")}`;
-    }
-    const v =
-        value === undefined || value === null || value === ""
-            ? "-"
-            : String(value);
-    return `${label}: ${v}`;
+    if (Array.isArray(value)) return `${label}: ${value.join(", ")}`;
+    const v = value ?? "-";
+    const s = typeof v === "string" && v.trim() === "" ? "-" : String(v);
+    return `${label}: ${s}`;
 }
-
 function escapeHtml(s: string) {
     return s
         .replace(/&/g, "&amp;")
@@ -79,7 +104,6 @@ function escapeHtml(s: string) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
-
 function sanitizeFilename(s: string) {
     return s.replace(/[\\/:*?"<>|]+/g, "_").trim();
 }
@@ -87,66 +111,43 @@ function sanitizeFilename(s: string) {
 export async function POST(req: NextRequest) {
     try {
         const formData = await req.formData();
-
         const dataRaw = formData.get("data");
         if (typeof dataRaw !== "string") {
             return new NextResponse("Bad payload", { status: 400 });
         }
-        const data = JSON.parse(dataRaw) as Record<string, any>;
 
-        const firstName = String(data.firstName ?? "").trim();
-        const lastName = String(data.lastName ?? "").trim();
-        const company = String(data.companyName ?? "").trim();
+        const parsed = IntakeSchema.safeParse(JSON.parse(dataRaw));
+        if (!parsed.success) {
+            return NextResponse.json(
+                { error: "Validation failed", issues: parsed.error.issues },
+                { status: 400 }
+            );
+        }
+        const data: IntakeData = parsed.data;
+
+        const firstName = data.firstName?.trim() ?? "";
+        const lastName = data.lastName?.trim() ?? "";
+        const company = data.companyName?.trim() ?? "";
         const date = toDateStamp();
-
         const personCompanyDate = sanitizeFilename(
             `${firstName} ${lastName} - ${company} - ${date}`
         );
 
-        // Build a clean TEXT body (each input separately)
-        const orderedKeys = [
-            "email",
-            "firstName",
-            "lastName",
-            "mobilePhone",
-            "phone",
-            "preferredComm",
-            "preferredLanguage",
-            "spokenWith",
-            "referral",
-            "companyName",
-            "address1",
-            "city",
-            "region",
-            "postal",
-            "country",
-            "website",
-            "foundingYear",
-            "annualRevenue",
-            "employees",
-            "taxNumber",
-            "description",
-            "shoppingCarts",
-            "paymentProviders",
-            "reserves",
-        ];
-
-        const textLines = orderedKeys.map((k) =>
-            asLine(FIELD_LABELS[k] ?? k, data[k])
-        );
-
+        // Build text + html bodies (each field separately)
+        const orderedKeys = Object.keys(FIELD_LABELS) as (keyof IntakeData)[];
+        const textLines = orderedKeys.map((k) => asLine(FIELD_LABELS[k], data[k]));
         const textBody =
             `A new Merchant Intake form was submitted.\n\n` +
             textLines.join("\n") +
             `\n`;
 
-        // HTML version (simple table)
         const rowsHtml = orderedKeys
             .map((k) => {
-                const label = FIELD_LABELS[k] ?? k;
-                const value = Array.isArray(data[k])
-                    ? escapeHtml((data[k] as string[]).join(", "))
-                    : escapeHtml(String(data[k] ?? "-"));
+                const label = FIELD_LABELS[k];
+                const raw = data[k];
+                const value = Array.isArray(raw)
+                    ? escapeHtml(raw.join(", "))
+                    : escapeHtml(String(raw ?? "-"));
                 const isLong = k === "description" || k === "reserves";
                 return `
           <tr>
@@ -179,11 +180,11 @@ export async function POST(req: NextRequest) {
             "supplierAgreement",
         ] as const;
 
-        const attachments: {
+        const attachments: Array<{
             filename: string;
             content: Buffer;
             contentType?: string;
-        }[] = [];
+        }> = [];
 
         for (const section of fileSections) {
             const files = formData.getAll(section) as File[];
@@ -200,28 +201,25 @@ export async function POST(req: NextRequest) {
             }
         }
 
-        // Send mail
         const transporter = createTransport();
-
-        const from = process.env.MAIL_FROM || "Wealth Consulting <info@wealthconsulting.com>";
-        const to = process.env.MAIL_TO || "akif@wealthconsulting.com";
-
-        const subject =
-            `New Merchant Intake — ${company || "Unknown Company"} (${date})`;
+        const from =
+            process.env.MAIL_FROM || "Wealth Consulting <info@wealthconsulting.com>";
+        const subject = `New Merchant Intake — ${company || "Unknown Company"} (${date})`;
 
         await transporter.sendMail({
-            from,                  // "Wealth Consulting <info@wealthconsulting.com>"
-            to: RECIPIENTS,        // array is fine; Nodemailer also accepts comma-separated string
+            from,
+            to: RECIPIENTS, // multiple recipients
             subject,
             text: textBody,
             html: htmlBody,
             attachments,
         });
 
-
         return NextResponse.json({ ok: true });
-    } catch (e: any) {
-        console.error(e);
-        return new NextResponse(e?.message ?? "Server error", { status: 500 });
+    } catch (err: unknown) {
+        const message =
+            err instanceof Error ? err.message : "Server error";
+        console.error(err);
+        return new NextResponse(message, { status: 500 });
     }
 }
