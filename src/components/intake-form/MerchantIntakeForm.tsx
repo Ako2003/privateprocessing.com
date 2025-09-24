@@ -3,7 +3,7 @@
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // ----- options -----
 const COMM_METHODS = ["E-Mail", "Phone", "WhatsApp"] as const;
@@ -142,6 +142,9 @@ export default function MerchantIntakeForm() {
         },
     });
 
+    const [isSuccessOpen, setIsSuccessOpen] = useState(false); // already added
+    const [isErrorOpen, setIsErrorOpen] = useState(false);
+    const [errorMessage, setErrorMessage] = useState<string>("");
     const [fileErrors, setFileErrors] = useState<Record<string, string | null>>(
         {}
     );
@@ -208,19 +211,32 @@ export default function MerchantIntakeForm() {
         });
 
         if (!res.ok) {
-            const msg = await res.text();
-            alert(`Submit failed: ${msg}`);
+            let msg = "Something went wrong. Please try again.";
+            try {
+                const contentType = res.headers.get("content-type") || "";
+                if (contentType.includes("application/json")) {
+                    const j = await res.json();
+                    msg = j.error || j.message || (j.issues ? JSON.stringify(j.issues) : msg);
+                } else {
+                    const t = await res.text();
+                    msg = t || msg;
+                }
+            } catch {
+                // keep default msg
+            }
+            setErrorMessage(msg);
+            setIsErrorOpen(true);
             return;
         }
 
-        alert("Form submitted! We’ll be in touch soon.");
         reset();
-        // clear file inputs manually
-        ["processingHistory", "businessLicense", "bankStatements", "shareholderIDs", "supplierAgreement"]
+        ["processingHistory","businessLicense","bankStatements","shareholderIDs","supplierAgreement"]
             .forEach((id) => {
                 const el = document.getElementById(id) as HTMLInputElement | null;
                 if (el) el.value = "";
             });
+
+        setIsSuccessOpen(true);
     };
 
     const errorText = (name: keyof IntakeValues) =>
@@ -490,6 +506,17 @@ export default function MerchantIntakeForm() {
             >
                 {isSubmitting ? "Submitting…" : "Submit"}
             </button>
+            <SuccessDialog
+                open={isSuccessOpen}
+                onClose={() => setIsSuccessOpen(false)}
+            />
+            <ErrorDialog
+                open={isErrorOpen}
+                message={errorMessage}
+                onClose={() => setIsErrorOpen(false)}
+            />
+
+
         </form>
     );
 }
@@ -521,6 +548,177 @@ function FileRow({
             />
             <p className="text-xs text-gray-500 mt-1">{hint ?? "PDF/JPG/PNG up to 10MB"}</p>
             {error ? <p className="text-sm text-red-600 mt-1">{error}</p> : null}
+        </div>
+    );
+}
+
+function SuccessDialog({
+                           open,
+                           onClose,
+                       }: {
+    open: boolean;
+    onClose: () => void;
+}) {
+    // focus the close button when opened
+    const [mounted, setMounted] = useState(false);
+    const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (open && mounted) {
+            closeBtnRef.current?.focus();
+            // prevent background scroll while modal open
+            const prev = document.body.style.overflow;
+            document.body.style.overflow = "hidden";
+            return () => {
+                document.body.style.overflow = prev;
+            };
+        }
+    }, [open, mounted]);
+
+    if (!open) return null;
+
+    return (
+        <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="intake-success-title"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            onKeyDown={(e) => {
+                if (e.key === "Escape") onClose();
+            }}
+        >
+            {/* Backdrop */}
+            <div
+                className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                onClick={onClose}
+            />
+
+            {/* Panel */}
+            <div className="relative z-10 w-full max-w-md rounded-2xl bg-white shadow-2xl ring-1 ring-black/5">
+                <div className="p-6 text-center">
+                    {/* Circle check icon */}
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-50">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-8 w-8 text-green-600"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                        >
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <path d="m22 4-10 10-3-3" />
+                        </svg>
+                    </div>
+
+                    <h2 id="intake-success-title" className="text-xl font-semibold text-gray-900">
+                        Submission received 🎉
+                    </h2>
+                    <p className="mt-2 text-sm text-gray-600">
+                        Thank you! Your merchant intake form was submitted successfully.
+                        We’ve emailed the details and attachments to our review team.
+                    </p>
+
+                    <div className="mt-6 flex items-center justify-center gap-3">
+                        <button
+                            ref={closeBtnRef}
+                            onClick={onClose}
+                            className="inline-flex items-center rounded-lg bg-black px-4 py-2 text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function ErrorDialog({
+                         open,
+                         message,
+                         onClose,
+                     }: {
+    open: boolean;
+    message?: string;
+    onClose: () => void;
+}) {
+    const [mounted, setMounted] = useState(false);
+    const closeBtnRef = useRef<HTMLButtonElement | null>(null);
+
+    useEffect(() => setMounted(true), []);
+    useEffect(() => {
+        if (open && mounted) {
+            closeBtnRef.current?.focus();
+            const prev = document.body.style.overflow;
+            document.body.style.overflow = "hidden";
+            return () => {
+                document.body.style.overflow = prev;
+            };
+        }
+    }, [open, mounted]);
+
+    if (!open) return null;
+
+    return (
+        <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="intake-error-title"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            onKeyDown={(e) => {
+                if (e.key === "Escape") onClose();
+            }}
+        >
+            {/* Backdrop */}
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+
+            {/* Panel */}
+            <div className="relative z-10 w-full max-w-md rounded-2xl bg-white shadow-2xl ring-1 ring-black/5">
+                <div className="p-6 text-center">
+                    {/* Error icon */}
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-50">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-8 w-8 text-red-600"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                        >
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M15 9l-6 6M9 9l6 6" />
+                        </svg>
+                    </div>
+
+                    <h2 id="intake-error-title" className="text-xl font-semibold text-gray-900">
+                        Submission failed
+                    </h2>
+                    <p className="mt-2 text-sm text-gray-600">
+                        We couldn’t submit your form. Please review the details and try again.
+                    </p>
+
+                    {message ? (
+                        <pre className="mt-3 max-h-40 overflow-auto whitespace-pre-wrap rounded-lg border border-red-100 bg-red-50 p-3 text-left text-sm text-red-700">
+              {message}
+            </pre>
+                    ) : null}
+
+                    <div className="mt-6 flex items-center justify-center gap-3">
+                        <button
+                            ref={closeBtnRef}
+                            onClick={onClose}
+                            className="inline-flex items-center rounded-lg bg-red-600 px-4 py-2 text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
