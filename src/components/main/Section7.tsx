@@ -25,7 +25,6 @@ export default function Section7(){
                     className="
                         grid grid-cols-1 lg:grid-cols-3 gap-y-20 mt-10
                         [&>*]:lg:max-w-[262px] [&>*]:w-full
-
                       "
                 >
                     {points.map((point, i) => (
