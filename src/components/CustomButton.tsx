@@ -49,7 +49,7 @@ export default function CustomButton({ className }: CustomButtonProps) {
             >
                 <div className="h-full">
                     <CalendlyInline
-                        url="https://calendly.com/vincent-privateprocessing/discovery-call"
+                        url="https://calendly.com/private-processing/book-a-call"
                         height="100%"
                     />
                 </div>
