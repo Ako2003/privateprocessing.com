@@ -2,19 +2,14 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Dialog } from "./Dialog";
-import CalendlyInline from "./CalendlyInline";
 
 type CustomButtonProps = { className?: string, text?: string, disabled?: boolean };
 
-export default function CustomButton({disabled,  text = "Find out if you qualify", className }: CustomButtonProps) {
-    const [open, setOpen] = useState(false);
-
+export default function CustomTextButton({disabled,  text = "Find out if you qualify", className }: CustomButtonProps) {
     return (
         <>
             <button
-                className={`relative flex items-center gap-x-2 button-gradient w-fit leading-8 group ${className}`}
-                onClick={() => setOpen(true)}
+                className={`relative flex items-center gap-x-2 button-gradient w-fit leading-8 group cursor-pointer ${className}`}
                 disabled={disabled}
             >
                 {/* Hover shadow effect */}
@@ -39,24 +34,6 @@ export default function CustomButton({disabled,  text = "Find out if you qualify
                     />
                 </div>
             </button>
-
-            <Dialog
-                open={open}
-                onOpenChange={setOpen}
-                size="xl"
-                className="lg:pt-[84px] max-lg:translate-y-10"
-                contentClassName="!bg-black lg:h-[700px] h-[550px] py-10"
-                bodyClassName="p-0" // no padding
-            >
-                <div className="h-full">
-                    <CalendlyInline
-                        url="https://calendly.com/private-processing/book-a-call"
-                        height="100%"
-                    />
-                </div>
-            </Dialog>
-
-
         </>
     );
 }

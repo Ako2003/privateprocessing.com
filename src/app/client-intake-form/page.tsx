@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useRef, useState } from "react";
+import CustomTextButton from "@/components/CustomTextButton";
 
 /* -------------------- options -------------------- */
 const BIZ_SIMPLE = ["Own Brand", "Dropshipping", "3PL"] as const;
@@ -107,204 +108,231 @@ export default function ClientIntakeBasic() {
     };
 
     return (
-        <div className="pt-25">
+        <div className="bg-[#040404] pt-30">
+                <div className="pointer-events-none absolute left-1/2 -translate-x-1/2
+               max-w-[1275px] h-[1621px] -z-0 w-full
+               [background:radial-gradient(59.14%_50.08%_at_50%_49.92%,rgba(192,160,109,0.6)_0%,rgba(0,0,0,0)_94.28%)]
+               blur-[2px]"
+                />
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="mx-auto max-w-3xl space-y-8 bg-white shadow-lg rounded-2xl p-8"
+                className="relative mx-auto max-w-[800px] w-11/12 space-y-8 border bg-[#0B0B0B] border-[#292929] shadow-lg rounded-2xl lg:p-15 p-8"
             >
-                <h1 className="text-3xl font-bold text-gray-700">Client Intake</h1>
+                <div className=" relative z-10">
+                    <h1 className="!text-[46px] text-gray mb-5 !leading-10"><span
+                        className="text-gold font-semibold">Client Intake</span> Form</h1>
+                    <p className="text-lg font-intel leading-6">Fill in your business details below so our team can review and
+                        prepare your onboarding.</p>
 
-                {/* ---------- Basic Information ---------- */}
-                <section className="space-y-4">
-                    <h2 className="text-lg font-semibold text-gray-800">Basic Information</h2>
+                    {/* ---------- Basic Information ---------- */}
+                    <section className="space-y-4 mt-10">
+                        <h2 className="!text-[28px] font-semibold text-white">Basic Information</h2>
 
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Company Name *</label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("companyName")} />
-                        {errorText("companyName")}
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label className="block text-sm font-medium text-gray-700">Registered Country *</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("registeredCountry")} />
-                            {errorText("registeredCountry")}
+                            <label className="block text-base font-light text-[#F1EEEE]">Company Name *</label>
+                            <input
+                                className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none" {...register("companyName")} />
+                            {errorText("companyName")}
                         </div>
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Website / Store URL</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="https://…" {...register("websiteUrl")} />
-                            {errorText("websiteUrl")}
-                        </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Contact Person Name *</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("contactName")} />
-                            {errorText("contactName")}
-                        </div>
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Email Address *</label>
-                            <input type="email" className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("email")} />
-                            {errorText("email")}
-                        </div>
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">WhatsApp Number *</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="+49 …" {...register("whatsapp")} />
-                            {errorText("whatsapp")}
-                        </div>
-                    </div>
-                </section>
-
-                {/* ---------- Business Overview ---------- */}
-                <section className="space-y-4">
-                    <h2 className="text-lg font-semibold text-gray-800">Business Overview</h2>
-
-                    <div>
-                        <p className="text-sm font-medium text-gray-700">Type of Business *</p>
-                        <div className="mt-2 flex flex-wrap gap-4">
-                            {BIZ_SIMPLE.map((t) => (
-                                <label key={t} className="inline-flex items-center gap-2 text-gray-700">
-                                    <input type="radio" value={t} {...register("typeOfBusiness")} />
-                                    <span>{t}</span>
-                                </label>
-                            ))}
-                        </div>
-                        {errorText("typeOfBusiness")}
-                    </div>
-
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Main Products Sold *</label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("mainProducts")} />
-                        {errorText("mainProducts")}
-                    </div>
-
-                    <div>
-                        <p className="text-sm font-medium text-gray-700">Main Market(s) *</p>
-                        <div className="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
-                            {MARKETS.map((m) => (
-                                <label key={m} className="inline-flex items-center gap-2 text-gray-700">
-                                    <input type="checkbox" value={m} {...register("mainMarkets")} />
-                                    <span>{m}</span>
-                                </label>
-                            ))}
-                        </div>
-                        {errorText("mainMarkets")}
-                        {markets.includes("Other") ? (
-                            <div className="mt-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Registered Country *</label>
                                 <input
-                                    className="w-full rounded-md border border-gray-300 p-2"
-                                    placeholder="Specify other markets"
-                                    {...register("otherMarket")}
-                                />
-                                {errorText("otherMarket")}
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none" {...register("registeredCountry")} />
+                                {errorText("registeredCountry")}
                             </div>
-                        ) : null}
-                    </div>
-
-                    <div>
-                        <p className="text-sm font-medium text-gray-700">Monthly Volume (approx.) *</p>
-                        <div className="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                            {VOLUME3.map((v) => (
-                                <label key={v} className="inline-flex items-center gap-2 text-gray-700">
-                                    <input type="radio" value={v} {...register("monthlyVolume")} />
-                                    <span>{v}</span>
-                                </label>
-                            ))}
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Website / Store URL</label>
+                                <input
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                    placeholder="https://…" {...register("websiteUrl")} />
+                                {errorText("websiteUrl")}
+                            </div>
                         </div>
-                        {errorText("monthlyVolume")}
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Average Order Value *</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="$…" {...register("aov")} />
-                            {errorText("aov")}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Contact Person Name *</label>
+                                <input
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none" {...register("contactName")} />
+                                {errorText("contactName")}
+                            </div>
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Email Address *</label>
+                                <input type="email"
+                                       className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none" {...register("email")} />
+                                {errorText("email")}
+                            </div>
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">WhatsApp Number *</label>
+                                <input
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                    placeholder="+49 …" {...register("whatsapp")} />
+                                {errorText("whatsapp")}
+                            </div>
                         </div>
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Current Payment Processor (if any)</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="Stripe, Checkout.com, …" {...register("currentProcessor")} />
-                        </div>
-                    </div>
-                </section>
+                    </section>
 
-                {/* ---------- Operational Info ---------- */}
-                <section className="space-y-4">
-                    <h2 className="text-lg font-semibold text-gray-800">Operational Info</h2>
+                    {/* ---------- Business Overview ---------- */}
+                    <section className="space-y-4 mt-10">
+                        <h2 className="!text-[28px] font-semibold text-white">Business Overview</h2>
 
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">How are orders fulfilled? *</label>
-                        <div className="mt-2 flex flex-wrap gap-6">
-                            {FULFILLMENTS.map((f) => (
-                                <label key={f} className="inline-flex items-center gap-2 text-gray-700">
-                                    <input type="radio" value={f} {...register("fulfillment")} />
-                                    <span>{f}</span>
-                                </label>
-                            ))}
+                        <div className="mt-5">
+                            <p className="text-base font-light text-[#F1EEEE]">Type of Business *</p>
+                            <div className="mt-2 flex flex-wrap gap-4">
+                                {BIZ_SIMPLE.map((t) => (
+                                    <label key={t} className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                        <input type="radio" value={t} {...register("typeOfBusiness")}
+                                               className="accent-[#D5B27B]"/>
+                                        <span>{t}</span>
+                                    </label>
+                                ))}
+                            </div>
+                            {errorText("typeOfBusiness")}
                         </div>
-                        {errorText("fulfillment")}
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Chargeback rate (if known)</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="e.g., 0.5%" {...register("chargebackRate")} />
+                        <div className="mt-5">
+                            <label className="block text-base font-light text-[#F1EEEE]">Main Products Sold *</label>
+                            <input
+                                className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none" {...register("mainProducts")} />
+                            {errorText("mainProducts")}
                         </div>
-                        <div>
-                            <p className="text-sm font-medium text-gray-700">Do you offer subscriptions or trials? *</p>
-                            <div className="mt-2 flex gap-6">
-                                {YESNO.map((v) => (
-                                    <label key={v} className="inline-flex items-center gap-2 text-gray-700">
-                                        <input type="radio" value={v} {...register("subscriptionsOrTrials")} />
+
+                        <div className="mt-5">
+                            <p className="text-base font-light text-[#F1EEEE]">Main Market(s) *</p>
+                            <div className="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                {MARKETS.map((m) => (
+                                    <label key={m} className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                        <input type="checkbox" value={m} {...register("mainMarkets")}
+                                               className="accent-[#D5B27B]"/>
+                                        <span>{m}</span>
+                                    </label>
+                                ))}
+                            </div>
+                            {errorText("mainMarkets")}
+                            {markets.includes("Other") ? (
+                                <div className="mt-3">
+                                    <input
+                                        className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                        placeholder="Specify other markets"
+                                        {...register("otherMarket")}
+                                    />
+                                    {errorText("otherMarket")}
+                                </div>
+                            ) : null}
+                        </div>
+
+                        <div className="mt-5">
+                            <p className="text-base font-light text-[#F1EEEE]">Monthly Volume (approx.) *</p>
+                            <div className="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                                {VOLUME3.map((v) => (
+                                    <label key={v} className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                        <input type="radio" value={v} {...register("monthlyVolume")}
+                                               className="accent-[#D5B27B]"/>
                                         <span>{v}</span>
                                     </label>
                                 ))}
                             </div>
-                            {errorText("subscriptionsOrTrials")}
+                            {errorText("monthlyVolume")}
                         </div>
-                    </div>
 
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">
-                            Main goal with new payment setup *
-                        </label>
-                        <input
-                            className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black"
-                            placeholder="e.g., better rates, stability, approvals"
-                            {...register("mainGoal")}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Average Order Value *</label>
+                                <input
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                    placeholder="$…" {...register("aov")} />
+                                {errorText("aov")}
+                            </div>
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Current Payment Processor (if
+                                    any)</label>
+                                <input
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                    placeholder="Stripe, Checkout.com, …" {...register("currentProcessor")} />
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ---------- Operational Info ---------- */}
+                    <section className="space-y-4 mt-10">
+                        <h2 className="!text-[28px] font-semibold text-white">Operational Info</h2>
+
+                        <div className="mt-5">
+                            <label className="block text-base font-light text-[#F1EEEE]">How are orders fulfilled? *</label>
+                            <div className="mt-2 flex flex-wrap gap-6">
+                                {FULFILLMENTS.map((f) => (
+                                    <label key={f} className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                        <input type="radio" value={f} {...register("fulfillment")}
+                                               className="accent-[#D5B27B]"/>
+                                        <span>{f}</span>
+                                    </label>
+                                ))}
+                            </div>
+                            {errorText("fulfillment")}
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Chargeback rate (if
+                                    known)</label>
+                                <input
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                    placeholder="e.g., 0.5%" {...register("chargebackRate")} />
+                            </div>
+                            <div>
+                                <p className="text-base font-light text-[#F1EEEE]">Do you offer subscriptions or trials?
+                                    *</p>
+                                <div className="mt-2 flex gap-6">
+                                    {YESNO.map((v) => (
+                                        <label key={v}
+                                               className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                            <input type="radio" value={v} {...register("subscriptionsOrTrials")}
+                                                   className="accent-[#D5B27B]"/>
+                                            <span>{v}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                                {errorText("subscriptionsOrTrials")}
+                            </div>
+                        </div>
+
+                        <div className="mt-5">
+                            <label className="block text-base font-light text-[#F1EEEE]">
+                                Main goal with new payment setup *
+                            </label>
+                            <input
+                                className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                placeholder="e.g., better rates, stability, approvals"
+                                {...register("mainGoal")}
+                            />
+                            {errorText("mainGoal")}
+                        </div>
+                    </section>
+
+                    {/* ---------- Additional Notes ---------- */}
+                    <section className="space-y-4 mt-10">
+                        <h2 className="!text-[28px] font-semibold text-white">Additional Notes</h2>
+                        <textarea
+                            rows={3}
+                            className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                            placeholder="Anything else you’d like us to know before onboarding?"
+                            {...register("notes")}
                         />
-                        {errorText("mainGoal")}
-                    </div>
-                </section>
+                    </section>
 
-                {/* ---------- Additional Notes ---------- */}
-                <section className="space-y-4">
-                    <h2 className="text-lg font-semibold text-gray-800">Additional Notes</h2>
-                    <textarea
-                        rows={3}
-                        className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black "
-                        placeholder="Anything else you’d like us to know before onboarding?"
-                        {...register("notes")}
-                    />
-                </section>
-
-                <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="rounded-xl bg-black px-5 py-3 text-white disabled:opacity-60"
-                >
-                    {isSubmitting ? "Submitting…" : "Submit"}
-                </button>
-
-                <SuccessDialog open={isSuccessOpen} onClose={() => setIsSuccessOpen(false)} />
-                <ErrorDialog open={isErrorOpen} message={errorMessage} onClose={() => setIsErrorOpen(false)} />
+                    <CustomTextButton className="mt-15" disabled={isSubmitting} text={isSubmitting ? "Submitting…" : "Submit form"}/>
+                </div>
+                <SuccessDialog open={isSuccessOpen} onClose={() => setIsSuccessOpen(false)}/>
+                <ErrorDialog open={isErrorOpen} message={errorMessage} onClose={() => setIsErrorOpen(false)}/>
             </form>
         </div>
     );
 }
 
 /* -------------------- Dialogs (same UX) -------------------- */
-function SuccessDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+function SuccessDialog({open, onClose}: { open: boolean; onClose: () => void }) {
     const [mounted, setMounted] = useState(false);
     const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 
@@ -360,15 +388,8 @@ function SuccessDialog({ open, onClose }: { open: boolean; onClose: () => void }
     );
 }
 
-function ErrorDialog({
-                         open,
-                         message,
-                         onClose,
-                     }: {
-    open: boolean;
-    message?: string;
-    onClose: () => void;
-}) {
+function ErrorDialog({open, message, onClose,}: { open: boolean; message?: string; onClose: () => void; })
+{
     const [mounted, setMounted] = useState(false);
     const closeBtnRef = useRef<HTMLButtonElement | null>(null);
 

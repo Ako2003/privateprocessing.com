@@ -14,7 +14,7 @@ import Section12 from "@/components/main/Section12";
 
 export default function Home() {
   return (
-      <main className="bg-black">
+      <main className="bg-black overflow-hidden">
         <Hero />
         <Section1 />
         <Section2 />

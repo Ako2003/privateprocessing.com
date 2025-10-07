@@ -21,10 +21,10 @@ export default function Navbar(){
                 <div className="flex items-center justify-between max-w-[1200px] mx-auto w-11/12">
                     <div className="flex gap-x-30 items-center">
                         <div>
-                            <Link href="/" className="max-lg:hidden">
+                            <Link href="/" className="max-xl:hidden">
                                 <Image src="/svg/logo.svg" alt={"Private Processing Logo"} width={153} height={48}/>
                             </Link>
-                            <Link href="/" className="lg:hidden">
+                            <Link href="/" className="xl:hidden">
                                 <Image src="/svg/logo-small.svg" alt={"Private Processing Logo"} width={48.31} height={48}/>
                             </Link>
                         </div>
@@ -38,7 +38,7 @@ export default function Navbar(){
                         </div>
                     </div>
 
-                    <CustomButton className="max-lg:hidden"/>
+                    <CustomButton className="max-xl:hidden"/>
 
                     <div className="xl:hidden transition-all duration-500 z-100">
                         {isOpen ? (
