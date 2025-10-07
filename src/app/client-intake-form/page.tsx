@@ -49,7 +49,7 @@ const BasicSchema = z
 type BasicValues = z.infer<typeof BasicSchema>;
 
 /* -------------------- page -------------------- */
-export default function MerchantIntakeBasic() {
+export default function ClientIntakeBasic() {
     const {
         register,
         handleSubmit,
@@ -112,7 +112,7 @@ export default function MerchantIntakeBasic() {
                 onSubmit={handleSubmit(onSubmit)}
                 className="mx-auto max-w-3xl space-y-8 bg-white shadow-lg rounded-2xl p-8"
             >
-                <h1 className="text-3xl font-bold text-gray-700">Merchant Intake – Basic</h1>
+                <h1 className="text-3xl font-bold text-gray-700">Client Intake</h1>
 
                 {/* ---------- Basic Information ---------- */}
                 <section className="space-y-4">
@@ -120,19 +120,19 @@ export default function MerchantIntakeBasic() {
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Company Name *</label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 p-2" {...register("companyName")} />
+                        <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("companyName")} />
                         {errorText("companyName")}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Registered Country *</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2" {...register("registeredCountry")} />
+                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("registeredCountry")} />
                             {errorText("registeredCountry")}
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Website / Store URL</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2" placeholder="https://…" {...register("websiteUrl")} />
+                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="https://…" {...register("websiteUrl")} />
                             {errorText("websiteUrl")}
                         </div>
                     </div>
@@ -140,17 +140,17 @@ export default function MerchantIntakeBasic() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Contact Person Name *</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2" {...register("contactName")} />
+                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("contactName")} />
                             {errorText("contactName")}
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Email Address *</label>
-                            <input type="email" className="mt-1 w-full rounded-md border border-gray-300 p-2" {...register("email")} />
+                            <input type="email" className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("email")} />
                             {errorText("email")}
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700">WhatsApp Number *</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2" placeholder="+49 …" {...register("whatsapp")} />
+                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="+49 …" {...register("whatsapp")} />
                             {errorText("whatsapp")}
                         </div>
                     </div>
@@ -175,7 +175,7 @@ export default function MerchantIntakeBasic() {
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Main Products Sold *</label>
-                        <input className="mt-1 w-full rounded-md border border-gray-300 p-2" {...register("mainProducts")} />
+                        <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" {...register("mainProducts")} />
                         {errorText("mainProducts")}
                     </div>
 
@@ -218,12 +218,12 @@ export default function MerchantIntakeBasic() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Average Order Value *</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2" placeholder="$…" {...register("aov")} />
+                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="$…" {...register("aov")} />
                             {errorText("aov")}
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Current Payment Processor (if any)</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2" placeholder="Stripe, Checkout.com, …" {...register("currentProcessor")} />
+                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="Stripe, Checkout.com, …" {...register("currentProcessor")} />
                         </div>
                     </div>
                 </section>
@@ -248,7 +248,7 @@ export default function MerchantIntakeBasic() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Chargeback rate (if known)</label>
-                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2" placeholder="e.g., 0.5%" {...register("chargebackRate")} />
+                            <input className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black" placeholder="e.g., 0.5%" {...register("chargebackRate")} />
                         </div>
                         <div>
                             <p className="text-sm font-medium text-gray-700">Do you offer subscriptions or trials? *</p>
@@ -269,7 +269,7 @@ export default function MerchantIntakeBasic() {
                             Main goal with new payment setup *
                         </label>
                         <input
-                            className="mt-1 w-full rounded-md border border-gray-300 p-2"
+                            className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black"
                             placeholder="e.g., better rates, stability, approvals"
                             {...register("mainGoal")}
                         />
@@ -282,7 +282,7 @@ export default function MerchantIntakeBasic() {
                     <h2 className="text-lg font-semibold text-gray-800">Additional Notes</h2>
                     <textarea
                         rows={3}
-                        className="mt-1 w-full rounded-md border border-gray-300 p-2"
+                        className="mt-1 w-full rounded-md border border-gray-300 p-2 text-black "
                         placeholder="Anything else you’d like us to know before onboarding?"
                         {...register("notes")}
                     />
