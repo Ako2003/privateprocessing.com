@@ -110,7 +110,7 @@ export default function ClientIntakeBasic() {
     return (
         <div className="bg-[#040404] pt-30">
                 <div className="pointer-events-none absolute left-1/2 -translate-x-1/2
-               max-w-[1275px] h-[1621px] -z-0 w-full
+               max-w-[1275px] h-[1621px] -z-0 w-full max-lg:top-0
                [background:radial-gradient(59.14%_50.08%_at_50%_49.92%,rgba(192,160,109,0.6)_0%,rgba(0,0,0,0)_94.28%)]
                blur-[2px]"
                 />
@@ -119,14 +119,15 @@ export default function ClientIntakeBasic() {
                 className="relative mx-auto max-w-[800px] w-11/12 space-y-8 border bg-[#0B0B0B] border-[#292929] shadow-lg rounded-2xl lg:p-15 p-8"
             >
                 <div className=" relative z-10">
-                    <h1 className="!text-[46px] text-gray mb-5 !leading-10"><span
+                    <h1 className="lg:!text-[44px] !text-[36px] mb-5 !leading-10"><span
                         className="text-gold font-semibold">Client Intake</span> Form</h1>
-                    <p className="text-lg font-intel leading-6">Fill in your business details below so our team can review and
+                    <p className="text-lg font-intel leading-6 max-w-[500px]">Fill in your business details below so our
+                        team can review and
                         prepare your onboarding.</p>
 
                     {/* ---------- Basic Information ---------- */}
                     <section className="space-y-4 mt-10">
-                        <h2 className="!text-[28px] font-semibold text-white">Basic Information</h2>
+                        <h2 className="!text-[26px] font-semibold text-white">Basic Information</h2>
 
                         <div>
                             <label className="block text-base font-light text-[#F1EEEE]">Company Name *</label>
@@ -137,7 +138,8 @@ export default function ClientIntakeBasic() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
                             <div>
-                                <label className="block text-base font-light text-[#F1EEEE]">Registered Country *</label>
+                                <label className="block text-base font-light text-[#F1EEEE]">Registered Country
+                                    *</label>
                                 <input
                                     className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none" {...register("registeredCountry")} />
                                 {errorText("registeredCountry")}
@@ -153,7 +155,8 @@ export default function ClientIntakeBasic() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
                             <div>
-                                <label className="block text-base font-light text-[#F1EEEE]">Contact Person Name *</label>
+                                <label className="block text-base font-light text-[#F1EEEE]">Contact Person Name
+                                    *</label>
                                 <input
                                     className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none" {...register("contactName")} />
                                 {errorText("contactName")}
@@ -174,15 +177,18 @@ export default function ClientIntakeBasic() {
                         </div>
                     </section>
 
+                    <hr className="border-[#292929]/60 my-10"/>
+
                     {/* ---------- Business Overview ---------- */}
                     <section className="space-y-4 mt-10">
-                        <h2 className="!text-[28px] font-semibold text-white">Business Overview</h2>
+                        <h2 className="!text-[26px] font-semibold text-white">Business Overview</h2>
 
                         <div className="mt-5">
                             <p className="text-base font-light text-[#F1EEEE]">Type of Business *</p>
                             <div className="mt-2 flex flex-wrap gap-4">
                                 {BIZ_SIMPLE.map((t) => (
-                                    <label key={t} className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                    <label key={t}
+                                           className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
                                         <input type="radio" value={t} {...register("typeOfBusiness")}
                                                className="accent-[#D5B27B]"/>
                                         <span>{t}</span>
@@ -203,7 +209,8 @@ export default function ClientIntakeBasic() {
                             <p className="text-base font-light text-[#F1EEEE]">Main Market(s) *</p>
                             <div className="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
                                 {MARKETS.map((m) => (
-                                    <label key={m} className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                    <label key={m}
+                                           className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
                                         <input type="checkbox" value={m} {...register("mainMarkets")}
                                                className="accent-[#D5B27B]"/>
                                         <span>{m}</span>
@@ -227,7 +234,8 @@ export default function ClientIntakeBasic() {
                             <p className="text-base font-light text-[#F1EEEE]">Monthly Volume (approx.) *</p>
                             <div className="mt-2 grid grid-cols-1 sm:grid-cols-3 gap-2">
                                 {VOLUME3.map((v) => (
-                                    <label key={v} className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                    <label key={v}
+                                           className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
                                         <input type="radio" value={v} {...register("monthlyVolume")}
                                                className="accent-[#D5B27B]"/>
                                         <span>{v}</span>
@@ -239,14 +247,16 @@ export default function ClientIntakeBasic() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
                             <div>
-                                <label className="block text-base font-light text-[#F1EEEE]">Average Order Value *</label>
+                                <label className="block text-base font-light text-[#F1EEEE]">Average Order Value
+                                    *</label>
                                 <input
                                     className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
                                     placeholder="$…" {...register("aov")} />
                                 {errorText("aov")}
                             </div>
                             <div>
-                                <label className="block text-base font-light text-[#F1EEEE]">Current Payment Processor (if
+                                <label className="block text-base font-light text-[#F1EEEE]">Current Payment Processor
+                                    (if
                                     any)</label>
                                 <input
                                     className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
@@ -255,15 +265,20 @@ export default function ClientIntakeBasic() {
                         </div>
                     </section>
 
+                    <hr className="border-[#292929]/60 my-10"/>
+
+
                     {/* ---------- Operational Info ---------- */}
                     <section className="space-y-4 mt-10">
-                        <h2 className="!text-[28px] font-semibold text-white">Operational Info</h2>
+                        <h2 className="!text-[26px] font-semibold text-white">Operational Info</h2>
 
                         <div className="mt-5">
-                            <label className="block text-base font-light text-[#F1EEEE]">How are orders fulfilled? *</label>
+                            <label className="block text-base font-light text-[#F1EEEE]">How are orders fulfilled?
+                                *</label>
                             <div className="mt-2 flex flex-wrap gap-6">
                                 {FULFILLMENTS.map((f) => (
-                                    <label key={f} className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
+                                    <label key={f}
+                                           className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
                                         <input type="radio" value={f} {...register("fulfillment")}
                                                className="accent-[#D5B27B]"/>
                                         <span>{f}</span>
@@ -311,18 +326,22 @@ export default function ClientIntakeBasic() {
                         </div>
                     </section>
 
+                    <hr className="border-[#292929]/60 my-10"/>
+
+
                     {/* ---------- Additional Notes ---------- */}
                     <section className="space-y-4 mt-10">
-                        <h2 className="!text-[28px] font-semibold text-white">Additional Notes</h2>
+                        <h2 className="!text-[26px] font-semibold text-white">Additional Notes</h2>
                         <textarea
                             rows={3}
-                            className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                            className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none !font-montserrat"
                             placeholder="Anything else you’d like us to know before onboarding?"
                             {...register("notes")}
                         />
                     </section>
 
-                    <CustomTextButton className="mt-15" disabled={isSubmitting} text={isSubmitting ? "Submitting…" : "Submit form"}/>
+                    <CustomTextButton className="mt-15" disabled={isSubmitting}
+                                      text={isSubmitting ? "Submitting…" : "Submit form"}/>
                 </div>
                 <SuccessDialog open={isSuccessOpen} onClose={() => setIsSuccessOpen(false)}/>
                 <ErrorDialog open={isErrorOpen} message={errorMessage} onClose={() => setIsErrorOpen(false)}/>
