@@ -110,12 +110,18 @@ export async function POST(req: Request) {
 
         // 4) Respond to the client
         return NextResponse.json({ ok: true });
-    } catch (err: any) {
+    } catch (err: unknown) {
         clearTimeout(timeout);
-        const msg =
-            err?.name === "AbortError"
+
+        let msg: string;
+        if (err instanceof Error) {
+            msg = err.name === "AbortError"
                 ? "Timed out sending to Zapier"
-                : err?.message || "Unknown error";
+                : err.message || "Unknown error";
+        } else {
+            msg = "Unknown error";
+        }
+
         return NextResponse.json({ error: msg }, { status: 500 });
     }
 }
