@@ -869,8 +869,14 @@ export default function ClientIntakeBasic() {
                         />
                     </section>
 
-                    <CustomTextButton className="mt-15" disabled={isSubmitting}
-                                      text={isSubmitting ? "Submitting…" : "Submit form"}/>
+                    <div className="mt-15">
+                        <p className="text-white/60 text-xs">Thank you for completing this form — this helps us match your business with the right payment partner. Once reviewed, our team will reach out with next steps for onboarding.</p>
+                        <p className="text-white/60 text-xs mb-5">Your details are confidential and used only for merchant screening and partner matching.</p>
+                        <CustomTextButton disabled={isSubmitting}
+                                          text={isSubmitting ? "Submitting…" : "Submit form"}/>
+
+                    </div>
+
                 </div>
                 <SuccessDialog open={isSuccessOpen} onClose={() => setIsSuccessOpen(false)}/>
                 <ErrorDialog open={isErrorOpen} message={errorMessage} onClose={() => setIsErrorOpen(false)}/>
