@@ -869,8 +869,8 @@ export default function ClientIntakeBasic() {
                         />
                     </section>
 
-                    <div className="mt-15">
-                        <p className="text-white/60 text-xs">Thank you for completing this form — this helps us match your business with the right payment partner. Once reviewed, our team will reach out with next steps for onboarding.</p>
+                    <div className="mt-5">
+                        {/*<p className="text-white/60 text-xs">Thank you for completing this form — this helps us match your business with the right payment partner. Once reviewed, our team will reach out with next steps for onboarding.</p>*/}
                         <p className="text-white/60 text-xs mb-5">Your details are confidential and used only for merchant screening and partner matching.</p>
                         <CustomTextButton disabled={isSubmitting}
                                           text={isSubmitting ? "Submitting…" : "Submit form"}/>
