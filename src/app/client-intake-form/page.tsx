@@ -643,9 +643,11 @@ export default function ClientIntakeBasic() {
                         <h2 className="!text-[26px] font-semibold text-white">What You Are Looking For</h2>
                         {/* ---------- Priorities ---------- */}
                         <section className="space-y-3 mt-10">
-                            <h2 className="!text-[26px] font-semibold text-white">What’s most important for your
-                                business right now?</h2>
-                            <p className="text-sm text-white/70">Select all that apply</p>
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">What’s most important for your
+                                    business right now?</label>
+                                <p className="text-sm text-white/70">Select all that apply</p>
+                            </div>
 
                             <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 {PRIORITY_OPTS.map((opt) => (
@@ -669,9 +671,11 @@ export default function ClientIntakeBasic() {
 
                         {/* ---------- Fix / Improve ---------- */}
                         <section className="space-y-3 mt-8">
-                            <h2 className="!text-[26px] font-semibold text-white">What would you like to fix or improve
-                                with your current payment setup?</h2>
-                            <p className="text-sm text-white/70">Select all that apply</p>
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">What would you like to fix or improve
+                                    with your current payment setup?</label>
+                                <p className="text-sm text-white/70">Select all that apply</p>
+                            </div>
 
                             <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 {FIX_OPTS.map((opt) => (
