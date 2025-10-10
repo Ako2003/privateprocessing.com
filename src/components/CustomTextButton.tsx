@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
 type CustomButtonProps = { className?: string, text?: string, disabled?: boolean };
 
