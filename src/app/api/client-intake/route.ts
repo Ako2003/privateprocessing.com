@@ -151,7 +151,7 @@ export async function POST(req: Request) {
     const userAgent = req.headers.get("user-agent") || null;
 
     // 4) Upstream webhook (Zapier, Make, your backend, etc.)
-    const url = process.env.ZAPIER_WEBHOOK_URL; // set in your env
+    const url = "https://hooks.zapier.com/hooks/catch/21494223/u52268m/"; // set in your env
     if (!url) {
         return NextResponse.json(
             { error: "Server not configured (missing ZAPIER_WEBHOOK_URL)" },
