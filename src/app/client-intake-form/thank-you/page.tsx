@@ -5,7 +5,7 @@ function Page() {
     return (
         <div className="bg-[#040404] pt-30">
             <div className="relative flex items-center justify-center h-screen -translate-y-32">
-                <div className="max-lg:hidden absolute -z-1 translate-y-32 -right-20 h-[calc(100vh+200px)] w-full">
+                <div className="absolute -z-1 lg:translate-y-32 lg:-right-20 h-[calc(100vh+200px)] w-full">
                     <Image src={"/svg/backgrounds/bg1.svg"} alt={"Background Image"} fill
                            />
                     <div className="absolute max-lg:bottom-30 bottom-0 h-[709px] w-full" style={{
@@ -20,7 +20,7 @@ function Page() {
                     <p className="lg:text-[40px] text-[26px] capitalize mb-3 max-md:leading-7">for completing this
                         form</p>
                     {/*<p className="text-lg mb-3">This helps us match your business with the right payment partner. </p>*/}
-                    <p className="font-bold text-lg">Once reviewed, our team will reach out with next steps for
+                    <p className="font-normal text-lg">Once reviewed, our team will reach out with next steps for
                         onboarding. </p>
                     <div className="absolute bottom-20 left-1/2 -translate-x-1/2">
                         <div className="flex items-center justify-center gap-5 max-md:mb-10 max-lg:hidden">
