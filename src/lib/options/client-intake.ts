@@ -7,22 +7,22 @@ export const FULFILLMENTS = ["Own warehouse", "Dropship", "3PL"] as const;
 export const YESNO = ["Yes", "No"] as const;
 export const ISSUES = [
     {
-        value: "holds",
+        value: "Account holds or sudden shutdowns",
         label: "Account holds or sudden shutdowns",
         prompt: "How long was the hold, and what reason did they give?",
     },
     {
-        value: "chargebacks",
+        value: "High chargebacks / disputes",
         label: "High chargebacks / disputes",
         prompt: "What’s your average chargeback rate?",
     },
     {
-        value: "volume_caps",
+        value: "Volume caps or payout delays",
         label: "Volume caps or payout delays",
         prompt: "What’s your processing cap, and how many days are payouts delayed?",
     },
     {
-        value: "limited_geo",
+        value: "Limited supported countries or currencies",
         label: "Limited supported countries or currencies",
         prompt: "Which countries or currencies can’t your provider support?",
     },
@@ -30,43 +30,43 @@ export const ISSUES = [
 ] as const;
 
 export const ISSUE_VALUES = ISSUES.map(i => i.value) as [
-    "holds",
-    "chargebacks",
-    "volume_caps",
-    "limited_geo",
+    "Account holds or sudden shutdowns",
+    "High chargebacks / disputes",
+    "Volume caps or payout delays",
+    "Limited supported countries or currencies",
     "other"
 ];
 
 // Payments priorities (what's most important now)
 export const PRIORITY_OPTS = [
-    { value: "reach_regions", label: "Reaching new countries or regions" },
-    { value: "faster_reliable_payouts", label: "Getting paid faster and more reliably" },
-    { value: "easier_checkout", label: "Making checkout easier for customers" },
-    { value: "unified_system", label: "Managing everything in one simple system" },
-    { value: "clear_reports", label: "Having clear reports and payment insights" },
+    { value: "Reach Regions", label: "Reaching new countries or regions" },
+    { value: "Faster Reliable Payouts", label: "Getting paid faster and more reliably" },
+    { value: "Easier Checkout", label: "Making checkout easier for customers" },
+    { value: "Unified System", label: "Managing everything in one simple system" },
+    { value: "Clear Reports", label: "Having clear reports and payment insights" },
 ] as const;
 
 // Fix / improve targets
 export const FIX_OPTS = [
-    { value: "faster_payouts", label: "Faster payouts and fewer delays" },
-    { value: "more_approvals", label: "More successful transactions (less declined payments)" },
-    { value: "better_overview", label: "Better overview of sales and settlements" },
-    { value: "more_currencies", label: "Ability to accept more currencies" },
-    { value: "more_methods", label: "Access to more payment methods for your customers" },
+    { value: "Faster Payouts", label: "Faster payouts and fewer delays" },
+    { value: "More Approvals", label: "More successful transactions (less declined payments)" },
+    { value: "Better Overview", label: "Better overview of sales and settlements" },
+    { value: "More Currencies", label: "Ability to accept more currencies" },
+    { value: "More Methods", label: "Access to more payment methods for your customers" },
 ] as const;
 
 export const PRIORITY_VALUES = PRIORITY_OPTS.map(o => o.value) as [
-    "reach_regions",
-    "faster_reliable_payouts",
-    "easier_checkout",
-    "unified_system",
-    "clear_reports"
+    "Reach Regions",
+    "Faster Reliable Payouts",
+    "Easier Checkout",
+    "Unified System",
+    "Clear Reports"
 ];
 
 export const FIX_VALUES = FIX_OPTS.map(o => o.value) as [
-    "faster_payouts",
-    "more_approvals",
-    "better_overview",
-    "more_currencies",
-    "more_methods"
+    "Faster Payouts",
+    "More Approvals",
+    "Better Overview",
+    "More Currencies",
+    "More Methods"
 ];
