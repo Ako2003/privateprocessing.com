@@ -44,6 +44,7 @@ export const PRIORITY_OPTS = [
     { value: "Easier Checkout", label: "Making checkout easier for customers" },
     { value: "Unified System", label: "Managing everything in one simple system" },
     { value: "Clear Reports", label: "Having clear reports and payment insights" },
+    { value: "other", label: "Other"},
 ] as const;
 
 // Fix / improve targets
@@ -53,6 +54,7 @@ export const FIX_OPTS = [
     { value: "Better Overview", label: "Better overview of sales and settlements" },
     { value: "More Currencies", label: "Ability to accept more currencies" },
     { value: "More Methods", label: "Access to more payment methods for your customers" },
+    { value: "other", label: "Other"},
 ] as const;
 
 export const PRIORITY_VALUES = PRIORITY_OPTS.map(o => o.value) as [
@@ -60,7 +62,8 @@ export const PRIORITY_VALUES = PRIORITY_OPTS.map(o => o.value) as [
     "Faster Reliable Payouts",
     "Easier Checkout",
     "Unified System",
-    "Clear Reports"
+    "Clear Reports",
+    "other",
 ];
 
 export const FIX_VALUES = FIX_OPTS.map(o => o.value) as [
@@ -68,5 +71,6 @@ export const FIX_VALUES = FIX_OPTS.map(o => o.value) as [
     "More Approvals",
     "Better Overview",
     "More Currencies",
-    "More Methods"
+    "More Methods",
+    "other"
 ];

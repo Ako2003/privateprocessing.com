@@ -1,136 +1,19 @@
 "use client";
 
 import {useForm, useFieldArray, FieldErrors} from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useRef, useState } from "react";
 import CustomTextButton from "@/components/CustomTextButton";
-
+import { BasicSchema, BasicValues } from "@/schema";
 import {
     BIZ_SIMPLE,
     INDUSTRY,
-    YESNO,
     ISSUES,
-    ISSUE_VALUES,
     PRIORITY_OPTS,
     FIX_OPTS,
-    FIX_VALUES,
-    PRIORITY_VALUES
 } from "@/lib/options";
 import {useRouter} from "next/navigation";
 
-const IssueType = z.enum(ISSUE_VALUES);
-const IssueItemSchema = z.object({
-    type: IssueType,
-    details: z.string().min(1, "Please add a short note"),
-})
-
-
-// array of selected issues with per-item details
-const IssuesSchema = z
-    .array(IssueItemSchema)
-    .min(1, "Select at least one issue")
-    .superRefine((items, ctx) => {
-        // ensure unique 'type'
-        const seen = new Set<string>();
-        items.forEach((it, idx) => {
-            if (seen.has(it.type)) {
-                ctx.addIssue({
-                    code: z.ZodIssueCode.custom,
-                    path: [idx, "type"],
-                    message: "Duplicate selection",
-                });
-            } else {
-                seen.add(it.type);
-            }
-        });
-    });
-
-const PriorityEnum = z.enum(PRIORITY_VALUES);
-const FixEnum = z.enum(FIX_VALUES);
-
-const PrioritiesSchema = z
-    .array(PriorityEnum)
-    .min(1, "Select at least one priority")
-    .superRefine((arr, ctx) => {
-        const s = new Set(arr);
-        if (s.size !== arr.length) {
-            ctx.addIssue({ code: z.ZodIssueCode.custom, message: "Duplicate selection" });
-        }
-    });
-
-const FixesSchema = z
-    .array(FixEnum)
-    .min(1, "Select at least one item to improve")
-    .superRefine((arr, ctx) => {
-        const s = new Set(arr);
-        if (s.size !== arr.length) {
-            ctx.addIssue({ code: z.ZodIssueCode.custom, message: "Duplicate selection" });
-        }
-    });
-
-/* -------------------- schema -------------------- */
-const BasicSchema = z
-    .object({
-        // Basic Information
-        companyName: z.string().min(1, "Required"),
-        registeredCountry: z.string().min(1, "Required"),
-        websiteUrl: z.url("Invalid URL").optional().or(z.literal("")),
-        contactName: z.string().min(1, "Required"),
-        contactRole: z.string().min(1, "Required"),
-        email: z.email("Invalid email"),
-        whatsapp: z.string().min(6, "Enter a valid number"),
-        taxResident: z.string().min(1, "Required"),
-
-        // Business Overview
-        industry: z.enum(INDUSTRY),
-        otherIndustry: z.string().optional(),
-
-        typeOfBusiness: z.enum(BIZ_SIMPLE),
-        otherTypeOfBusiness: z.string().optional(),
-
-
-        inventory: z.string().min(1, "Required"),
-        supplierLocation: z.string().min(1, "Required"),
-        deliveryTime: z.string().min(1, "Required"),
-        trackingCode: z.string().min(1, "Required"),
-        sellingRegions: z.string().min(1, "Required"),
-        currencies: z.string().min(1, "Required"),
-        marketingChannels: z.string().min(1, "Required"),
-        platform: z.string().min(1, "Required"),
-        currentProcessor: z.string().min(1, "Required"),
-        processingVolume: z.string().min(1, "Required"),
-        productPrice: z.string().min(1, "Required"),
-        chargebackRate: z.string().min(1, "Required"),
-        chargebackTool: z.string().min(1, "Required"),
-        previousProcessors: z.string().optional(),
-        itin: z.enum(["yes", "no"]),
-        issues: IssuesSchema,
-        paymentMethods: z.string().min(1, "Required"),
-        priorities: PrioritiesSchema,
-        fixImprovements: FixesSchema,
-        // add near the bottom of your .object({...})
-        regulatedProducts: z.string().optional(),
-
-        refundPolicyUrl: z.url("Invalid URL").optional().or(z.literal("")),
-        returnPolicyUrl: z.url("Invalid URL").optional().or(z.literal("")),
-        privacyPolicyUrl: z.url("Invalid URL").optional().or(z.literal("")),
-        shippingPolicyUrl: z.url("Invalid URL").optional().or(z.literal("")),
-
-        siteShowsFullContact: z.enum(YESNO),
-
-        notes: z.string().optional(),
-    })
-    .refine(
-        (data) => (data.industry === "Other" ? !!data.otherIndustry?.trim() : true),
-        { message: "Please specify your industry", path: ["otherIndustry"] }
-    )
-    .refine(
-        (data) => (data.typeOfBusiness === "Other" ? !!data.otherTypeOfBusiness?.trim() : true),
-        { message: "Please specify your business type", path: ["otherTypeOfBusiness"] }
-    );
-
-type BasicValues = z.infer<typeof BasicSchema>;
 
 /* -------------------- page -------------------- */
 export default function ClientIntakeBasic() {
@@ -145,8 +28,8 @@ export default function ClientIntakeBasic() {
         resolver: zodResolver(BasicSchema),
         defaultValues: {
             websiteUrl: "",
-            typeOfBusiness: "Own Brand",
-            industry: "Fashion",
+            typeOfBusiness: "",
+            industry: "",
             issues: [],
             priorities: [],
             fixImprovements: [],
@@ -155,7 +38,9 @@ export default function ClientIntakeBasic() {
             returnPolicyUrl: "",
             privacyPolicyUrl: "",
             shippingPolicyUrl: "",
-            siteShowsFullContact: "Yes", // or "No"
+            siteShowsFullContact: "",
+            otherPriority: "",
+            otherFixImprovements: "",
         },
     });
 
@@ -302,7 +187,8 @@ export default function ClientIntakeBasic() {
                                     tax resident? *</label>
                                 <input
                                     className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
-                                    placeholder="+49 …" {...register("taxResident")} />
+                                    placeholder="e.g. United Kingdom, France, United States"
+                                    {...register("taxResident")} />
                                 {errorText("taxResident")}
                             </div>
                         </div>
@@ -321,6 +207,7 @@ export default function ClientIntakeBasic() {
                                 {...register("industry")}
                                 className="mt-1 w-full rounded-md border border-[#292929] bg-[#111111] p-2 text-[14px] text-[#F1EEEE] focus:outline-none"
                             >
+                                <option value={""}>Select an option</option>
                                 {INDUSTRY.map((item) => (
                                     <option key={item} value={item}>
                                         {item}
@@ -371,6 +258,7 @@ export default function ClientIntakeBasic() {
                                 </div>
                             )}
                         </div>
+
 
                         {/* Inventory */}
                         <div className="mt-5">
@@ -428,7 +316,7 @@ export default function ClientIntakeBasic() {
                             <label className="block text-base font-light text-[#F1EEEE]">Selling Regions *</label>
                             <input
                                 className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
-                                placeholder="i.e 50% US, EU 30%, UK"
+                                placeholder="e.g. US 50%, UK 30%, EU 20%"
                                 {...register("sellingRegions")}
                             />
                             {errorText("sellingRegions")}
@@ -447,7 +335,7 @@ export default function ClientIntakeBasic() {
 
                         {/* Marketing Channels Used */}
                         <div className="mt-5">
-                            <label className="block text-base font-light text-[#F1EEEE]">Marketing Channels Used
+                            <label className="block text-base font-light text-[#F1EEEE]">Marketing Channels In Use
                                 *</label>
                             <input
                                 className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
@@ -459,7 +347,7 @@ export default function ClientIntakeBasic() {
 
                         {/* Platform */}
                         <div className="mt-5">
-                            <label className="block text-base font-light text-[#F1EEEE]">Platform Used *</label>
+                            <label className="block text-base font-light text-[#F1EEEE]">Platform In Use *</label>
                             <input
                                 className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
                                 placeholder="e.g. Shopify, WooCommerce, Magento, Custom, etc"
@@ -544,24 +432,23 @@ export default function ClientIntakeBasic() {
                                 any)</label>
                             <input
                                 className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
-                                placeholder="Ethoca, Verifi, etc."
+                                placeholder="Stripe, Shopify Payments, Checkout.com, etc."
                                 {...register("previousProcessors")}
                             />
                             {errorText("previousProcessors")}
                         </div>
 
-                        <div className="mt-5">
+                        <div>
                             <label className="block text-base font-light text-[#F1EEEE]">Do you have an ITIN Number?
                                 (Individual Taxpayer Identification Number in the US) *</label>
-                            <select
+                            <input
+                                className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                placeholder="Yes / No / In Process"
                                 {...register("itin")}
-                                className="mt-1 w-full rounded-md border border-[#292929] bg-[#111111] p-2 text-[14px] text-[#F1EEEE] focus:outline-none"
-                            >
-                                <option value={"yes"}>Yes</option>
-                                <option value={"no"}>No</option>
-                            </select>
+                            />
                             {errorText("itin")}
                         </div>
+
 
                         {/* Issues*/}
                         <div className="mt-5">
@@ -569,7 +456,7 @@ export default function ClientIntakeBasic() {
                                 Main Issues or Pain Points (select all that apply) *
                             </p>
 
-                            <div className="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-2">
+                            <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-2">
                                 {ISSUES.map((opt) => {
                                     const checked = isSelected(opt.value);
                                     const idx = indexOf(opt.value);
@@ -624,11 +511,10 @@ export default function ClientIntakeBasic() {
 
                         {/* Payment methods */}
                         <div>
-                            <label className="block text-base font-light text-[#F1EEEE]">Alternative payment methods
-                                that are important for growth* </label>
+                            <label className="block text-base font-light text-[#F1EEEE]">Alternative payment methods that are important for growth* </label>
                             <input
                                 className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
-                                placeholder="Ethoca, Verifi, etc."
+                                placeholder="Apple Pay, Google Pay, Buy Now Pay Later, Paypal, etc."
                                 {...register("paymentMethods")}
                             />
                             {errorText("paymentMethods")}
@@ -640,15 +526,14 @@ export default function ClientIntakeBasic() {
 
                     {/* ---------- What You Are Looking For ---------- */}
                     <section className="space-y-4 mt-10">
-                        <h2 className="!text-[26px] font-semibold text-white">What You Are Looking For</h2>
                         {/* ---------- Priorities ---------- */}
                         <section className="space-y-3 mt-10">
+                            <h2 className="!text-[26px] font-semibold text-white">What You Are Looking For</h2>
                             <div>
-                                <label className="block text-base font-light text-[#F1EEEE]">What’s most important for your
-                                    business right now?</label>
+                                <label className="block text-base font-light text-[#F1EEEE]">What’s most important for
+                                    your business right now?</label>
                                 <p className="text-sm text-white/70">Select all that apply</p>
                             </div>
-
                             <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 {PRIORITY_OPTS.map((opt) => (
                                     <label
@@ -666,17 +551,31 @@ export default function ClientIntakeBasic() {
                                 ))}
                             </div>
 
+                            {/* group-level error */}
                             {errorText("priorities" as never)}
+
+                            {/* show extra input only when 'Other' is checked */}
+                            {(watch("priorities") || []).includes("other") && (
+                                <div className="mt-3">
+                                    <label className="block text-[13px] font-light text-[#F1EEEE]/80">
+                                        Please describe your other priority
+                                    </label>
+                                    <input
+                                        className="mt-1 w-full rounded-md border border-[#292929] bg-[#0C0C0C] p-2 text-[14px] text-[#F1EEEE] focus:outline-none"
+                                        placeholder="Type here…"
+                                        {...register("otherPriority")}
+                                    />
+                                    {errorText("otherPriority" as never)}
+                                </div>
+                            )}
                         </section>
 
                         {/* ---------- Fix / Improve ---------- */}
-                        <section className="space-y-3 mt-8">
+                        <section className="space-y-3 mt-10">
                             <div>
-                                <label className="block text-base font-light text-[#F1EEEE]">What would you like to fix or improve
-                                    with your current payment setup?</label>
+                                <label className="block text-base font-light text-[#F1EEEE]">What would you like to fix or improve with your current payment setup?</label>
                                 <p className="text-sm text-white/70">Select all that apply</p>
                             </div>
-
                             <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 {FIX_OPTS.map((opt) => (
                                     <label
@@ -694,7 +593,23 @@ export default function ClientIntakeBasic() {
                                 ))}
                             </div>
 
+                            {/* group-level error */}
                             {errorText("fixImprovements" as never)}
+
+                            {/* show extra input only when 'Other' is checked */}
+                            {(watch("fixImprovements") || []).includes("other") && (
+                                <div className="mt-3">
+                                    <label className="block text-[13px] font-light text-[#F1EEEE]/80">
+                                        Please describe what else you would like to fix or improve
+                                    </label>
+                                    <input
+                                        className="mt-1 w-full rounded-md border border-[#292929] bg-[#0C0C0C] p-2 text-[14px] text-[#F1EEEE] focus:outline-none"
+                                        placeholder="Type here…"
+                                        {...register("otherFixImprovements")}
+                                    />
+                                    {errorText("otherFixImprovements" as never)}
+                                </div>
+                            )}
                         </section>
                     </section>
 
@@ -718,8 +633,6 @@ export default function ClientIntakeBasic() {
                                 placeholder="Describe if applicable"
                                 {...register("regulatedProducts")}
                             />
-                            {/* optional error if you make it required later */}
-                            {/* {errorText("regulatedProducts")} */}
                         </div>
 
                         {/* Policy links */}
@@ -775,88 +688,32 @@ export default function ClientIntakeBasic() {
 
                         {/* Site shows full contact info */}
                         <div className="mt-4">
-                            <p className="text-base font-light text-[#F1EEEE]">
-                                Does your site display full contact info (address, email, support line)? *
-                            </p>
-                            <div className="mt-2 flex gap-6">
-                                {YESNO.map((v) => (
-                                    <label key={v}
-                                           className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">
-                                        <input
-                                            type="radio"
-                                            value={v}
-                                            {...register("siteShowsFullContact")}
-                                            className="accent-[#D5B27B]"
-                                        />
-                                        <span>{v}</span>
-                                    </label>
-                                ))}
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Does your website display full contact information (email, phone number, any physical address)? *</label>
+                                <input
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                    placeholder="e.g. Yes - our 'Contact Us' page shows our company email, phone number, and address"
+                                    {...register("siteShowsFullContact")}
+                                />
+                                {errorText("siteShowsFullContact")}
                             </div>
-                            {errorText("siteShowsFullContact")}
+                        </div>
+
+                        {/* Site shows full contact info */}
+                        <div className="mt-4">
+                            <div>
+                                <label className="block text-base font-light text-[#F1EEEE]">Does your website clearly display your registered company name and business details (e.g. registration number and address) in the footer? *</label>
+                                <input
+                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
+                                    placeholder="e.g. Yes - our company name, registration number, and address are shown in the footer"
+                                    {...register("siteShowsCompanyDetails")}
+                                />
+                                {errorText("siteShowsCompanyDetails")}
+                            </div>
                         </div>
                     </section>
 
-
-                    {/*/!* ---------- Operational Info ---------- *!/*/}
-                    {/*<section className="space-y-4 mt-10">*/}
-                    {/*    <h2 className="!text-[26px] font-semibold text-white">Operational Info</h2>*/}
-
-                    {/*    <div className="mt-5">*/}
-                    {/*        <label className="block text-base font-light text-[#F1EEEE]">How are orders fulfilled?*/}
-                    {/*            *</label>*/}
-                    {/*        <div className="mt-2 flex flex-wrap gap-6">*/}
-                    {/*            {FULFILLMENTS.map((f) => (*/}
-                    {/*                <label key={f}*/}
-                    {/*                       className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">*/}
-                    {/*                    <input type="radio" value={f} {...register("fulfillment")}*/}
-                    {/*                           className="accent-[#D5B27B]"/>*/}
-                    {/*                    <span>{f}</span>*/}
-                    {/*                </label>*/}
-                    {/*            ))}*/}
-                    {/*        </div>*/}
-                    {/*        {errorText("fulfillment")}*/}
-                    {/*    </div>*/}
-
-                    {/*    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">*/}
-                    {/*        <div>*/}
-                    {/*            <label className="block text-base font-light text-[#F1EEEE]">Chargeback rate (if*/}
-                    {/*                known)</label>*/}
-                    {/*            <input*/}
-                    {/*                className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"*/}
-                    {/*                placeholder="e.g., 0.5%" {...register("chargebackRate")} />*/}
-                    {/*        </div>*/}
-                    {/*        <div>*/}
-                    {/*            <p className="text-base font-light text-[#F1EEEE]">Do you offer subscriptions or trials?*/}
-                    {/*                *</p>*/}
-                    {/*            <div className="mt-2 flex gap-6">*/}
-                    {/*                {YESNO.map((v) => (*/}
-                    {/*                    <label key={v}*/}
-                    {/*                           className="inline-flex items-center gap-2 text-[#F1EEEE] text-[14px]">*/}
-                    {/*                        <input type="radio" value={v} {...register("subscriptionsOrTrials")}*/}
-                    {/*                               className="accent-[#D5B27B]"/>*/}
-                    {/*                        <span>{v}</span>*/}
-                    {/*                    </label>*/}
-                    {/*                ))}*/}
-                    {/*            </div>*/}
-                    {/*            {errorText("subscriptionsOrTrials")}*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-
-                    {/*    <div className="mt-5">*/}
-                    {/*        <label className="block text-base font-light text-[#F1EEEE]">*/}
-                    {/*            Main goal with new payment setup **/}
-                    {/*        </label>*/}
-                    {/*        <input*/}
-                    {/*            className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"*/}
-                    {/*            placeholder="e.g., better rates, stability, approvals"*/}
-                    {/*            {...register("mainGoal")}*/}
-                    {/*        />*/}
-                    {/*        {errorText("mainGoal")}*/}
-                    {/*    </div>*/}
-                    {/*</section>*/}
-
                     <hr className="border-[#292929]/60 my-10"/>
-
 
                     {/* ---------- Additional Notes ---------- */}
                     <section className="space-y-4 mt-10">
