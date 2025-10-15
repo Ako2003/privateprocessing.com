@@ -381,7 +381,7 @@ export default function ClientIntakeBasic() {
                         {/* Processing Volume */}
                         <div>
                             <label className="block text-base font-light text-[#F1EEEE]">Current Monthly Processing
-                                Volume (average of last 6 months) *</label>
+                                Volume (average of last 3 months) *</label>
                             <input
                                 className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
                                 placeholder=""
