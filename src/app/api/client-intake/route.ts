@@ -33,20 +33,20 @@ export async function POST(req: Request) {
     const userAgent = req.headers.get("user-agent") || null;
 
     // 4) Upstream webhook (Zapier, Make, your backend, etc.)
-    // const url = "https://hooks.zapier.com/hooks/catch/21494223/u52268m/"; // set in your env
-    // if (!url) {
-    //     return NextResponse.json(
-    //         { error: "Server not configured (missing ZAPIER_WEBHOOK_URL)" },
-    //         { status: 500 }
-    //     );
-    // }
+    const url = process.env.ZAPIER_WEBHOOK_URL
+    if (!url) {
+        return NextResponse.json(
+            { error: "Server not configured (missing ZAPIER_WEBHOOK_URL)" },
+            { status: 500 }
+        );
+    }
 
     // Abort if upstream hangs
     const ac = new AbortController();
     const timeout = setTimeout(() => ac.abort(), 12_000);
 
     try {
-        const zapRes = await fetch("/api/example", {
+        const zapRes = await fetch(url, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             signal: ac.signal,
