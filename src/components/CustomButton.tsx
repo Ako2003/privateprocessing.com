@@ -13,7 +13,7 @@ export default function CustomButton({disabled,  text = "Find out if you qualify
     return (
         <>
             <button
-                className={`relative flex items-center gap-x-2 button-gradient w-fit leading-8 group ${className}`}
+                className={`relative flex items-center gap-x-2 button-gradient w-fit leading-8 group cursor-pointer ${className}`}
                 onClick={() => setOpen(true)}
                 disabled={disabled}
             >
