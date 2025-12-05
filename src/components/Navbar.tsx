@@ -38,7 +38,10 @@ export default function Navbar(){
                         </div>
                     </div>
 
-                    <CustomButton className="max-xl:hidden"/>
+                    <div className='flex items-center gap-x-5'>
+                        <Link href="https://app.privateprocessing.com" target="_blank" className="font-medium text-sm">Sign In</Link>
+                        <CustomButton className="max-xl:hidden"/>
+                    </div>
 
                     <div className="xl:hidden transition-all duration-500 z-100">
                         {isOpen ? (
