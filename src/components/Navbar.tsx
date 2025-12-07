@@ -39,8 +39,12 @@ export default function Navbar(){
                     </div>
 
                     <div className='flex items-center gap-x-5'>
-                        <Link href="https://app.privateprocessing.com" target="_blank" className="font-medium text-sm">Sign In</Link>
-                        <CustomButton className="max-xl:hidden"/>
+                        {/*<Link href="https://app.privateprocessing.com" target="_blank" className="font-medium text-sm">Sign In</Link>*/}
+                        {/*<CustomButton className="max-xl:hidden"/>*/}
+                        <button className='text-black font-semibold text-sm px-5 py-3 rounded-full cursor-pointer' onClick={() => window.location.href = "https://app.privateprocessing.com"} style={{
+                            background: "linear-gradient(298.86deg, rgba(173, 141, 85, 0.9) 7.31%, #D2AD75 33.41%, #E8CDA0 54.2%, #D2AD75 89%, rgba(173, 141, 85, 0.9) 107.85%)",
+                            filter: "drop-shadow(0px 2px 5.8px rgba(187, 165, 129, 0.29))",
+                        }}>Log in</button>
                     </div>
 
                     <div className="xl:hidden transition-all duration-500 z-100">
