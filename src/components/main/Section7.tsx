@@ -39,7 +39,7 @@ export default function Section7(){
 
                     {/* Button as the last element in row 2, right side */}
                     <div className="lg:col-start-3 lg:row-start-2  self-end">
-                        <CustomButton />
+                        <CustomButton text="Start for free"/>
                     </div>
                 </div>
             </div>

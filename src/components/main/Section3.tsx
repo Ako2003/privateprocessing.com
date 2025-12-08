@@ -22,7 +22,7 @@ export default function Section3() {
                         <h2 className="lg:!text-[38px]">Why E-Commerce <br/> <span className="text-gold font-bold">Whales use Private Processing™</span></h2>
                     </div>
                     <div className="max-lg:hidden">
-                        <CustomButton />
+                        <CustomButton text="Start for free" />
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@ export default function Section3() {
                     </div>
                 </div>
                 <div className="flex justify-start w-full mt-10 lg:hidden">
-                    <CustomButton />
+                    <CustomButton text="Start for free" />
                 </div>
             </div>
         </section>

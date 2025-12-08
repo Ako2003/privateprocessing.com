@@ -26,7 +26,7 @@ export default function Section11(){
                         series of connection events in the most exclusive locations around the world.</p>
                     <p className="font-inter font-light text-lg max-w-[470px] mt-5 text-whitisch">We create human
                         relationships that last a lifetime.</p>
-                    <CustomButton className="mt-8"/>
+                    <CustomButton className="mt-8" text="Start for free"/>
                 </div>
             </div>
         </section>

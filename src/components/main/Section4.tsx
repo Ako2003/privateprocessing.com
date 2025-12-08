@@ -52,7 +52,7 @@ export default function Section4(){
                             </p>
                         </div>
                         <hr className="border-t border-[#2b2b2b] w-full mt-5"/>
-                        <CustomButton className="mt-8"/>
+                        <CustomButton className="mt-8" text="Start for free"/>
                     </div>
                     <div className="z-0 lg:translate-x-20 translate-x-5 max-lg:mt-5">
                         <Image src={"/img/img_3.png"} alt={"Private processing over other platforms"} width={808}

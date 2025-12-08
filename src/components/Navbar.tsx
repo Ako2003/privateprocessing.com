@@ -41,25 +41,35 @@ export default function Navbar(){
                     <div className='flex items-center gap-x-5'>
                         {/*<Link href="https://app.privateprocessing.com" target="_blank" className="font-medium text-sm">Sign In</Link>*/}
                         {/*<CustomButton className="max-xl:hidden"/>*/}
-                        <button className='text-black font-semibold text-sm px-5 py-3 rounded-full cursor-pointer' onClick={() => window.location.href = "https://app.privateprocessing.com"} style={{
+                        <button
+                            className='text-black font-semibold font-inter text-sm px-5 py-3 rounded-full cursor-pointer'
+                            onClick={() => window.location.href = "https://app.privateprocessing.com"} style={{
                             background: "linear-gradient(298.86deg, rgba(173, 141, 85, 0.9) 7.31%, #D2AD75 33.41%, #E8CDA0 54.2%, #D2AD75 89%, rgba(173, 141, 85, 0.9) 107.85%)",
                             filter: "drop-shadow(0px 2px 5.8px rgba(187, 165, 129, 0.29))",
-                        }}>Log in</button>
+                        }}>Open Account
+                        </button>
+                        <button
+                            className='font-semibold font-inter text-sm px-5 py-3 rounded-full cursor-pointer border border-white/18'
+                            onClick={() => window.location.href = "https://app.privateprocessing.com/login"} style={{
+                            background: " linear-gradient(180deg, rgba(161, 166, 191, 0.7) -64.13%, rgba(161, 166, 191, 0) 136.96%)",
+                        }}>Log In
+                        </button>
                     </div>
 
                     <div className="xl:hidden transition-all duration-500 z-100">
                         {isOpen ? (
-                            <X onClick={()=>setIsOpen(false)}/>
+                            <X onClick={() => setIsOpen(false)}/>
                         ) : (
-                            <Menu onClick={()=>setIsOpen(true)}/>
-                            )}
+                            <Menu onClick={() => setIsOpen(true)}/>
+                        )}
                     </div>
 
                 </div>
             </div>
             {/* Mobile Menu*/}
             {isOpen && (
-                <div className="fixed translate-y-[9.5px] top-19 xl:hidden h-[calc(100vh)] w-full bg-black/60 backdrop-blur-[8px] z-90">
+                <div
+                    className="fixed translate-y-[9.5px] top-19 xl:hidden h-[calc(100vh)] w-full bg-black/60 backdrop-blur-[8px] z-90">
                     <div className="flex flex-col justify-center h-[calc(100svh)] -translate-y-20 space-y-3">
                         {menu.map((item, index) => (
                             <div key={index} className="text-center" onClick={() => setIsOpen(false)}>

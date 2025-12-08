@@ -33,7 +33,7 @@ export default function Hero() {
                         <p className="lg:text-[22px] text-[18px] max-w-[480px] capitalize leading-8 mt-8 font-light text-[#b7b7b7]">
                             Relief the stress of payment processing in e-commerce with private processing™
                         </p>
-                        <CustomButton className="lg:mt-13 mt-8 w-fit"/>
+                        <CustomButton className="lg:mt-13 mt-8 w-fit" text="Start for free"/>
                     </div>
                 </div>
 

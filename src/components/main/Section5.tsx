@@ -65,7 +65,7 @@ export default function Section5() {
 
                                 ))}
                             </div>
-                            <CustomButton className="mt-3"/>
+                            <CustomButton text="Start for free" className="mt-3"/>
                         </div>
 
                     </div>

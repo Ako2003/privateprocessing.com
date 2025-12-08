@@ -62,7 +62,7 @@ export default function Section1() {
                     <div>
                         <ArrowText title={"private processing™"}/>
                         <h3 className="max-w-[500px] mb-6 text-balance">Experience the private banking of payment processing</h3>
-                        <CustomButton/>
+                        <CustomButton text="Start for free" />
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@ export default function Section1() {
             <div className="mt-10 lg:hidden mx-auto w-11/12 -translate-y-20">
                 <ArrowText title={"private processing™"}/>
                 <h3 className="max-w-[440px] mb-6 capitalize">Experience the private banking of payment processing</h3>
-                <CustomButton/>
+                <CustomButton text="Start for free" />
             </div>
         </section>
     )

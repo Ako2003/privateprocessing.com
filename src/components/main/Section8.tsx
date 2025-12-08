@@ -25,7 +25,7 @@ export default function Section8(){
                 <div className="lg:mt-12.5 mt-5">
                     <EmblaCarousel slides={cards} />
                 </div>
-                <CustomButton className="max-lg:hidden mt-5"/>
+                <CustomButton className="max-lg:hidden mt-5" text="Start for free"/>
 
             </div>
         </section>

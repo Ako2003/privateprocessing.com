@@ -40,7 +40,7 @@ export default function Section4(){
                             </div>
                         ))}
                     </div>
-                    <CustomButton/>
+                    <CustomButton text="Start for free"/>
                 </div>
             </div>
         </section>
