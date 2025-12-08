@@ -146,7 +146,7 @@ const PrivacyPolicy = () => {
                                 Accidental, incorrect, or unauthorized sharing does not create liability for PrivateProcessing.com or Private Processing LLC.
                             </p>
 
-                            <h3 className="text-lg text-white font-medium mb-3">3.3 Sharing With Legal Authorities</h3>
+                            <h3 className="!text-xl text-white font-medium mb-3">3.3 Sharing With Legal Authorities</h3>
                             <p className="text-gray-300 mb-2 leading-relaxed">
                                 We may share information with government agencies, regulatory bodies, or law enforcement when:
                             </p>
