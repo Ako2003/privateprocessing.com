@@ -27,11 +27,11 @@ export default function Hero() {
                 <div className="mx-auto max-w-[1200px] w-11/12 h-full">
                     <div className="flex flex-col justify-center h-full lg:max-w-[824px] max-w-[350px] lg:translate-y-15">
                         <h1 className="text-balance">
-                            Worlds <span className="text-gold font-semibold">#1 Comparison Platform </span> for E-Com Payment Processors
+                            Worlds <span className="text-gold font-semibold">#1 All-In-One </span> Private Processing Platform for E-Com Stores
                             {/*<span className="text-gold font-semibold"> One Call Away ... </span>*/}
                         </h1>
-                        <p className="lg:text-[22px] text-[18px] max-w-[480px] capitalize leading-8 mt-8 font-light text-[#b7b7b7]">
-                            Find the Best Private Processors for Your Online Shop. Apply with One Click.
+                        <p className="lg:text-[22px] text-[18px] capitalize leading-8 mt-4 font-light text-[#b7b7b7]">
+                            Find and Onboard with Private Processors for your E-Com Store.
                         </p>
                         <CustomButton className="lg:mt-13 mt-8 w-fit" text="Start for free"/>
                     </div>
