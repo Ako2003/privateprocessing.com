@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
   background: #000;
   color: var(--foreground);
-  font-family: var(--font-montserrat);
+  font-family: var(--font-inter);
 }
 
 h1 {
