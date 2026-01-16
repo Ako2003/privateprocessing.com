@@ -99,6 +99,12 @@ h5 {
   letter-spacing: 1px;
 }
 
+.video-button-gradient {
+  background: linear-gradient(180deg, rgba(161, 166, 191, 0.7) -64.13%, rgba(161, 166, 191, 0) 136.96%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+}
+
 .text-gold {
   background: linear-gradient(309.94deg, rgba(173, 141, 85, 0.9) 5.06%, #D2AD75 23.8%, #E8CDA0 38.72%, #D2AD75 63.7%, rgba(173, 141, 85, 0.9) 77.23%);
   -webkit-background-clip: text;
@@ -106,6 +112,15 @@ h5 {
   background-clip: text;
   color: transparent;
 }
+
+.text-silver {
+  background: linear-gradient(180deg, #FFFFFF -21.83%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 
 .text-gray {
   background: linear-gradient(90deg, #4C4C4C 0%, #B2B2B2 67.31%);

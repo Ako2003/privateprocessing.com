@@ -7,10 +7,11 @@ import {Menu, X} from "lucide-react";
 import { useState } from "react";
 
 const menu = [
-    {title: "Private processing solution", url: "#private-processing-solution"},
-    {title: "Shared values", url: "#shared-values"},
-    {title: "Mission", url: "#mission"},
-    {title: "Awards", url: "#awards"},
+    {title: "Platform", url: "#private-processing-solution"},
+    {title: "Solutions", url: "#shared-values"},
+    {title: "Leadership", url: "#mission"},
+    {title: "Resources", url: "#awards"},
+    {title: "Contact", url: "#awards"},
 ]
 
 export default function Navbar(){
@@ -21,7 +22,7 @@ export default function Navbar(){
                 <div className="flex items-center justify-between max-w-[1200px] mx-auto w-11/12">
                     <div className="flex gap-x-30 items-center">
                         <div>
-                            <Link href="/" className="max-xl:hidden">
+                            <Link href="/" className="max-lg:hidden">
                                 <Image src="/svg/logo.svg" alt={"Private Processing Logo"} width={153} height={48}/>
                             </Link>
                             <Link href="/" className="xl:hidden">
@@ -29,10 +30,10 @@ export default function Navbar(){
                             </Link>
                         </div>
 
-                        <div className="flex gap-x-15 max-xl:hidden">
+                        <div className="flex gap-x-15 max-lg:hidden">
                             {menu.map((item, index) => (
                                 <div key={index}>
-                                    <Link href={item.url} className="font-medium text-xs uppercase">{item.title}</Link>
+                                    <Link href={item.url} className="font-medium font-inter text-sm capitalize">{item.title}</Link>
                                 </div>
                             ))}
                         </div>
@@ -46,17 +47,19 @@ export default function Navbar(){
                             onClick={() => window.location.href = "https://app.privateprocessing.com/signup"} style={{
                             background: "linear-gradient(298.86deg, rgba(173, 141, 85, 0.9) 7.31%, #D2AD75 33.41%, #E8CDA0 54.2%, #D2AD75 89%, rgba(173, 141, 85, 0.9) 107.85%)",
                             filter: "drop-shadow(0px 2px 5.8px rgba(187, 165, 129, 0.29))",
-                        }}>Open Account
+                        }}>
+                            Log In
                         </button>
                         <button
                             className='font-semibold font-inter text-sm px-5 py-3 rounded-full cursor-pointer border border-white/18'
                             onClick={() => window.location.href = "https://app.privateprocessing.com/login"} style={{
                             background: " linear-gradient(180deg, rgba(161, 166, 191, 0.7) -64.13%, rgba(161, 166, 191, 0) 136.96%)",
-                        }}>Log In
+                        }}>
+                            Sign Up
                         </button>
                     </div>
 
-                    <div className="xl:hidden transition-all duration-500 z-100">
+                    <div className="lg:hidden transition-all duration-500 z-100">
                         {isOpen ? (
                             <X onClick={() => setIsOpen(false)}/>
                         ) : (
