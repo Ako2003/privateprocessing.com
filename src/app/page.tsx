@@ -17,15 +17,20 @@ export default function Home() {
       <main className="bg-black overflow-hidden">
         <Hero />
         <Section1 />
-        <Section2 />
-        {/*<Section3 />*/}
-        <Section4 />
-        <Section5 />
-        <Section6 />
-        <Section7 />
-        <Section8 />
-        <Section9 />
+          <div className="pb-10" style={{
+              background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
+          }}>
+            <Section2 />
+            {/*<Section3 />*/}
+            <Section4 />
+            <Section5 />
+            <Section6 />
+          </div>
+        {/*<Section7 />*/}
+        {/*<Section8 />*/}
+        {/*<Section9 />*/}
         <Section10 />
+        {/*<Section11 />*/}
         <Section11 />
         <Section12 />
       </main>

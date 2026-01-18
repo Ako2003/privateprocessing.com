@@ -1,76 +1,62 @@
 import Image from "next/image";
-import {Cabin} from "next/dist/compiled/@next/font/dist/google";
 import CustomButton from "@/components/CustomButton";
+import ArrowText from "@/components/main/ArrowText";
 
-const points = [
-    "No struggles with alternative payment options",
-    "High Credit Card Acceptance Rates",
-    "Dedicated Private Processing Executive Manager",
-    "Reserves are discussed upfront",
-    "Old School Support",
-]
-
-export default function Section5() {
+export default function Section2() {
     return (
-        <section className="lg:mt-35 lg:overflow-hidden overflow-x-hidden">
-            <div className="relative w-full flex lg:flex-row flex-col items-center lg:h-[600px] max-w-[1440px] mx-auto">
+        <section className="mt-20 max-w-[1200px] mx-auto w-11/12">
+            <div className="max-w-[800px] mx-auto text-center">
+                <p className="text-[52px] leading-14">We support <span className="text-gold font-medium">low, medium and high risk</span> e-commerce.
+                </p>
+                <p className="text-[#ACAFB9] text-[20px] mt-5">Each payment processor is specialized in a different
+                    area. Our platform allows you to find processors that perfectly fit your business type and
+                    industry.</p>
+            </div>
+            <div className="flex justify-between mt-20">
+                {/*  Card 1  */}
+                <div className="w-[380px] border border-[#38332e] rounded-[12px] p-5 pb-0" style={{
+                    background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",
+                }}
+                >
+                    <p className="text-white font-medium text-lg">Risk-Aware Assessment</p>
+                    <p className="text-[#ACAFB9] font-light text-base">Every processor is matched to your business
+                        model, industry, and risk level — from low to high-risk e-commerce.</p>
 
-                <div className="lg:hidden w-11/12 mx-auto translate-y-30">
-                    <h2 className="!font-normal lg:!text-[38px]">
-                        <span className="text-gold font-manrope font-bold">A New World Opens.</span>
-                        <br/>
-                        The World Of Private Processing<span className="align-super text-lg ml-0.5">™</span>
-                    </h2>
-                    <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>
+                    <Image src={"/img/img_5.png"} alt={"Wallet Image"} width={341} height={298} className="mt-10"/>
                 </div>
-                <div className="relative basis-1/2 w-full max-lg:translate-y-30">
-                    <Image src={"/img/img_4.png"} alt={"Vincent Pecho"} width={393} height={523}
-                           className="object-cover lg:object-[25%_25%] object-[50%_25%] w-full h-[600px]"/>
-                    <div
-                        className="max-lg:hidden absolute left-0 h-[600px] w-full top-0 -translate-x-[30%]"
-                        style={{
-                            background: "linear-gradient(180.68deg, rgba(0, 0, 0, 0) 0.59%, #000000 88.24%)",
-                            transform: "matrix(0, -1, -1, 0, 0, 0)",
-                        }}
-                    />
-                </div>
-                <div>
-                    <div
-                        className="max-lg:hidden absolute inset-0 translate-x-[10%]"
-                        style={{
-                            background:
-                                "linear-gradient(270.04deg, rgba(0, 0, 0, 0) 3.05%, #000000 34.03%)",
-                            transform: "rotate(180deg)",
-                        }}
-                    />
-                    {/*<div className="bg-black/60 absolute inset-0 lg:hidden"/>*/}
-                    <div className="relative z-0 h-full max-w-[1200px] lg:mx-auto w-11/12 py-15">
-                        <div className="flex flex-col items-start justify-center h-full max-w-[1200px] mx-auto w-11/12">
-                            <div className="max-lg:hidden">
-                                <h2 className="!font-normal lg:!text-[38px]">
-                                    <span className="text-gold font-manrope font-bold">A New World Opens.</span>
-                                    <br/>
-                                    The World Of Private Processing<span className="align-super text-lg ml-0.5">™</span>
-                                </h2>
-                                <p className="font-semibold text-lg mt-3">Top-tier advantages of Private Processing™</p>
-                            </div>
-                            <hr className="max-lg:hidden border-t border-[#2b2b2b] w-full my-10 max-w-[677px]"/>
-                            <div className="mb-5">
-                                {points.map((point, i) => (
-                                    <div key={i} className="flex items-center gap-x-3 mb-3 text-whitisch">
-                                        <Image src={"/svg/golden-tick.svg"} alt={"Golden Tick Icon"} width={15.19}
-                                               height={10.76}/>
-                                        <p className="font-intel font medium text-lg capitalize">{point}</p>
-                                    </div>
 
-                                ))}
-                            </div>
-                            <CustomButton text="Start for free" className="mt-3"/>
-                        </div>
-
+                {/*  Card 2  */}
+                <div className="w-[380px] border border-[#38332e] rounded-[12px]" style={{
+                    background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",
+                }}
+                >
+                    <div className="flex justify-center w-full" style={{
+                        background: "rgba(0, 0, 0, 0.56)",
+                        border: "1px solid #242424",
+                        backdropFilter: "blur(5.35px)",
+                        borderRadius: "16px",
+                    }}>
+                        <Image src={"/img/img_7.png"} alt={"Total Order Image"} width={337} height={298}/>
                     </div>
+                    <div className="p-5">
+                        <p className="text-white font-medium text-lg">Specialized Processor Matching</p>
+                        <p className="text-[#ACAFB9] font-light text-base">We connect you only with processors that
+                            support your risk level.</p>
+                    </div>
+                </div>
+
+                {/*  Card 3  */}
+                <div className="w-[380px] border border-[#38332e] rounded-[12px] p-5 pb-0" style={{
+                    background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",
+                }}
+                >
+                    <p className="text-white font-medium text-lg">Long-Term Partnership</p>
+                    <p className="text-[#ACAFB9] font-light text-base">Get onboarded with processors that understand your business and want to grow with you.</p>
+
+                    <Image src={"/img/img_9.png"} alt={"Average Order Value Image"} width={341} height={298} className="mt-7"/>
                 </div>
             </div>
         </section>
     )
 }
+
