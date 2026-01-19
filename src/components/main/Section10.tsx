@@ -10,7 +10,7 @@ const awards = [
 ]
 
 
-export default function Section4(){
+export default function Section10(){
     return(
         <section className="lg:pt-30 pt-35" id="awards">
             <div className="mx-auto max-w-[1200px] w-11/12">

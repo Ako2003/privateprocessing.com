@@ -11,6 +11,7 @@ import Section9 from "@/components/main/Section9";
 import Section10 from "@/components/main/Section10";
 import Section11 from "@/components/main/Section11";
 import Section12 from "@/components/main/Section12";
+import Articles from "@/components/main/Articles";
 
 export default function Home() {
   return (
@@ -29,7 +30,12 @@ export default function Home() {
         {/*<Section7 />*/}
         {/*<Section8 />*/}
         {/*<Section9 />*/}
-        <Section10 />
+        <div className="pb-10" style={{
+            background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
+        }}>
+            <Section10 />
+            <Articles />
+        </div>
         {/*<Section11 />*/}
         <Section11 />
         <Section12 />

@@ -54,18 +54,29 @@ export default function Footer() {
                     <p className="font-inter font-medium text-base">Navigation</p>
                     <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-3">
                         <li>
-                            <a href="#private-processing-solution">
-                                Private Processing Solution
+                            <a href="#platform-overview">
+                                Platform Overview
                             </a>
                         </li>
                         <li>
-                            <a href="#shared-values">Shared Values</a>
+                            <a href="#how-it-works">
+                                How it works
+                            </a>
                         </li>
                         <li>
-                            <a href="#mission">Mission</a>
+                            <a href="#compare-processors">
+                                Compare Processors
+                            </a>
                         </li>
                         <li>
-                            <a href="#awards">Awards</a>
+                            <a href="#awards">
+                                Awards
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#leadership">
+                                Leadership
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -110,6 +121,22 @@ export default function Footer() {
                             height={8}
                         />
                     </div>
+                    <div className="flex items-center gap-x-2 mt-3">
+                        <a
+                            href="https://www.youtube.com/@PrivateProcessing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-inter font-medium text-base text-[#9194A1]"
+                        >
+                            YouTube
+                        </a>
+                        <Image
+                            src={"/svg/social-media/youtube.svg"}
+                            alt={"YouTube Icon"}
+                            width={26}
+                            height={20}
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -118,7 +145,7 @@ export default function Footer() {
                 <div className="basis-5/7">
                     <div className="flex items-center gap-5">
                         <p className="font-semibold">Disclaimer</p>
-                        <hr className="w-full border-[#1E1E1E] h-[0.5px]" />
+                        <hr className="w-full border-[#1E1E1E] h-[0.5px]"/>
                     </div>
                     <p className="mt-2 text-[12px] text-white/60">
                         At Private Processing, we provide exclusive and secure payment
@@ -133,34 +160,19 @@ export default function Footer() {
                 </div>
 
                 <div className="basis-1/7 flex items-center justify-end gap-5 max-md:mb-10 max-lg:hidden">
-                    <a
-                        href="https://wa.me/971528072627"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-inter font-medium text-base text-[#9194A1]"
-                    >
-                        <Image
-                            src={"/svg/social-media/whatsapp.svg"}
-                            alt={"Whatsapp Icon"}
-                            width={20}
-                            height={20}
-                        />
-                    </a>
-                    <a href="https://www.instagram.com/samuel.aziz.boubaous?igsh=dnFvY2E2N3YyZmty">
-                        <Image
-                            src={"/svg/social-media/instagram.svg"}
-                            alt={"Instagram Icon"}
-                            width={20}
-                            height={20}
-                        />
-                    </a>
-                    <a href="https://www.youtube.com/@samuelazizbusiness">
-                        <Image
-                            src={"/svg/social-media/youtube.svg"}
-                            alt={"Youtube Icon"}
-                            width={26}
-                            height={20}
-                        />
+                    <a className="font-roboto text-base font-semibold uppercase flex gap-x-1" href="#">
+                        <p>Back to top</p>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.75 7.5C12.525 7.5 12.375 7.425 12.225 7.275L8.475 3.525C8.175 3.225 8.175 2.775 8.475 2.475C8.775 2.175 9.225 2.175 9.525 2.475L13.275 6.225C13.575 6.525 13.575 6.975 13.275 7.275C13.125 7.425 12.975 7.5 12.75 7.5Z"
+                                fill="white"/>
+                            <path
+                                d="M5.25 7.5C5.025 7.5 4.875 7.425 4.725 7.275C4.425 6.975 4.425 6.525 4.725 6.225L8.475 2.475C8.775 2.175 9.225 2.175 9.525 2.475C9.825 2.775 9.825 3.225 9.525 3.525L5.775 7.275C5.625 7.425 5.475 7.5 5.25 7.5Z"
+                                fill="white"/>
+                            <path
+                                d="M9 15.75C8.55 15.75 8.25 15.45 8.25 15V3C8.25 2.55 8.55 2.25 9 2.25C9.45 2.25 9.75 2.55 9.75 3V15C9.75 15.45 9.45 15.75 9 15.75Z"
+                                fill="white"/>
+                        </svg>
                     </a>
                 </div>
 
