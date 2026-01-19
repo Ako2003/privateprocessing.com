@@ -17,9 +17,7 @@ export default function Home() {
 
     return (
       <main className="bg-black overflow-hidden">
-        <Hero
-            setModalVisible={setModalVisible}
-        />
+        <Hero setModalVisible={setModalVisible}/>
         <Section1 />
           <div className="pb-10" style={{
               background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",

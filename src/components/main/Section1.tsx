@@ -9,7 +9,7 @@ export default function Section1() {
             background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
         }}>
             <div className="max-w-[1200px] mx-auto w-11/12">
-                <hr className="border-t border-[#1F2026] mb-27 mt-40"/>
+                <hr className="border-t border-[#1F2026] mb-27 mt-20"/>
                 <div className="flex lg:flex-row flex-col gap-10 items-center justify-between">
                     <div className="flex justify-between w-full items-center xl:flex-row flex-col">
                         <p className="text-[40px] font-inter xl:max-w-[526px] leading-12 max-xl:text-center">Find and apply for <span
