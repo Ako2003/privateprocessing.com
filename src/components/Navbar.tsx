@@ -2,16 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import CustomButton from "@/components/CustomButton";
 import {Menu, X} from "lucide-react";
 import { useState } from "react";
 
 const menu = [
-    {title: "Platform", url: "#private-processing-solution"},
-    {title: "Solutions", url: "#shared-values"},
-    {title: "Leadership", url: "#mission"},
-    {title: "Resources", url: "#awards"},
-    {title: "Contact", url: "#awards"},
+    {title: "Platform", url: "#platform"},
+    {title: "Solutions", url: "#solutions"},
+    {title: "Leadership", url: "#leadership"},
+    {title: "Resources", url: "#resources"},
+    {title: "Contact", url: "#contact"},
 ]
 
 export default function Navbar(){

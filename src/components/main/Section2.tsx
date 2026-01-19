@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Section2() {
     return (
-        <section className="mt-20">
+        <section className="pt-20" id="solutions">
             <div className="max-w-[800px] mx-auto text-center w-11/12">
                 <p className="lg:text-[52px] text-[40px] max-lg:leading-12">All your <span className="text-gold font-medium">Information in one place</span>
                 </p>

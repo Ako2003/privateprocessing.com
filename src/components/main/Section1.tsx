@@ -5,7 +5,7 @@ export default function Section1() {
     return (
 
 
-    <section className="mt-25 relative z-10" style={{
+    <section className="mt-25 relative z-10" id="platform" style={{
             background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
         }}>
             <div className="max-w-[1200px] mx-auto w-11/12">
