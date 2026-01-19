@@ -2,19 +2,19 @@ import Image from "next/image";
 import CustomButton from "@/components/CustomButton";
 import ArrowText from "@/components/main/ArrowText";
 
-export default function Section2() {
+export default function Section5() {
     return (
         <section className="mt-20 max-w-[1200px] mx-auto w-11/12">
             <div className="max-w-[800px] mx-auto text-center">
-                <p className="text-[52px] leading-14">We support <span className="text-gold font-medium">low, medium and high risk</span> e-commerce.
+                <p className="lg:text-[52px] text-[40px] leading-14 max-lg:leading-12">We support <span className="text-gold font-medium">low, medium and high risk</span> e-commerce.
                 </p>
                 <p className="text-[#ACAFB9] text-[20px] mt-5">Each payment processor is specialized in a different
                     area. Our platform allows you to find processors that perfectly fit your business type and
                     industry.</p>
             </div>
-            <div className="flex justify-between mt-20">
+            <div className="flex justify-between mt-20 xl:flex-row flex-col gap-y-10">
                 {/*  Card 1  */}
-                <div className="w-[380px] border border-[#38332e] rounded-[12px] p-5 pb-0" style={{
+                <div className="max-w-[380px] border border-[#38332e] rounded-[12px] p-5 pb-0 mx-auto" style={{
                     background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",
                 }}
                 >
@@ -26,7 +26,7 @@ export default function Section2() {
                 </div>
 
                 {/*  Card 2  */}
-                <div className="w-[380px] border border-[#38332e] rounded-[12px]" style={{
+                <div className="max-w-[380px] border border-[#38332e] rounded-[12px] mx-auto" style={{
                     background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",
                 }}
                 >
@@ -46,7 +46,7 @@ export default function Section2() {
                 </div>
 
                 {/*  Card 3  */}
-                <div className="w-[380px] border border-[#38332e] rounded-[12px] p-5 pb-0" style={{
+                <div className="max-w-[380px] border border-[#38332e] rounded-[12px] p-5 pb-0 mx-auto" style={{
                     background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",
                 }}
                 >

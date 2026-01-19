@@ -11,16 +11,21 @@ export default function Section1() {
             <div className="max-w-[1200px] mx-auto w-11/12">
                 <hr className="border-t border-[#1F2026] mb-27 mt-40"/>
                 <div className="flex lg:flex-row flex-col gap-10 items-center justify-between">
-                    <div className="flex justify-between w-full items-center">
-                        <p className="text-[40px] font-inter max-w-[526px] leading-12">Find and apply for <span className="font-manrope font-medium text-gold">payment processors worldwide.</span></p>
-                        <div className="w-px h-[160px] bg-white/30"/>
-                        <p className="text-[20px] font-inter text-[#ACAFB9] max-w-[536px]">Imagine working with payment processors that want to grow with you and offer one-on-one support — so you can scale to $10M+ per month without headaches.</p>
+                    <div className="flex justify-between w-full items-center xl:flex-row flex-col">
+                        <p className="text-[40px] font-inter xl:max-w-[526px] leading-12 max-xl:text-center">Find and apply for <span
+                            className="font-manrope font-medium text-gold">payment processors worldwide.</span></p>
+
+                        <div className="w-px h-[160px] bg-white/30 mx-5 max-xl:hidden"/>
+
+                        <p className="text-[20px] font-inter text-[#ACAFB9] xl:max-w-[536px] max-xl:text-center mt-3">Imagine working with payment
+                            processors that want to grow with you and offer one-on-one support — so you can scale to
+                            $10M+ per month without headaches.</p>
                     </div>
                 </div>
 
-                <div className="flex justify-between mt-20">
-                    {/*  Card 1  */}
-                    <div className="w-[380px] border border-[#38332e] rounded-[12px] p-5 pb-0" style={{
+                <div className="flex justify-between mt-20 xl:flex-row flex-col gap-y-10">
+                {/*  Card 1  */}
+                    <div className="max-w-[380px] border border-[#38332e] rounded-[12px] p-5 pb-0 mx-auto" style={{
                         background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",}}
                     >
                         <p className="text-white font-medium text-lg">Compare Processors</p>
@@ -41,7 +46,7 @@ export default function Section1() {
                     </div>
 
                     {/*  Card 2  */}
-                    <div className="w-[380px] border border-[#38332e] rounded-[12px]" style={{
+                    <div className="max-w-[380px] border border-[#38332e] rounded-[12px] mx-auto" style={{
                         background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",}}
                     >
                         <div className="p-5">
@@ -59,7 +64,7 @@ export default function Section1() {
                     </div>
 
                     {/*  Card 3  */}
-                    <div className="w-[380px] border border-[#38332e] rounded-[12px] p-5 pt-0" style={{
+                    <div className="max-w-[380px] border border-[#38332e] rounded-[12px] p-5 pt-0 mx-auto" style={{
                         background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",}}
                     >
                         <Image src={"/img/img_4.png"} alt={"Nomupay Image"} width={337} height={276} className="flex justify-center"/>

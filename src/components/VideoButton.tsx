@@ -9,7 +9,7 @@ export default function VideoButton({disabled,  text = "How it works?", classNam
     return (
         <>
             <button
-                className={`video-button-gradient p-3 cursor-pointer ${className}`}
+                className={`video-button-gradient p-3 cursor-pointer w-fit ${className}`}
                 disabled={disabled}
             >
                     <p className="font-inter relative z-10 tracking-normal capitalize font-semibold text-sm">{text}</p>

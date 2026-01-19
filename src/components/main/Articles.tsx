@@ -18,7 +18,7 @@ const Articles = () => {
                     <div className="basis-1/2 border-t border-[#2B2B2B]"/>
                 </div>
 
-                <div className="flex items-center justify-center mt-10 max-xl:hidden">
+                <div className="flex items-center justify-center mt-10">
                     {articles.map((article, index) => (
                         <a href={article.url} key={index} className="relative flex items-center">
                             <Image src={`/svg/articles/` + article.img} alt={"Some articles"} width={article.imageWidth} height={article.imageHeight}/>
@@ -35,16 +35,16 @@ const Articles = () => {
                 </div>
             </div>
 
-            <div className="xl:hidden mt-10">
-                <Marquee autoFill={true} >
-                    {articles.map((article, index) => (
-                        <div key={index} className="">
-                            <Image src={`/img/articles/` + article.img} alt={"Some articles"} width={article.imageWidth}
-                                   height={article.imageHeight} className="scale-75"/>
-                        </div>
-                    ))}
-                </Marquee>
-            </div>
+            {/*<div className="xl:hidden mt-10">*/}
+            {/*    <Marquee autoFill={true} >*/}
+            {/*        {articles.map((article, index) => (*/}
+            {/*            <div key={index} className="">*/}
+            {/*                <Image src={`/svg/articles/` + article.img} alt={"Some articles"} width={article.imageWidth}*/}
+            {/*                       height={article.imageHeight} className="scale-75"/>*/}
+            {/*            </div>*/}
+            {/*        ))}*/}
+            {/*    </Marquee>*/}
+            {/*</div>*/}
         </section>
     );
 };

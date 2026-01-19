@@ -6,7 +6,7 @@ export default function Section4(){
     return(
         <section className="lg:pt-30 lg:mt-20 pt-35" id="private-processing-solution">
             <div className="mx-auto max-w-[1200px] w-11/12 overflow-hidden">
-                <div className="flex lg:flex-row flex-col-reverse items-center justify-between max-lg:mt-10">
+                <div className="flex lg:flex-row flex-col items-center justify-between max-lg:mt-10">
                     <div className="lg:w-[700px]">
                         <div>
                             <h3 className="!font-normal !text-[44px]">Looking for a <span className="!font-medium text-gold">specific local payment</span> option?</h3>
@@ -41,7 +41,7 @@ export default function Section4(){
                     </div>
                     <div className="z-0 lg:translate-x-20 translate-x-5 max-lg:mt-5">
                         <Image src={"/img/img_3.png"} alt={"Private processing over other platforms"} width={808}
-                               height={760} className="lg:-translate-y-30 -translate-y-20 max-lg:scale-150"/>
+                               height={760} className="lg:-translate-y-30 md:-translate-y-60 xs:-translate-y-30 -translate-y-20"/>
                     </div>
                 </div>
             </div>

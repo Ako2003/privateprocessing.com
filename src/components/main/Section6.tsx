@@ -11,7 +11,7 @@ export default function Section4(){
                         <Image src={"/img/img_13.png"} alt={"Total Revenue Image"} width={589}
                                height={389}/>
                     </div>
-                    <div className="lg:w-[700px]">
+                    <div className="lg:w-[700px] mb-10">
                         <div>
                             <h3 className="!font-normal !text-[44px]">Do you offer <span
                                 className="!font-medium text-gold">subscriptions</span>?</h3>
