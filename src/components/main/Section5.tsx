@@ -31,7 +31,7 @@ export default function Section5() {
                 }}
                 >
                     <div className="flex justify-center w-full" style={{
-                        background: "rgba(0, 0, 0, 0.56)",
+                        // background: "rgba(0, 0, 0, 0.56)",
                         border: "1px solid #242424",
                         backdropFilter: "blur(5.35px)",
                         borderRadius: "16px",

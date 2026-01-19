@@ -19,12 +19,12 @@ export default function Home() {
       <main className="bg-black overflow-hidden">
         <Hero setModalVisible={setModalVisible}/>
         <Section1 />
+        <Section2 />
+        {/*<Section3 />*/}
+        <Section4 />
           <div className="pb-10" style={{
               background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
           }}>
-            <Section2 />
-            {/*<Section3 />*/}
-            <Section4 />
             <Section5 />
             <Section6 />
           </div>
