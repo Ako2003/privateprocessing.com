@@ -3,10 +3,11 @@ import CustomButton from "@/components/CustomButton";
 import ArrowText from "@/components/main/ArrowText";
 import VideoButton from "@/components/VideoButton";
 import Marquee from "react-fast-marquee";
+import {Dispatch, SetStateAction} from "react";
 
 const marquee_elements = ["Old school support", "No blocked accounts", "Dedicated processing agent", "No frozen support", "No support chatbots"]
 
-export default function Hero() {
+export default function Hero({ setModalVisible }: {  setModalVisible: Dispatch<SetStateAction<boolean>>}) {
     return (
         <section className="relative z-10 overflow-hidden" style={{
             background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
@@ -33,7 +34,7 @@ export default function Hero() {
                             </p>
                             <div className="flex sm:items-center gap-5 mt-8 sm:flex-row flex-col">
                                 <CustomButton text="Start for free" />
-                                <VideoButton />
+                                <VideoButton setModalVisible={setModalVisible}/>
                             </div>
                         </div>
                         <div className="absolute right-0 flex flex-col justify-center h-full lg:translate-y-15 max-xl:hidden">
