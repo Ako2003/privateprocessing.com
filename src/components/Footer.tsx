@@ -30,7 +30,7 @@ export default function Footer() {
             className="mx-auto max-w-[1200px] text-white pb-20 px-4 overflow-hidden"
         >
             <div
-                className="h-[1px] w-full mb-10"
+                className="h-[1px] w-full mb-30"
                 style={{
                     background:
                         "radial-gradient(50% 816.76% at 50% 50%, #1E1E1E 36.7%, rgba(28, 29, 34, 0) 100%)",
@@ -40,7 +40,7 @@ export default function Footer() {
             {/* TOP ROW */}
             <div className="flex flex-col md:flex-row justify-between items-start space-y-10 md:space-y-0 md:space-x-20">
                 {/* Left Side - Logo */}
-                <div className="max-w-md flex justify-between items-center w-full">
+                <div className="">
                     <Image
                         src="/svg/logo.svg"
                         alt="Logo"
@@ -51,8 +51,8 @@ export default function Footer() {
 
                 {/* Navigation */}
                 <div>
-                    <p className="font-inter font-medium text-base">Navigation</p>
-                    <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-3">
+                    <p className="font-inter font-medium text-base mb-3.5">Navigation</p>
+                    <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-2.5 !tracking-[-0.38px]">
                         <li>
                             <a href="#platform-overview">
                                 Platform Overview
@@ -83,8 +83,8 @@ export default function Footer() {
 
                 {/* ✅ NEW COLUMN: Legal / Policies */}
                 <div>
-                    <p className="font-inter font-medium text-base">Legal</p>
-                    <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-3">
+                    <p className="font-inter font-medium text-base mb-3.5">Legal</p>
+                    <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-2.5 !tracking-[-0.38px]">
                         <li>
                             <a href="/terms-conditions">Terms &amp; Conditions</a>
                         </li>

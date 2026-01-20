@@ -11,6 +11,7 @@ import Section12 from "@/components/main/Section12";
 import Articles from "@/components/main/Articles";
 import {Dispatch, SetStateAction, useState} from "react";
 import {X} from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
     const [modalVisible, setModalVisible] = useState(false);
@@ -22,24 +23,24 @@ export default function Home() {
         <Section2 />
         {/*<Section3 />*/}
         <Section4 />
-          <div className="pb-10" style={{
-              background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
+          <div className="relative pb-10" style={{
+              background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
+              backgroundImage: "url('/img/img_19.png')"
           }}>
-            <Section5 />
-            <Section6 />
+              <Section5/>
+              <Section6/>
           </div>
-        {/*<Section7 />*/}
-        {/*<Section8 />*/}
-        {/*<Section9 />*/}
-        <div className="pb-10" style={{
-            background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
-        }}>
-            <Section10 />
-            <Articles />
-        </div>
-        {/*<Section11 />*/}
-        <Section11 />
-        <Section12 />
+          {/*<Section7 />*/}
+          {/*<Section8 />*/}
+          {/*<Section9 />*/}
+
+          <div className="pb-10">
+              <Section10/>
+              <Articles/>
+          </div>
+          {/*<Section11 />*/}
+          <Section11/>
+          <Section12 />
 
         {modalVisible && (
           <VideoModal setModalVisible={setModalVisible} />

@@ -17,7 +17,7 @@ export default function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
     return(
         <nav className="relative">
-            <div className="fixed w-full py-4 bg-black/60 lg:backdrop-blur-[4px] backdrop-blur-[8px] z-100">
+            <div className="fixed w-full py-4 bg-black/60 lg:backdrop-blur-[4px] backdrop-blur-[8px] z-100 border-b border-[#191919]">
                 <div className="flex items-center justify-between max-w-[1200px] mx-auto w-11/12">
                     <div className="flex items-center">
                         <div>
@@ -30,10 +30,10 @@ export default function Navbar(){
                         </div>
 
                     </div>
-                    <div className="flex gap-x-15 max-lg:hidden">
+                    <div className="flex gap-x-15 max-lg:hidden -translate-x-10">
                         {menu.map((item, index) => (
                             <div key={index}>
-                                <Link href={item.url} className="font-medium font-inter text-sm capitalize">{item.title}</Link>
+                                <Link href={item.url} className="font-normal font-inter text-sm capitalize tracking-[-0.38px]">{item.title}</Link>
                             </div>
                         ))}
                     </div>

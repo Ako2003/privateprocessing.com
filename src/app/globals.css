@@ -6,6 +6,10 @@
 
 }
 
+.font-manrope {
+  font-family: 'Manrope', sans-serif;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -36,7 +40,7 @@ body {
 h1 {
   font-size: 2.875rem;
   font-family: var(--font-manpore);
-  line-height: 112%;
+  line-height: 130%;
   font-weight: 400;
 }
 
