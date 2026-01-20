@@ -6,55 +6,57 @@ export default function Section1() {
     return (
 
 
-    <section className="mt-25 relative z-10" id="platform" style={{
+    <section className="lg:mt-25 mt-10 relative z-10" id="platform" style={{
             background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
             backgroundImage: "url('/img/img_19.png')"
         }}>
 
         <div className="max-w-[1200px] mx-auto w-11/12">
-                <hr className="border-t border-[#1F2026] mb-30 mt-20"/>
+                <hr className="border-t border-[#1F2026] lg:mb-30 lg:mt-20 mb-20"/>
                 <div className="flex lg:flex-row flex-col gap-10 items-center justify-between">
                     <div className="flex justify-between w-full items-center xl:flex-row flex-col">
-                        <p className="text-[40px] font-inter xl:max-w-[526px] leading-12 max-xl:text-center tracking-tighter">Find and apply for <span
+                        <p className="lg:text-[40px] text-[32px] font-inter xl:max-w-[526px] lg:leading-12 leading-10 max-xl:text-center tracking-tighter">Find and apply for <span
                             className="font-manrope font-medium text-gold">payment processors worldwide.</span></p>
 
                         <div className="w-px h-[160px] bg-white/30 mx-5 max-xl:hidden"/>
 
-                        <p className="text-[20px] font-inter text-[#ACAFB9] xl:max-w-[536px] max-xl:text-center mt-3 !tracking-[-0.38px]">Imagine working with payment
+                        <p className="lg:text-[20px] text-[18px] font-inter text-[#ACAFB9] xl:max-w-[536px] max-xl:text-center mt-3 !tracking-[-0.38px] max-lg:font-light">Imagine working with payment
                             processors that want to grow with you and offer one-on-one support — so you can scale to
                             $10M+ per month without headaches.</p>
                     </div>
                 </div>
 
-                <div className="flex justify-between mt-20 xl:flex-row flex-col gap-y-10">
+                <div className="flex justify-between lg:mt-20 mt-10 xl:flex-row flex-col gap-y-10">
                 {/*  Card 1  */}
                     <div className="max-w-[380px] max-h-[401px] h-full border border-[#38332e] rounded-[12px] pt-5 pb-0 mx-auto" style={{
                         background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",}}
                     >
                         <p className="text-white font-medium text-lg px-5 mb-2.5">Compare Processors</p>
                         <p className="text-[#ACAFB9] font-extralight text-base px-5">Compare up to 3–5 payment processors side by side to review differences in regions, payment methods, onboarding time, and risk fit — and apply to the best match.</p>
-                        <Marquee autoFill>
-                            <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
-                                background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
-                                border: "1px solid rgba(255, 255, 255, 0.12)",
-                                filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",
-                            }}>Qualified - <span>Eligible</span></p>
-                            <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
-                                background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
-                                border: "1px solid rgba(255, 255, 255, 0.12)",
-                                filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",
-                            }}>Request Sent - <span>Under Review</span></p>
-                            <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
-                                background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
-                                border: "1px solid rgba(255, 255, 255, 0.12)",
-                                filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",
-                            }}>Rejected - <span>Not Eligible</span></p>
-                            <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
-                                background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
-                                border: "1px solid rgba(255, 255, 255, 0.12)",
-                                filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",
-                            }}>Active - <span>Applications Open</span></p>
-                        </Marquee>
+                        <div>
+                            <Marquee autoFill>
+                                <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
+                                    background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
+                                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                                    filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",
+                                }}>Qualified - <span>Eligible</span></p>
+                                <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
+                                    background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
+                                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                                    filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",
+                                }}>Request Sent - <span>Under Review</span></p>
+                                <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
+                                    background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
+                                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                                    filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",
+                                }}>Rejected - <span>Not Eligible</span></p>
+                                <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
+                                    background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
+                                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                                    filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",
+                                }}>Active - <span>Applications Open</span></p>
+                            </Marquee>
+                        </div>
                         <div className="flex justify-center w-full -translate-x-2">
                             <Image src={"/img/img_1.png"} alt={"Adyen Image"} width={337} height={276} />
                         </div>
@@ -90,7 +92,7 @@ export default function Section1() {
                 </div>
 
                 <div className="flex justify-center w-full">
-                    <CustomButton text="Start For Free" className="mt-10 mb-30"/>
+                    <CustomButton text="Start For Free" className="mt-10 lg:mb-30 mb-20"/>
                 </div>
             </div>
 

@@ -10,7 +10,7 @@ const articles = [
 
 const Articles = () => {
     return (
-        <section className="pt-25 my-25 pb-20 relative" style={{
+        <section className="pt-25 lg:my-25 pb-20 relative" style={{
             backgroundImage: "url('/img/img_19.png')"
         }}>
             <div className="relative mx-auto max-w-[1200px] w-11/12 z-10">
@@ -20,17 +20,17 @@ const Articles = () => {
                     <div className="basis-1/2 border-t border-[#2B2B2B]"/>
                 </div>
 
-                <div className="flex items-center justify-center mt-20">
+                <div className="flex items-center justify-center mt-20 max-lg:flex-col gap-y-5">
                     {articles.map((article, index) => (
                         <a href={article.url} key={index} className="relative flex items-center">
-                            <Image src={`/svg/articles/` + article.img} alt={"Some articles"} width={article.imageWidth} height={article.imageHeight}/>
+                            <Image src={`/svg/articles/` + article.img} alt={"Some articles"} width={article.imageWidth} height={article.imageHeight} className={`${index === 0 ? "scale-70" : "scale-85"}`}/>
                             <div className={`absolute w-full h-full top-0 ${index === 0 ? "-left-7" : "right-0"}`} style={{
                                 background: "linear-gradient(180deg, rgba(205, 137, 57, 0) 23.5%, rgba(205, 161, 57, 0.4) 100%)",
                                 mixBlendMode: "plus-lighter",
                                 filter: "blur(32px)",
                             }}/>
                             {index !== articles.length - 1 && (
-                                <hr className="h-[68px] w-[1px] mx-10 border-l border-[#2B2B2B]"/>
+                                <hr className="h-[68px] w-[1px] mx-10 border-l border-[#2B2B2B] max-lg:hidden"/>
                             )}
                         </a>
                     ))}

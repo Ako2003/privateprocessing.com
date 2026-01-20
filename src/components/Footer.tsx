@@ -30,7 +30,7 @@ export default function Footer() {
             className="mx-auto max-w-[1200px] text-white pb-20 px-4 overflow-hidden"
         >
             <div
-                className="h-[1px] w-full mb-30"
+                className="h-[1px] w-full lg:mb-30 max-lg:mt-15 mb-15"
                 style={{
                     background:
                         "radial-gradient(50% 816.76% at 50% 50%, #1E1E1E 36.7%, rgba(28, 29, 34, 0) 100%)",
@@ -46,6 +46,7 @@ export default function Footer() {
                         alt="Logo"
                         width={163.33}
                         height={48}
+                        className="max-lg:scale-90"
                     />
                 </div>
 

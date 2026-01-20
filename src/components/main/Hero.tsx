@@ -9,12 +9,10 @@ const marquee_elements = ["Old school support", "No blocked accounts", "Dedicate
 
 export default function Hero({ setModalVisible }: {  setModalVisible: Dispatch<SetStateAction<boolean>>}) {
     return (
-        <section className="relative z-10 overflow-hidden max-md:bg-black" style={{
-            background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
-        }}>
-
+        <section className="relative z-10 overflow-hidden max-md:bg-black md:bg-[linear-gradient(180deg,rgba(46,42,38,0)_0%,#2E2A26_100%)]">
             <div className="absolute translate-y-20 lg:-translate-y-30 2xl:-translate-y-50 max-lg:hidden">
-                <Image src={"/svg/backgrounds/bg.svg"} alt={"Background Image"} width={2272} height={1419} className="opacity-20"/>
+                <Image src={"/svg/backgrounds/bg.svg"} alt={"Background Image"} width={2272} height={1419}
+                       className="opacity-20"/>
             </div>
             <div className="absolute -z-1 lg:-translate-y-30 translate-y-25 right-0 h-[calc(100vh+200px)] w-full">
                 <div className="opacity-60 max-lg:hidden" style={{
@@ -41,24 +39,25 @@ export default function Hero({ setModalVisible }: {  setModalVisible: Dispatch<S
                     background: "linear-gradient(179.07deg, rgba(10, 10, 10, 0) 5.84%, rgba(10, 10, 10, 0.9) 66.31%, rgba(0, 0, 0, 0.95) 128.02%)",
                 }}/>
             </div>
-            <div className="md:hidden mt-10">
+            <div className="md:hidden mt-5">
                 <Image src={"/img/img_18.png"} alt={"Bg image"} width={393} height={386} className="w-full"/>
                 <div className="mx-auto max-w-[1200px] w-11/12 ">
-                    <div className="flex flex-col justify-center h-full">
-                        <h1 className="text-silver !font-inter !font-normal">
+                    <div className="flex flex-col justify-center h-full -translate-y-10">
+                        <h1 className="text-silver !font-inter !font-normal !text-[36px] tracking-[-0.38px]">
                             We make <span className="text-gold font-manrope !font-medium">the best payment processors </span>
                             <br/> accessible for you
                         </h1>
-                        <p className="lg:text-[16px] text-[14px] leading-6 mt-4 font-inter text-[#ACAFB9] max-w-md">
+                        <p className="lg:text-[16px] text-[18px] leading-6 mt-4 font-inter text-[#ACAFB9] max-w-md max-lg:font-light">
                             The go-to platform for fast-growing e-commerce stores that need better payment processing.
                         </p>
-                        <div className="flex sm:items-center gap-5 mt-8 sm:flex-row flex-col">
+                        <div className="flex sm:items-center gap-5 mt-8 sm:flex-row">
                             <CustomButton text="Start for free"/>
                             <VideoButton setModalVisible={setModalVisible}/>
                         </div>
                     </div>
                 </div>
             </div>
+            <hr className="lg:hidden border-t border-[#1F2026]"/>
             <div className="mx-auto max-w-[1200px] w-11/12 ">
                 <div className="relative z-10 md:h-[calc(100svh)] flex flex-col justify-between">
                     <div className="relative flex h-full max-md:hidden">
@@ -83,7 +82,7 @@ export default function Hero({ setModalVisible }: {  setModalVisible: Dispatch<S
                     </div>
 
                     <div className="mb-5 mt-10">
-                        <ArrowText title="we can help" className="mb-5 max-xl:justify-center"/>
+                        <ArrowText title="we can help" className="mb-5"/>
                         <div className="flex justify-between max-lg:hidden">
                             {marquee_elements.map((item, index) => (
                                 <div key={index} className="border border-[#FFFFFF]/18 p-3 rounded-full">
@@ -94,7 +93,7 @@ export default function Hero({ setModalVisible }: {  setModalVisible: Dispatch<S
                         <div className="lg:hidden">
                             <Marquee autoFill={true}>
                                 {marquee_elements.map((item, index) => (
-                                    <div key={index} className="border border-[#FFFFFF]/18 p-3 rounded-full mx-5">
+                                    <div key={index} className="border border-[#FFFFFF]/18 p-3 px-5 rounded-full mx-5">
                                         <p className="text-[#BFBFBF] text-nowrap text-sm">{item}</p>
                                     </div>
                                 ))}

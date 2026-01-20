@@ -23,13 +23,18 @@ export default function Home() {
         <Section2 />
         {/*<Section3 />*/}
         <Section4 />
-          <div className="relative pb-10" style={{
+          <div className="relative pb-10 max-lg:hidden" style={{
               background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
               backgroundImage: "url('/img/img_19.png')"
           }}>
               <Section5/>
               <Section6/>
           </div>
+          <div className="relative pb-10 lg:hidden">
+              <Section5/>
+              <Section6/>
+          </div>
+
           {/*<Section7 />*/}
           {/*<Section8 />*/}
           {/*<Section9 />*/}

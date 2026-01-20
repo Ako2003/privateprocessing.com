@@ -47,11 +47,11 @@ export default function Section10() {
     };
 
     return (
-        <section className="pt-20 mt-25" id="awards">
+        <section className="lg:pt-20 pt-10 lg:mt-25" id="awards">
             <div className="mx-auto max-w-[1200px] w-11/12">
                 <div>
                     <ArrowText title={"NEW: Private Processing™ Awards"} className="justify-center !mb-0" />
-                    <h3 className="text-center !font-light lg:!text-[52px] capitalize max-lg:text-balance tracking-tighter !font-inter">
+                    <h3 className="text-center !font-light lg:!text-[52px] !text-[32px] capitalize max-lg:text-balance tracking-tighter !font-inter">
                         <span className="text-gold font-medium capitalize font-manrope">We Celebrate</span> Success Together
                     </h3>
                 </div>

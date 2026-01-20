@@ -5,10 +5,10 @@ import ArrowText from "@/components/main/ArrowText";
 export default function Section5() {
     return (
         <section className="pt-20 mt-10 max-w-[1200px] mx-auto w-11/12">
-            <div className="max-w-[800px] mx-auto text-center">
-                <p className="lg:text-[52px] text-[40px] leading-14 max-lg:leading-12 tracking-tighter font-light">We support <span className="text-gold font-medium font-manrope">low, medium and high risk</span> e-commerce.
+            <div className="max-w-[800px] mx-auto ">
+                <p className="lg:text-[52px] text-[32px]  lg:leading-14 leading-10 tracking-tighter font-light">We support <span className="text-gold font-medium font-manrope">low, medium and high risk</span> e-commerce.
                 </p>
-                <p className="text-[#ACAFB9] text-[20px] mt-5 !tracking-[-0.38px]">Each payment processor is specialized in a different
+                <p className="text-[#ACAFB9] lg:text-[20px] text-[18px] mt-5 !tracking-[-0.38px] font-light">Each payment processor is specialized in a different
                     area. Our platform allows you to find processors that perfectly fit your business type and
                     industry.</p>
             </div>

@@ -6,16 +6,29 @@ export default function Section4(){
     return(
         <section className="lg:pt-30 lg:mt-20 pt-35" id="private-processing-solution">
             <div className="mx-auto max-w-[1200px] w-11/12 overflow-hidden">
-                <div className="flex lg:flex-row flex-col items-center justify-between max-lg:mt-10">
+                <div className="flex lg:flex-row flex-col items-center justify-between max-lg:mt-10 ">
                     <div className="lg:w-[700px]">
                         <div className='space-y-5'>
-                            <h3 className="!font-normal !text-[44px] tracking-tighter">Looking for a <span className="!font-medium text-gold font-manrope">specific local payment</span> option?</h3>
+                            <h3 className="!font-normal lg:!text-[44px] !text-[32px] tracking-tighter">Looking for
+                                a <span
+                                    className="!font-medium text-gold font-manrope">specific local payment</span> option?
+                            </h3>
                             <p className="font-inter font-semibold text-white mt-3 text-lg">
                                 → We have it. You can choose it.
                             </p>
-                            <p className="text-[#ACAFB9] mt-3 !tracking-[-0.38px] text-[20px]">
-                                Filter payment processors based on local payment options and find processors that perfectly fit your needs.
+                            <div className="z-0 ranslate-x-5 -translate-y-5 lg:hidden">
+                                <Image src={"/img/img_3.png"} alt={"Private processing over other platforms"}
+                                       width={808}
+                                       height={760}
+                                       className="lg:-translate-y-30 md:-translate-y-60 xs:-translate-y-30 -translate-y-20 scale-130"/>
+                            </div>
+                            <p className="text-[#ACAFB9] mt-3 !tracking-[-0.38px] lg:text-[20px] text-[18px] max-lg:-translate-y-12 font-light">
+                                Filter payment processors based on local payment options and find processors that
+                                perfectly fit your needs.
                             </p>
+                            <div>
+                                <CustomButton className="max-lg:-translate-y-8" text="Start for free"/>
+                            </div>
                         </div>
                         {/*<hr className="border-t border-[#2b2b2b] w-full my-5"/>*/}
                         {/*<div>*/}
@@ -37,9 +50,8 @@ export default function Section4(){
                         {/*    </p>*/}
                         {/*</div>*/}
                         {/*<hr className="border-t border-[#2b2b2b] w-full mt-5"/>*/}
-                        <CustomButton className="mt-10" text="Start for free"/>
                     </div>
-                    <div className="z-0 lg:translate-x-20 translate-x-5 max-lg:mt-5">
+                    <div className="z-0 lg:translate-x-20 translate-x-5 max-lg:mt-5 max-lg:hidden">
                         <Image src={"/img/img_3.png"} alt={"Private processing over other platforms"} width={808}
                                height={760} className="lg:-translate-y-30 md:-translate-y-60 xs:-translate-y-30 -translate-y-20"/>
                     </div>
