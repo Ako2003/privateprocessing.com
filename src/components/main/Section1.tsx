@@ -26,14 +26,14 @@ export default function Section1() {
                     </div>
                 </div>
 
-                <div className="flex justify-between lg:mt-20 mt-10 xl:flex-row flex-col gap-y-10">
+                <div className="flex justify-between lg:mt-20 mt-10 xl:flex-row flex-col gap-y-10 ">
                 {/*  Card 1  */}
-                    <div className="max-w-[380px] max-h-[401px] h-full border border-[#38332e] rounded-[12px] pt-5 pb-0 mx-auto" style={{
+                    <div className="w-full max-w-[380px] max-h-[401px] min-w-0 h-full border border-[#38332e] rounded-[12px] pt-5 pb-0 mx-auto overflow-hidden" style={{
                         background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",}}
                     >
                         <p className="text-white font-medium text-lg px-5 mb-2.5">Compare Processors</p>
                         <p className="text-[#ACAFB9] font-extralight text-base px-5">Compare up to 3–5 payment processors side by side to review differences in regions, payment methods, onboarding time, and risk fit — and apply to the best match.</p>
-                        <div>
+                        <div className="overflow-hidden min-w-0">
                             <Marquee autoFill>
                                 <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{
                                     background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",
