@@ -20,7 +20,7 @@ const Articles = () => {
                     <div className="basis-1/2 border-t border-[#2B2B2B]"/>
                 </div>
 
-                <div className="flex items-center justify-center mt-20 max-lg:flex-col gap-y-5">
+                <div className="flex items-center justify-center mt-20 max-lg:flex-col gap-y-5 lg:translate-x-8">
                     {articles.map((article, index) => (
                         <a href={article.url} key={index} className="relative flex items-center">
                             <Image src={`/img/` + article.img} alt={"Some articles"} width={article.imageWidth} height={article.imageHeight} className={`${index === 0 ? "scale-70" : "scale-85"}`}/>

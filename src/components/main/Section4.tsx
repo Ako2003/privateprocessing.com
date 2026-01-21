@@ -51,7 +51,7 @@ export default function Section4(){
                         {/*</div>*/}
                         {/*<hr className="border-t border-[#2b2b2b] w-full mt-5"/>*/}
                     </div>
-                    <div className="z-0 lg:translate-x-20 translate-x-5 max-lg:mt-5 max-lg:hidden">
+                    <div className="z-0 max-lg:mt-5 max-lg:hidden">
                         <Image src={"/img/img_3.png"} alt={"Private processing over other platforms"} width={808}
                                height={760} className="lg:-translate-y-30 md:-translate-y-60 xs:-translate-y-30 -translate-y-20"/>
                     </div>

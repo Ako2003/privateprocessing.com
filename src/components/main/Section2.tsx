@@ -13,7 +13,7 @@ export default function Section2() {
                     on the platform, you can apply to multiple processors with one click.</p>
             </div>
             <div className="mt-10">
-                <div className="relative w-fit mx-auto w-11/12 mx-auto max-lg:hidden">
+                <div className="relative max-w-[1200px] w-11/12 mx-auto max-lg:hidden">
                     <Image className="w-fit mx-auto" src="/img/img_12.png" alt="Card Images" width={1152} height={873}/>
                 </div>
             </div>
