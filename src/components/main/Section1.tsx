@@ -6,7 +6,7 @@ export default function Section1() {
     return (
 
 
-    <section className="lg:mt-25 mt-10 relative z-10" id="platform" style={{
+    <section className="lg:mt-25 pt-10 relative z-10" id="platform" style={{
             background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 113.42%)",
             backgroundImage: "url('/img/img_19.png')"
         }}>

@@ -8,8 +8,8 @@ import { useState } from "react";
 const menu = [
     {title: "Platform", url: "#platform"},
     {title: "Solutions", url: "#solutions"},
-    {title: "Leadership", url: "#leadership"},
     {title: "Resources", url: "#resources"},
+    {title: "Leadership", url: "#leadership"},
     {title: "Contact", url: "#contact"},
 ]
 

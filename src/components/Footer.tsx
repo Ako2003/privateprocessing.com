@@ -28,6 +28,7 @@ export default function Footer() {
     return (
         <footer
             className="mx-auto max-w-[1200px] text-white pb-20 px-4 overflow-hidden"
+            id="contact"
         >
             <div
                 className="h-[1px] w-full lg:mb-30 max-lg:mt-15 mb-15"
@@ -55,28 +56,28 @@ export default function Footer() {
                     <p className="font-inter font-medium text-base mb-3.5">Navigation</p>
                     <ul className="font-inter font-normal text-base text-[#9194A1] mt-1.5 space-y-2.5 !tracking-[-0.38px]">
                         <li>
-                            <a href="#platform-overview">
-                                Platform Overview
+                            <a href="#platform">
+                                Platform
                             </a>
                         </li>
                         <li>
-                            <a href="#how-it-works">
-                                How it works
+                            <a href="#solutions">
+                                Solutions
                             </a>
                         </li>
                         <li>
-                            <a href="#compare-processors">
-                                Compare Processors
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#awards">
-                                Awards
+                            <a href="#resources">
+                                Resources
                             </a>
                         </li>
                         <li>
                             <a href="#leadership">
                                 Leadership
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+                                Contact
                             </a>
                         </li>
                     </ul>

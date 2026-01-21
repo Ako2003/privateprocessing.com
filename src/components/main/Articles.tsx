@@ -10,7 +10,7 @@ const articles = [
 
 const Articles = () => {
     return (
-        <section className="pt-25 lg:my-25 pb-20 relative" style={{
+        <section className="pt-25 lg:my-25 pb-20 relative" id="resources" style={{
             backgroundImage: "url('/img/img_19.png')"
         }}>
             <div className="relative mx-auto max-w-[1200px] w-11/12 z-10">

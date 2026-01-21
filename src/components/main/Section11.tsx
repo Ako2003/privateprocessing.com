@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Section11(){
     return (
-        <section className="lg:my-50 lg:mt-25 max-lg:pt-10">
+        <section className="lg:my-50 lg:pt-25 max-lg:pt-20" id="leadership">
             <div className="flex lg:flex-row flex-col gap-10 items-center justify-between gap-x-20 mx-auto max-w-[1200px] w-11/12">
                 <div className="relative max-lg:hidden -translate-y-10">
                     <Image src={"/img/img_14.png"} alt={"Vincent sitting"} width={542} height={596} className="relative z-1"/>
