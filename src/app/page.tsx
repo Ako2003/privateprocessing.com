@@ -44,8 +44,8 @@ export default function Home() {
               <Articles/>
           </div>
           {/*<Section11 />*/}
-          <Section11/>
-          <Section12 />
+          {/*<Section11/>*/}
+          {/*<Section12 />*/}
 
         {modalVisible && (
           <VideoModal setModalVisible={setModalVisible} />

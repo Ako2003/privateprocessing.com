@@ -30,13 +30,13 @@ export default function Footer() {
             className="mx-auto max-w-[1200px] text-white pb-20 px-4 overflow-hidden"
             id="contact"
         >
-            <div
-                className="h-[1px] w-full lg:mb-30 max-lg:mt-15 mb-15"
-                style={{
-                    background:
-                        "radial-gradient(50% 816.76% at 50% 50%, #1E1E1E 36.7%, rgba(28, 29, 34, 0) 100%)",
-                }}
-            />
+            {/*<div*/}
+            {/*    className="h-[1px] w-full lg:mb-30 max-lg:mt-15 mb-15"*/}
+            {/*    style={{*/}
+            {/*        background:*/}
+            {/*            "radial-gradient(50% 816.76% at 50% 50%, #1E1E1E 36.7%, rgba(28, 29, 34, 0) 100%)",*/}
+            {/*    }}*/}
+            {/*/>*/}
 
             {/* TOP ROW */}
             <div className="flex flex-col md:flex-row justify-between items-start space-y-10 md:space-y-0 md:space-x-20">
