@@ -3,9 +3,9 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
 const articles = [
-    {img: "forbes.svg", url: "https://www.forbes.com/sites/pklein/2025/09/04/the-digital-future-more-tech-unicorns-from-islamic-founders/", imageWidth: 161.1, imageHeight: 42},
+    {img: "forbes.png", url: "https://www.forbes.com/sites/pklein/2025/09/04/the-digital-future-more-tech-unicorns-from-islamic-founders/", imageWidth: 161.1, imageHeight: 42},
     // {img: "img.png", url: "https://thematrixgreenpill.com/episodes/episode-220/", imageWidth: 199, imageHeight: 92 },
-    {img: "gulf-news.svg", url: "https://gulfnews.com/business/wealth-consulting-unlocks-global-growth-potential-1.500282660", imageWidth: 236, imageHeight: 42},
+    {img: "img_29.png", url: "https://gulfnews.com/business/wealth-consulting-unlocks-global-growth-potential-1.500282660", imageWidth: 236, imageHeight: 42},
 ]
 
 const Articles = () => {
@@ -23,7 +23,7 @@ const Articles = () => {
                 <div className="flex items-center justify-center mt-20 max-lg:flex-col gap-y-5">
                     {articles.map((article, index) => (
                         <a href={article.url} key={index} className="relative flex items-center">
-                            <Image src={`/svg/articles/` + article.img} alt={"Some articles"} width={article.imageWidth} height={article.imageHeight} className={`${index === 0 ? "scale-70" : "scale-85"}`}/>
+                            <Image src={`/img/` + article.img} alt={"Some articles"} width={article.imageWidth} height={article.imageHeight} className={`${index === 0 ? "scale-70" : "scale-85"}`}/>
                             <div className={`absolute w-full h-full top-0 ${index === 0 ? "-left-7" : "right-0"}`} style={{
                                 background: "linear-gradient(180deg, rgba(205, 137, 57, 0) 23.5%, rgba(205, 161, 57, 0.4) 100%)",
                                 mixBlendMode: "plus-lighter",

@@ -12,8 +12,8 @@ export default function Section1() {
         }}>
 
         <div className="max-w-[1200px] mx-auto w-11/12">
-                <hr className="border-t border-[#1F2026] lg:mb-30 lg:mt-20 mb-20"/>
-                <div className="flex lg:flex-row flex-col gap-10 items-center justify-between">
+                <hr className="border-t border-[#1F2026] lg:mb-30 lg:mt-20 mb-20 max-lg:hidden"/>
+                <div className="flex lg:flex-row flex-col gap-10 items-center justify-between mt-20">
                     <div className="flex justify-between w-full items-center xl:flex-row flex-col">
                         <p className="lg:text-[40px] text-[32px] font-inter xl:max-w-[526px] lg:leading-12 leading-10 max-xl:text-center tracking-tighter">Find and apply for <span
                             className="font-manrope font-medium text-gold">payment processors worldwide.</span></p>
