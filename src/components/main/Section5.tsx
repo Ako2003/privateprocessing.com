@@ -30,7 +30,7 @@ export default function Section5() {
                     background: "linear-gradient(307.8deg, rgba(46, 42, 38, 0) -51.02%, #2E2A26 132.67%)",
                 }}
                 >
-                    <div className="flex justify-center max-w-[306px] mx-auto" style={{
+                    <div className="flex justify-center max-lg:max-w-[306px] mx-auto" style={{
                         // background: "rgba(0, 0, 0, 0.56)",
                         // border: "1px solid #242424",
                         backdropFilter: "blur(5.35px)",
