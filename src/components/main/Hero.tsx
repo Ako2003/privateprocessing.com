@@ -35,7 +35,7 @@ export default function Hero({ setModalVisible }: {  setModalVisible: Dispatch<S
                 }}/>
                 <Image src={"/svg/backgrounds/bg1.svg"} alt={"Background Image"} fill
                        className="max-lg:scale-170 opacity-20"/>
-                <div className="absolute max-md:bottom-0 -bottom-0 h-[709px] w-full" style={{
+                <div className="absolute max-md:bottom-0 -bottom-10 h-[709px] w-full" style={{
                     background: "linear-gradient(179.07deg, rgba(10, 10, 10, 0) 5.84%, rgba(10, 10, 10, 0.9) 66.31%, rgba(0, 0, 0, 0.95) 128.02%)",
                 }}/>
             </div>

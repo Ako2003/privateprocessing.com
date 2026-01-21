@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 export default function Section2() {
     return (
@@ -26,13 +27,13 @@ export default function Section2() {
                     <Image className="w-fit mx-auto" src="/img/img_22.png" alt="Brand Images" width={570}
                            height={443}/>
                 </div>
-                <div className="absolute bottom-0 w-full" style={{
+                <div className="absolute bottom-0 w-full rounded-xl" style={{
                     height: "258px",
                     background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, rgba(46, 42, 38, 0.45121) 16.61%, #2E2A26 57.38%)",
                 }}/>
                 <div className="absolute bottom-10 px-4">
-                    <p className="font-semibold text-lg ">Structured Profile Setup</p>
-                    <p className="text-base text-[#acafb9]">Complete your business profile step by step — from
+                    <p className="font-medium text-lg ">Structured Profile Setup</p>
+                    <p className="text-base text-[#acafb9] font-extralight">Complete your business profile step by step — from
                         communication details to company structure — all in one secure workspace.</p>
                 </div>
             </div>
@@ -46,32 +47,49 @@ export default function Section2() {
                     <Image className="w-fit mx-auto" src="/img/img_25.png" alt="Brand Images" width={570}
                            height={443}/>
                 </div>
-                <div className="absolute bottom-0 w-full" style={{
+                <div className="absolute bottom-0 w-full rounded-xl" style={{
                     height: "258px",
                     background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, rgba(46, 42, 38, 0.45121) 16.61%, #2E2A26 57.38%)",
                 }}/>
                 <div className="absolute bottom-10 px-4">
-                    <p className="font-semibold text-lg ">Companies & Brands Overview</p>
-                    <p className="text-base text-[#acafb9]">Manage operating companies and connected brands in one dashboard, with real-time readiness status for each entity.</p>
+                    <p className="font-medium text-lg ">Companies & Brands Overview</p>
+                    <p className="text-base text-[#acafb9] font-extralight">Manage operating companies and connected brands in one dashboard, with real-time readiness status for each entity.</p>
                 </div>
             </div>
 
             {/* Card 3 */}
-            <div
-                className="mt-10 w-11/12 mx-auto lg:hidden relative bg-[url('/img/img_28.png')] bg-center bg-cover rounded-lg">
-                <Image className="w-full sm:h-130 h-105" src="/img/img_23.png" alt="Brand Images" width={670}
+            <div className="mt-10 w-11/12 mx-auto lg:hidden relative bg-[url('/img/img_28.png')] bg-center bg-cover rounded-lg">
+                <Image className="w-full sm:h-130 h-80 " src="/img/img_23.png" alt="Brand Images" width={670}
                        height={443}/>
                 <div className="absolute top-0 px-4">
                     <Image className="w-fit mx-auto" src="/img/img_27.png" alt="Brand Images" width={570}
                            height={443}/>
                 </div>
-                <div className="absolute bottom-0 w-full" style={{
+                <div className="absolute bottom-0 w-full rounded-xl" style={{
                     height: "258px",
                     background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, rgba(46, 42, 38, 0.45121) 16.61%, #2E2A26 57.38%)",
                 }}/>
                 <div className="absolute bottom-10 px-4">
-                    <p className="font-semibold text-lg ">Everything in one place</p>
-                    <p className="text-base text-[#acafb9]">Your data is stored in one place so you don’t need to send it over and over again to different processors.</p>
+                    <p className="font-medium text-lg">Everything in one place</p>
+                    <p className="text-base text-[#acafb9] font-extralight">Your data is stored in one place so you
+                        don’t need to send it over and over again to different processors.</p>
+                    {/*<div>*/}
+                    {/*    <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{*/}
+                    {/*        background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",*/}
+                    {/*        border: "1px solid rgba(255, 255, 255, 0.12)",*/}
+                    {/*        filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",*/}
+                    {/*    }}>Fast Onboarding</p>*/}
+                    {/*    <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{*/}
+                    {/*        background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",*/}
+                    {/*        border: "1px solid rgba(255, 255, 255, 0.12)",*/}
+                    {/*        filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",*/}
+                    {/*    }}>Global Processor Access</p>*/}
+                    {/*    <p className="w-fit rounded-full py-1.5 px-3 mt-3 mx-2" style={{*/}
+                    {/*        background: "linear-gradient(180deg, rgba(46, 42, 38, 0) 0%, #2E2A26 100%)",*/}
+                    {/*        border: "1px solid rgba(255, 255, 255, 0.12)",*/}
+                    {/*        filter: "drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25))",*/}
+                    {/*    }}>Easy Usability</p>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </section>
