@@ -61,9 +61,24 @@ function VideoModal ({setModalVisible}: {  setModalVisible: Dispatch<SetStateAct
             <div className="flex mx-auto justify-center h-full items-center">
                 <div className="lg:w-[800px] relative">
                     <div className="absolute top-5 right-5 cursor-pointer z-10" onClick={() => setModalVisible(false)}>
-                        <X />
+                        <X/>
                     </div>
-                    <video src="/video/Intro.mp4" controls={true} autoPlay={true}/>
+                    <div style={{position: "relative", paddingTop: "56.25%"}}>
+                        <iframe
+                            src="https://fast.wistia.net/embed/iframe/c1cqgjzsg5"
+                            title="Video"
+                            allow="autoplay; fullscreen"
+                            className="!-left-1 !-top-1"
+                            style={{
+                                position: "absolute",
+                                border: "none",
+                                top: 0,
+                                left: 0,
+                                width: "101%",
+                                height: "101%",
+                            }}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
