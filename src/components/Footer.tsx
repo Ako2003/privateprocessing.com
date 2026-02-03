@@ -70,11 +70,11 @@ export default function Footer() {
                                 Resources
                             </a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="#leadership">
                                 Leadership
                             </a>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="#contact">
                                 Contact

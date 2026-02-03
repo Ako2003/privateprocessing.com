@@ -9,7 +9,7 @@ const menu = [
     {title: "Platform", url: "#platform"},
     {title: "Solutions", url: "#solutions"},
     {title: "Resources", url: "#resources"},
-    {title: "Leadership", url: "#leadership"},
+    // {title: "Leadership", url: "#leadership"},
     {title: "Contact", url: "#contact"},
 ]
 
