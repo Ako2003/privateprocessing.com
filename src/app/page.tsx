@@ -56,8 +56,8 @@ export default function Home() {
 function VideoModal ({setModalVisible}: {  setModalVisible: Dispatch<SetStateAction<boolean>>}) {
     return (
         <div className="fixed inset-0 h-screen w-screen bg-black/40 backdrop-blur-sm z-100">
-            <div className="flex mx-auto justify-center h-full items-center">
-                <div className="lg:w-[800px] relative">
+            <div className="flex mx-auto w-11/12 justify-center h-full items-center">
+                <div className="w-[800px] relative">
                     <div className="absolute top-5 right-5 cursor-pointer z-10" onClick={() => setModalVisible(false)}>
                         <X/>
                     </div>
