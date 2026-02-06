@@ -146,3 +146,7 @@ h5 {
   background: linear-gradient(180deg, rgba(10, 10, 10, 0) 30.23%, rgba(3, 3, 3, 0.5) 56.88%, #0A0A0A 102.91%);
 
 }
+
+.bg-gold-gradient {
+  background: linear-gradient(309.94deg, rgba(173, 141, 85, 0.9) 5.06%, #D2AD75 23.8%, #E8CDA0 38.72%, #D2AD75 63.7%, rgba(173, 141, 85, 0.9) 77.23%);
+}
