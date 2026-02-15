@@ -70,7 +70,7 @@ function VideoModal ({setModalVisible}: {  setModalVisible: Dispatch<SetStateAct
                     </div>
                     <div style={{position: "relative", paddingTop: "56.25%"}}>
                         <iframe
-                            src="https://fast.wistia.net/embed/iframe/x9aoqhzzmg"
+                            src="https://fast.wistia.net/embed/iframe/k920ioyuxg"
                             title="Video"
                             allow="autoplay; fullscreen"
                             className="!-left-1 !-top-1"
