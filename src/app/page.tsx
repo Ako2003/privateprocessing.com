@@ -11,6 +11,7 @@ import Articles from "@/components/main/Articles";
 import {Dispatch, SetStateAction, useState} from "react";
 import {X} from "lucide-react";
 import Image from "next/image";
+import Section11 from "@/components/main/Section11";
 
 
 export default function Home() {
@@ -48,7 +49,7 @@ export default function Home() {
               <Section10/>
               <Articles/>
           </div>
-          {/*<Section11 />*/}
+          <Section11 />
           {/*<Section11/>*/}
           {/*<Section12 />*/}
 
