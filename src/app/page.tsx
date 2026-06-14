@@ -10,7 +10,6 @@ import Section10 from "@/components/main/Section10";
 import Articles from "@/components/main/Articles";
 import {Dispatch, SetStateAction, useState} from "react";
 import {X} from "lucide-react";
-import Image from "next/image";
 import Section11 from "@/components/main/Section11";
 
 
@@ -19,12 +18,6 @@ export default function Home() {
 
     return (
       <main className="bg-black overflow-hidden">
-        <a href="https://wa.me/971528072627" target="_blank" className="fixed bottom-10 right-10 z-20 bg-gold-gradient p-2 rounded-full max-h-12 max-w-12" style={{
-          boxSizing: "border-box",
-          boxShadow: "-3px -3px 17.1px rgba(210, 173, 117, 0.3), 3px 3px 10.2px rgba(210, 173, 117, 0.3)",
-        }}>
-          <Image src="/svg/whatsapp.svg" width={44} height={44} alt={"Whatsapp Icon"} />
-        </a>
         <Hero setModalVisible={setModalVisible}/>
         <Section1 />
         <Section2 />

@@ -24,15 +24,6 @@ function Page() {
                         onboarding. </p>
                     <div className="absolute bottom-20 left-1/2 -translate-x-1/2">
                         <div className="flex items-center justify-center gap-5 max-md:mb-10 max-lg:hidden">
-                            <a
-                                href="https://wa.me/971528072627"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="font-inter font-medium text-base text-[#9194A1]"
-                            >
-                                <Image src={"/svg/social-media/whatsapp.svg"} alt={"Whatsapp Icon"} width={20}
-                                       height={20} className="opacity-60"/>
-                            </a>
                             <a href="https://www.instagram.com/samuel.aziz.boubaous?igsh=dnFvY2E2N3YyZmty">
                                 <Image src={"/svg/social-media/instagram.svg"} alt={"Instagram Icon"} width={20}
                                        height={20} className="opacity-60"/>

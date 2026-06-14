@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect, useRef } from "react";
 
 // ----- options -----
-const COMM_METHODS = ["E-Mail", "Phone", "WhatsApp"] as const;
+const COMM_METHODS = ["E-Mail", "Phone"] as const;
 
 const LANGUAGES = [
     "English",

@@ -15,7 +15,6 @@ export const BasicSchema = z
         contactName: z.string().min(1, "Required"),
         contactRole: z.string().min(1, "Required"),
         email: z.email("Invalid email"),
-        whatsapp: z.string().min(6, "Enter a valid number"),
         taxResident: z.string().min(1, "Required"),
 
         // Business Overview

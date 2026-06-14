@@ -176,13 +176,6 @@ export default function ClientIntakeBasic() {
                                 {errorText("email")}
                             </div>
                             <div>
-                                <label className="block text-base font-light text-[#F1EEEE]">WhatsApp Number *</label>
-                                <input
-                                    className="mt-1 w-full rounded-md border border-[#292929] p-2 text-[#F1EEEE] text-[14px] bg-[#111111] focus:outline-none"
-                                    placeholder="+49 …" {...register("whatsapp")} />
-                                {errorText("whatsapp")}
-                            </div>
-                            <div>
                                 <label className="block text-base font-light text-[#F1EEEE]">In which country are you a
                                     tax resident? *</label>
                                 <input
